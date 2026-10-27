@@ -1,0 +1,7 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+İNŞAAT;I-13;3. Yapı Kimyasalları;Ceresit (Henkel);C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg);Torba;465,60;39;=G2*(1-H2/100);https://www.ceresit.com.tr/
+İNŞAAT;I-14;3. Yapı Kimyasalları;Ceresit (Henkel);Standart Seramik Yapıştırma Harcı (25 kg Torba);Torba;273,60;39;=G3*(1-H3/100);https://www.ceresit.com.tr/
+İNŞAAT;I-15;3. Yapı Kimyasalları;Ceresit (Henkel);Silikonlu Esnek Derz Dolgu (20 kg Torba);Torba;614,40;39;=G4*(1-H4/100);https://www.ceresit.com.tr/
+İNŞAAT;I-16;3. Yapı Kimyasalları;Ceresit (Henkel);Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Islak Hacim Set);Set;2352,00;39;=G5*(1-H5/100);https://www.ceresit.com.tr/
+İNŞAAT;I-17;3. Yapı Kimyasalları;Ceresit (Henkel);Mantolama Yapıştırma + Elyaflı Sıva Harcı + File ve Dübel Paketi;m²;345,60;39;=G6*(1-H6/100);https://www.ceresit.com.tr/
+İNŞAAT;I-18;3. Yapı Kimyasalları;Ceresit (Henkel);Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg);Torba;566,40;39;=G7*(1-H7/100);https://www.ceresit.com.tr/

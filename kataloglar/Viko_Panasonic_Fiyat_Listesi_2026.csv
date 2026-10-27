@@ -1,0 +1,17 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+ELEKTRİK;E-01;1. Pano & Kutu;Viko (Panasonic);Ana Dağıtım Panosu (ADP) Dikili Tip Metal Pano Gövdesi + Bara Seti;Adet;36860,00;60;=G2*(1-H2/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-02;1. Pano & Kutu;Viko (Panasonic);Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano (96 Modül, 4 Sıra);Adet;12464,00;60;=G3*(1-H3/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-03;1. Pano & Kutu;Viko (Panasonic);36 Modül (3x12) Sıva Altı Sigorta Kutusu (Klemensli);Adet;2196,40;60;=G4*(1-H4/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-04;1. Pano & Kutu;Viko (Panasonic);24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu;Adet;1504,80;60;=G5*(1-H5/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-05;1. Pano & Kutu;Viko (Panasonic);12 Modül (1x12) Sıva Altı Sigorta Kutusu;Adet;851,20;60;=G6*(1-H6/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-06;1. Pano & Kutu;Viko (Panasonic);IP65 Su Geçirmez Sıva Üstü Sigorta Kutusu (18 Modül);Adet;2774,00;60;=G7*(1-H7/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-07;1. Pano & Kutu;Viko (Panasonic);"Zayıf Akım / Data Kabini 19"" 15U Duvar Tipi Rack Kabin + Fan + Priz";Adet;14364,00;60;=G8*(1-H8/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-42;5. Kanal & Priz;Viko (Panasonic);105x50 mm Kapaklı Duvar Tipi PVC Kablo Kanalı;m;565,80;62;=G9*(1-H9/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-43;5. Kanal & Priz;Viko (Panasonic);40x25 mm / 25x16 mm Sıva Üstü PVC Kablo Kanalı;m;110,70;62;=G10*(1-H10/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-44;5. Kanal & Priz;Viko (Panasonic);Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı Takımı;m;754,40;62;=G11*(1-H11/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-45;5. Kanal & Priz;Viko (Panasonic);Halojensiz Sıva Altı Kangal Boru Ø20/25mm + Buat ve Kasa;m;34,44;62;=G12*(1-H12/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-46;5. Kanal & Priz;Viko (Panasonic);Sıva Altı Beyaz Aydınlatma Anahtarı / Komütatör (Çerçeveli);Adet;315,70;62;=G13*(1-H13/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-47;5. Kanal & Priz;Viko (Panasonic);Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Çerçeveli);Adet;344,40;62;=G14*(1-H14/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-48;5. Kanal & Priz;Viko (Panasonic);Sıva Altı Kırmızı UPS Prizi (Kesintisiz Güç Kaynağı Prizi);Adet;405,90;62;=G15*(1-H15/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-49;5. Kanal & Priz;Viko (Panasonic);Sıva Altı 2xRJ45 CAT6 İkili Data / İnternet Prizi;Adet;967,60;62;=G16*(1-H16/100);https://ewtr.panasonic.com/fiyat-listeleri/
+ELEKTRİK;E-50;5. Kanal & Priz;Viko (Panasonic);LED Acil Çıkış Yönlendirme Armatürü (3 Saat Akülü) + Topraklama Seti;Adet;3157,00;62;=G17*(1-H17/100);https://ewtr.panasonic.com/fiyat-listeleri/

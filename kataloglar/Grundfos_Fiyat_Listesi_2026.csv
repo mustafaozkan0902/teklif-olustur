@@ -1,0 +1,11 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+MEKANİK;M-23;3. Pompa & Vana;Grundfos;İki Pompalı Frekans Konvertörlü Paket Hidrofor Seti;Set;202800,00;38;=G2*(1-H2/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-24;3. Pompa & Vana;Grundfos;25/1-6 Islak Rotorlu Frekans Konvertörlü Sirkülasyon Pompası;Adet;12896,00;38;=G3*(1-H3/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-25;3. Pompa & Vana;Grundfos;40/0.5-12 Flanşlı Yüksek Verimli Ana Isıtma Sirkülasyon Pompası;Adet;56992,00;38;=G4*(1-H4/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-26;3. Pompa & Vana;Grundfos;Flatörlü Pis Su / Drenaj Dalgıç Pompası;Adet;14768,00;38;=G5*(1-H5/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-27;3. Pompa & Vana;Grundfos;"1/2"" ve 3/4"" Tam Geçişli Pirinç Küresel Vana (PN25 - Ortalama)";Adet;561,60;38;=G6*(1-H6/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-28;3. Pompa & Vana;Grundfos;"1"" ve 1 1/4"" Tam Geçişli Pirinç Küresel Vana (Kolon Kesme Vanaları)";Adet;1331,20;38;=G7*(1-H7/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-29;3. Pompa & Vana;Grundfos;DN65 / DN80 Wafer Tipi EPDM Contalı Kelebek Vana (Kollu);Adet;2964,00;38;=G8*(1-H8/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-30;3. Pompa & Vana;Grundfos;DN50 / DN65 Flanşlı Pislik Tutucu + Çalpara/Wafer Çekvalf Seti;Set;4784,00;38;=G9*(1-H9/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-31;3. Pompa & Vana;Grundfos;DN65 / DN80 Kauçuk Kompansatör + Basınç Düşürücü Vana Grubu;Set;7176,00;38;=G10*(1-H10/100);https://www.grundfos.com/tr/support/price-list
+MEKANİK;M-32;3. Pompa & Vana;Grundfos;"Otomatik Hava Purjörü 1/2"" + Manometre (0-10 Bar) + Termometre Seti";Set;1196,00;38;=G11*(1-H11/100);https://www.grundfos.com/tr/support/price-list

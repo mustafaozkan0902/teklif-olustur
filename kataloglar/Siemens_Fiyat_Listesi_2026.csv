@@ -1,0 +1,20 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+ELEKTRİK;E-01;1. Pano & Kutu;Siemens;Ana Dağıtım Panosu (ADP) Dikili Tip Metal Pano Gövdesi + Bara Seti;Adet;49470,00;68;=G2*(1-H2/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-02;1. Pano & Kutu;Siemens;Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano (96 Modül, 4 Sıra);Adet;16728,00;68;=G3*(1-H3/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-03;1. Pano & Kutu;Siemens;36 Modül (3x12) Sıva Altı Sigorta Kutusu (Klemensli);Adet;2947,80;68;=G4*(1-H4/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-04;1. Pano & Kutu;Siemens;24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu;Adet;2019,60;68;=G5*(1-H5/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-05;1. Pano & Kutu;Siemens;12 Modül (1x12) Sıva Altı Sigorta Kutusu;Adet;1142,40;68;=G6*(1-H6/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-06;1. Pano & Kutu;Siemens;IP65 Su Geçirmez Sıva Üstü Sigorta Kutusu (18 Modül);Adet;3723,00;68;=G7*(1-H7/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-07;1. Pano & Kutu;Siemens;"Zayıf Akım / Data Kabini 19"" 15U Duvar Tipi Rack Kabin + Fan + Priz";Adet;19278,00;68;=G8*(1-H8/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-08;2. Şalt & Sigorta;Siemens;Termik-Manyetik Kompakt Şalter (MCCB) 3x160A 25kA Ana Giriş Şalteri;Adet;15295,50;68;=G9*(1-H9/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-09;2. Şalt & Sigorta;Siemens;Termik-Manyetik Kompakt Şalter (MCCB) 3x100A 16kA Tali Pano Şalteri;Adet;11227,00;68;=G10*(1-H10/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-10;2. Şalt & Sigorta;Siemens;4x63A 300mA AC Tipi Kaçak Akım Koruma Şalteri (Yangın Koruma);Adet;4665,90;68;=G11*(1-H11/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-11;2. Şalt & Sigorta;Siemens;4x40A 30mA AC Tipi Trifaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;4511,40;68;=G12*(1-H12/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-12;2. Şalt & Sigorta;Siemens;2x40A 30mA AC Tipi Monofaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;3522,60;68;=G13*(1-H13/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-13;2. Şalt & Sigorta;Siemens;1P B10A 6kA Otomatik Sigorta (Aydınlatma Linyesi);Adet;458,35;68;=G14*(1-H14/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-14;2. Şalt & Sigorta;Siemens;1P C16A 6kA Otomatik Sigorta (Priz Linyesi);Adet;448,05;68;=G15*(1-H15/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-15;2. Şalt & Sigorta;Siemens;1P C20A 6kA Otomatik Sigorta (Klima / Özel Yük Hattı);Adet;478,95;68;=G16*(1-H16/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-16;2. Şalt & Sigorta;Siemens;1P C25A 6kA Otomatik Sigorta (Mutfak / Fırın Hattı);Adet;509,85;68;=G17*(1-H17/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-17;2. Şalt & Sigorta;Siemens;3P C32A 6kA Trifaze Otomatik Sigorta (Mekanik / Pompa);Adet;1689,20;68;=G18*(1-H18/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-18;2. Şalt & Sigorta;Siemens;3P C40A 6kA Trifaze Otomatik Sigorta (Kolon Besleme);Adet;1843,70;68;=G19*(1-H19/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html
+ELEKTRİK;E-19;2. Şalt & Sigorta;Siemens;B+C Tipi AG Parafudr 3P+N 50kA + 25A Kontaktör Seti;Set;16068,00;68;=G20*(1-H20/100);https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html

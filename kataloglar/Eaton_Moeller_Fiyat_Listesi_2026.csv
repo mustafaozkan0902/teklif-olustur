@@ -1,0 +1,13 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+ELEKTRİK;E-08;2. Şalt & Sigorta;Eaton (Moeller);Termik-Manyetik Kompakt Şalter (MCCB) 3x160A 25kA Ana Giriş Şalteri;Adet;14107,50;65;=G2*(1-H2/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-09;2. Şalt & Sigorta;Eaton (Moeller);Termik-Manyetik Kompakt Şalter (MCCB) 3x100A 16kA Tali Pano Şalteri;Adet;10355,00;65;=G3*(1-H3/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-10;2. Şalt & Sigorta;Eaton (Moeller);4x63A 300mA AC Tipi Kaçak Akım Koruma Şalteri (Yangın Koruma);Adet;4303,50;65;=G4*(1-H4/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-11;2. Şalt & Sigorta;Eaton (Moeller);4x40A 30mA AC Tipi Trifaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;4161,00;65;=G5*(1-H5/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-12;2. Şalt & Sigorta;Eaton (Moeller);2x40A 30mA AC Tipi Monofaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;3249,00;65;=G6*(1-H6/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-13;2. Şalt & Sigorta;Eaton (Moeller);1P B10A 6kA Otomatik Sigorta (Aydınlatma Linyesi);Adet;422,75;65;=G7*(1-H7/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-14;2. Şalt & Sigorta;Eaton (Moeller);1P C16A 6kA Otomatik Sigorta (Priz Linyesi);Adet;413,25;65;=G8*(1-H8/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-15;2. Şalt & Sigorta;Eaton (Moeller);1P C20A 6kA Otomatik Sigorta (Klima / Özel Yük Hattı);Adet;441,75;65;=G9*(1-H9/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-16;2. Şalt & Sigorta;Eaton (Moeller);1P C25A 6kA Otomatik Sigorta (Mutfak / Fırın Hattı);Adet;470,25;65;=G10*(1-H10/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-17;2. Şalt & Sigorta;Eaton (Moeller);3P C32A 6kA Trifaze Otomatik Sigorta (Mekanik / Pompa);Adet;1558,00;65;=G11*(1-H11/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-18;2. Şalt & Sigorta;Eaton (Moeller);3P C40A 6kA Trifaze Otomatik Sigorta (Kolon Besleme);Adet;1700,50;65;=G12*(1-H12/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html
+ELEKTRİK;E-19;2. Şalt & Sigorta;Eaton (Moeller);B+C Tipi AG Parafudr 3P+N 50kA + 25A Kontaktör Seti;Set;14820,00;65;=G13*(1-H13/100);https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html

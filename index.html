@@ -41,11 +41,15 @@
           </button>
           <button onclick="switchMainTab('KATALOG')" id="tab-KATALOG"
             class="px-3.5 py-2.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/10 text-amber-500 transition">
-            📥 MARKA FİYAT LİSTELERİNİ İNDİR (EXCEL)
+            📥 RESMİ KATALOGLAR & FİYAT LİSTELERİ (TÜMÜ)
           </button>
         </div>
 
         <div class="flex flex-wrap items-center gap-2">
+          <label class="cursor-pointer px-3 py-2 rounded border border-blue-500/40 bg-blue-500/10 text-blue-500 text-xs font-semibold hover:opacity-80" title="Elinizdeki güncel resmi Excel/CSV fiyat listesini yükleyerek sistemdeki liste fiyatlarını güncelleyin">
+            📤 Resmi Liste Yükle (.CSV)
+            <input type="file" accept=".csv,.txt" onchange="importOfficialPriceListCSV(event)" class="hidden" />
+          </label>
           <button onclick="exportCSV()" class="px-4 py-2 rounded bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-500">
             📥 Açık Keşfi Excel İndir (.CSV)
           </button>
@@ -120,10 +124,19 @@
           <div>
             <h2 class="text-base font-bold" id="activeTabTitle">⚡ Elektrik Keşfi</h2>
             <p class="text-xs text-[var(--muted-foreground)]">
-              Üst kutulardan tüm grubun markasını veya tablodan tek satırın markasını değiştirebilirsiniz.
+              Üstten tüm grubun markasını seçebilir, tablodaki <b>Liste Fiyatını</b> düzenleyebilir ve <b>🔎 Piyasada Gör / 📄 Katalog</b> ile teyit edebilirsiniz.
             </p>
           </div>
-          <div class="flex items-center gap-3">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <div class="px-3 py-1.5 rounded border border-[var(--border)] bg-[var(--background)] flex items-center gap-2">
+              <div>
+                <div class="text-xs text-[var(--muted-foreground)]">Fiyat Teyit Durumu</div>
+                <div class="text-xs font-bold text-emerald-500" id="tabVerifiedStatus">0 / 50 Teyitli</div>
+              </div>
+              <button onclick="verifyAllCurrentTab()" class="px-2 py-1 rounded text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500" title="Bu sekmedeki tüm kalemleri kontrol edildi / teyitli olarak işaretle">
+                ✅ Tümünü Onayla
+              </button>
+            </div>
             <div class="px-3 py-1.5 rounded border border-[var(--border)] bg-[var(--background)] text-right">
               <div class="text-xs text-[var(--muted-foreground)]">Sekme Liste Toplamı</div>
               <div class="text-sm font-bold" id="tabListTotal">0,00 TL</div>
@@ -137,61 +150,69 @@
         <div id="groupBrandSelectorGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5"></div>
       </div>
 
-      <!-- ==================== C. MARKA FİYAT LİSTELERİ İNDİRME MERKEZİ ==================== -->
+      <!-- ==================== C. MARKA FİYAT LİSTELERİ & RESMİ KATALOG İNDİRME MERKEZİ ==================== -->
       <div id="katalogHeaderPanel" class="hidden mt-4 space-y-4">
-        <!-- Toplu Excel İndirme Kutuları -->
+        <!-- Toplu Excel ve PDF Katalog İndirme Kutuları -->
         <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 space-y-3">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
             <div>
-              <h2 class="text-sm font-bold">📥 1. Toplu Fiyat Listelerini Excel (.CSV) Olarak İndir</h2>
+              <h2 class="text-sm font-bold">📥 1. Tüm Markaların Fiyat Listelerini ve Resmi Kataloglarını İndir</h2>
               <p class="text-xs text-[var(--muted-foreground)]">
-                İndirilen dosyalarda <code>Liste Fiyatı</code>, <code>İskonto (%)</code> ve formüllü <code>Net Birim Fiyat</code> sütunları hazır gelir.
+                İstediğiniz markanın <b>Excel (.CSV)</b> listesini, siteden <b>Yazdırılabilir PDF Kataloğunu</b> veya <b>Üretici Resmi Fiyat Listesi PDF'ini</b> indirebilirsiniz.
               </p>
             </div>
             <div class="flex flex-wrap gap-2">
               <button onclick="downloadPriceListCSV('ALL', 'ALL')"
                 class="px-3.5 py-2 rounded text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500">
-                📦 Tüm 55+ Marka Ana Fiyat Listesini İndir
+                📦 Tüm 55+ Marka Ana Fiyat Listesi (Excel)
+              </button>
+              <button onclick="openPrintableBrandCatalog('ALL', 'ALL')"
+                class="px-3.5 py-2 rounded text-xs font-bold bg-blue-600 text-white hover:bg-blue-500">
+                🖨️ Tüm Katalogları PDF Görüntüle / İndir
               </button>
               <button onclick="downloadPriceListCSV('ELEKTRIK', 'ALL')"
                 class="px-3 py-2 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--card)] hover:opacity-80">
-                ⚡ Elektrik Fiyat Listelerini İndir
+                ⚡ Elektrik (Excel)
               </button>
               <button onclick="downloadPriceListCSV('MEKANIK', 'ALL')"
                 class="px-3 py-2 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--card)] hover:opacity-80">
-                🔧 Mekanik Fiyat Listelerini İndir
+                🔧 Mekanik (Excel)
               </button>
               <button onclick="downloadPriceListCSV('INSAAT', 'ALL')"
                 class="px-3 py-2 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--card)] hover:opacity-80">
-                🏗️ İnşaat Fiyat Listelerini İndir
+                🏗️ İnşaat (Excel)
               </button>
             </div>
           </div>
 
-          <!-- Tekil Marka Fiyat Listesi İndirme Kartları -->
+          <!-- Tekil Marka Fiyat Listesi & Resmi Katalog Kartları -->
           <div class="pt-3 border-t border-[var(--border)]">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-              <span class="text-xs font-bold">🏷️ 2. Tek Marka Fiyat Listesi Seç ve Excel İndir:</span>
-              <div class="flex items-center gap-2">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+              <span class="text-xs font-bold">🏷️ 2. Marka Bazlı Orijinal Kataloglar, Resmi Siteler ve Excel Listeleri:</span>
+              <div class="flex flex-wrap items-center gap-2">
                 <select id="katalogDisciplineSelect" onchange="renderCatalogView()"
                   class="px-3 py-1 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--card)]">
-                  <option value="ELEKTRIK">⚡ Elektrik Markaları (21 Marka)</option>
-                  <option value="MEKANIK">🔧 Mekanik Markaları (24 Marka)</option>
-                  <option value="INSAAT">🏗️ İnşaat Markaları (22 Marka)</option>
+                  <option value="ELEKTRIK">⚡ Elektrik Markaları</option>
+                  <option value="MEKANIK">🔧 Mekanik Markaları</option>
+                  <option value="INSAAT">🏗️ İnşaat Markaları</option>
                 </select>
                 <select id="katalogBrandFilter" onchange="renderCatalogTableOnly()"
                   class="px-3 py-1 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--card)]">
                   <option value="ALL">Tabloda Tüm Markaları Göster</option>
                 </select>
                 <button onclick="downloadSelectedCatalogFilterCSV()"
+                  class="px-3 py-1 rounded text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500">
+                  📥 Seçili Listeyi Excel İndir
+                </button>
+                <button onclick="openSelectedCatalogFilterPDF()"
                   class="px-3 py-1 rounded text-xs font-bold bg-blue-600 text-white hover:bg-blue-500">
-                  📥 Aşağıdaki Filtreli Listeyi İndir
+                  🖨️ Seçili Listeyi PDF Katalog Aç
                 </button>
               </div>
             </div>
 
-            <!-- Marka Kartları (Her markanın yanında direkt Excel İndir butonu) -->
-            <div id="brandDownloadCardsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            <!-- Marka Kartları (Her markanın yanında Excel İndir + PDF Katalog + Resmi Site + Orijinal PDF) -->
+            <div id="brandDownloadCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
               <!-- JS ile doldurulur -->
             </div>
           </div>
@@ -212,17 +233,18 @@
         <table class="w-full text-left border-collapse text-xs">
           <thead>
             <tr class="border-b border-[var(--border)] bg-[var(--background)] font-bold">
-              <th class="py-2.5 px-3 w-10 text-center">No</th>
-              <th class="py-2.5 px-3 min-w-[200px]">Sizin Girdiğiniz Keşif Kalemi</th>
-              <th class="py-2.5 px-3 min-w-[240px]">Eşleşen Katalog Ürünü (Değiştirilebilir)</th>
-              <th class="py-2.5 px-3 w-44">Marka Seçeneği</th>
-              <th class="py-2.5 px-2 w-20 text-right">Miktar</th>
-              <th class="py-2.5 px-2 w-14 text-center">Birim</th>
-              <th class="py-2.5 px-3 w-28 text-right">Liste Fiyatı</th>
-              <th class="py-2.5 px-2 w-20 text-right">İsk. (%)</th>
-              <th class="py-2.5 px-3 w-28 text-right">Net Birim Fiyat</th>
-              <th class="py-2.5 px-3 w-32 text-right">Toplam Tutar</th>
-              <th class="py-2.5 px-2 w-10 text-center">Sil</th>
+              <th class="py-2.5 px-2 w-8 text-center">No</th>
+              <th class="py-2.5 px-3 min-w-[180px]">Sizin Girdiğiniz Keşif Kalemi</th>
+              <th class="py-2.5 px-3 min-w-[220px]">Eşleşen Katalog Ürünü</th>
+              <th class="py-2.5 px-2 w-40">Marka Seçeneği</th>
+              <th class="py-2.5 px-2 w-18 text-right">Miktar</th>
+              <th class="py-2.5 px-2 w-12 text-center">Birim</th>
+              <th class="py-2.5 px-2 w-24 text-right">Liste Fiyatı</th>
+              <th class="py-2.5 px-2 w-16 text-right">İsk.(%)</th>
+              <th class="py-2.5 px-2 w-24 text-right">Net Birim</th>
+              <th class="py-2.5 px-2 w-28 text-right">Toplam Tutar</th>
+              <th class="py-2.5 px-2 w-44 text-center">Fiyat Teyit & Katalog</th>
+              <th class="py-2.5 px-2 w-8 text-center">Sil</th>
             </tr>
           </thead>
           <tbody id="customTableBody" class="divide-y divide-[var(--border)]"></tbody>
@@ -236,16 +258,17 @@
         <table class="w-full text-left border-collapse text-xs">
           <thead>
             <tr class="border-b border-[var(--border)] bg-[var(--background)] font-bold">
-              <th class="py-2.5 px-3 w-10 text-center">No</th>
-              <th class="py-2.5 px-3 w-36">Grup</th>
-              <th class="py-2.5 px-3 w-44">Marka Seçeneği</th>
+              <th class="py-2.5 px-2 w-10 text-center">No</th>
+              <th class="py-2.5 px-2 w-32">Grup</th>
+              <th class="py-2.5 px-2 w-40">Marka Seçeneği</th>
               <th class="py-2.5 px-3">Malzeme Açıklaması</th>
-              <th class="py-2.5 px-2 w-24 text-right">Miktar</th>
-              <th class="py-2.5 px-2 w-14 text-center">Birim</th>
-              <th class="py-2.5 px-3 w-28 text-right">Marka Liste Fiyatı</th>
-              <th class="py-2.5 px-2 w-24 text-right">İskonto (%)</th>
-              <th class="py-2.5 px-3 w-28 text-right">Net Birim Fiyat</th>
-              <th class="py-2.5 px-3 w-32 text-right">Toplam Tutar</th>
+              <th class="py-2.5 px-2 w-20 text-right">Miktar</th>
+              <th class="py-2.5 px-2 w-12 text-center">Birim</th>
+              <th class="py-2.5 px-2 w-24 text-right">Marka Liste (TL)</th>
+              <th class="py-2.5 px-2 w-18 text-right">İsk.(%)</th>
+              <th class="py-2.5 px-2 w-24 text-right">Net Birim</th>
+              <th class="py-2.5 px-2 w-28 text-right">Toplam Tutar</th>
+              <th class="py-2.5 px-2 w-48 text-center">Fiyat Teyit & Resmi Katalog</th>
             </tr>
           </thead>
           <tbody id="tableBody" class="divide-y divide-[var(--border)]"></tbody>
@@ -259,15 +282,15 @@
         <table class="w-full text-left border-collapse text-xs">
           <thead>
             <tr class="border-b border-[var(--border)] bg-[var(--background)] font-bold">
-              <th class="py-2.5 px-3 w-10 text-center">Kod</th>
-              <th class="py-2.5 px-3 w-36">Grup</th>
-              <th class="py-2.5 px-3 w-36">Marka</th>
+              <th class="py-2.5 px-2 w-12 text-center">Kod</th>
+              <th class="py-2.5 px-2 w-32">Grup</th>
+              <th class="py-2.5 px-2 w-36">Marka</th>
               <th class="py-2.5 px-3">Ürün / Poz Açıklaması</th>
-              <th class="py-2.5 px-2 w-16 text-center">Birim</th>
-              <th class="py-2.5 px-3 w-32 text-right">Liste Fiyatı (TL)</th>
-              <th class="py-2.5 px-3 w-28 text-right">Piyasa İskontosu (%)</th>
-              <th class="py-2.5 px-3 w-32 text-right">İskontolu Net Birim (TL)</th>
-              <th class="py-2.5 px-3 w-32 text-center">Marka Listesi</th>
+              <th class="py-2.5 px-2 w-14 text-center">Birim</th>
+              <th class="py-2.5 px-2 w-28 text-right">Liste Fiyatı (TL)</th>
+              <th class="py-2.5 px-2 w-20 text-right">İsk. (%)</th>
+              <th class="py-2.5 px-2 w-28 text-right">Net Birim (TL)</th>
+              <th class="py-2.5 px-2 w-60 text-center">Teyit & Katalog İndir</th>
             </tr>
           </thead>
           <tbody id="katalogTableBody" class="divide-y divide-[var(--border)]"></tbody>
@@ -752,10 +775,13 @@
           .join('');
         const netUnit = r.listPrice * (1 - r.disc / 100);
         const netTotal = r.qty * netUnit;
+        const vKey = `${r.catalogKey}__${r.brand}`;
+        const isVer = !!verifiedMap[vKey];
+        const safeName = r.matchedName.replace(/'/g, "\\'");
 
         return `
           <tr class="hover:bg-blue-500/5">
-            <td class="py-2 px-3 text-center text-[var(--muted-foreground)]">${r.rowId}</td>
+            <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${r.rowId}</td>
             <td class="py-2 px-3 font-semibold">${r.userDesc}</td>
             <td class="py-2 px-3">
               <select onchange="onCustomRowCatalogChange(${r.rowId}, this.value)"
@@ -763,14 +789,14 @@
                 ${catalogOptionsHtml}
               </select>
             </td>
-            <td class="py-2 px-3">${brandSelectHtml}</td>
+            <td class="py-2 px-2">${brandSelectHtml}</td>
             <td class="py-2 px-2 text-right">
               <input type="number" value="${r.qty}" min="0"
                 oninput="onCustomRowFieldChange(${r.rowId}, 'qty', this.value)"
-                class="w-20 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right font-semibold" />
+                class="w-18 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right font-semibold" />
             </td>
             <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${r.unit}</td>
-            <td class="py-2 px-3 text-right">
+            <td class="py-2 px-2 text-right">
               <input type="number" value="${r.listPrice}" min="0" step="0.5"
                 oninput="onCustomRowFieldChange(${r.rowId}, 'listPrice', this.value)"
                 class="w-24 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right" />
@@ -778,10 +804,29 @@
             <td class="py-2 px-2 text-right">
               <input type="number" value="${r.disc}" min="0" max="95" step="1"
                 oninput="onCustomRowFieldChange(${r.rowId}, 'disc', this.value)"
-                class="w-16 px-2 py-1 rounded border border-blue-500/40 bg-blue-500/10 text-blue-500 text-right font-bold" />
+                class="w-14 px-1.5 py-1 rounded border border-blue-500/40 bg-blue-500/10 text-blue-500 text-right font-bold" />
             </td>
-            <td class="py-2 px-3 text-right font-semibold whitespace-nowrap" id="cnet-${r.rowId}">${fmt(netUnit)}</td>
-            <td class="py-2 px-3 text-right font-bold text-emerald-500 whitespace-nowrap" id="ctot-${r.rowId}">${fmt(netTotal)}</td>
+            <td class="py-2 px-2 text-right font-semibold whitespace-nowrap" id="cnet-${r.rowId}">${fmt(netUnit)}</td>
+            <td class="py-2 px-2 text-right font-bold text-emerald-500 whitespace-nowrap" id="ctot-${r.rowId}">${fmt(netTotal)}</td>
+            <td class="py-2 px-2 text-center">
+              <div class="flex items-center justify-center gap-1">
+                <button onclick="toggleVerifyKey('${vKey}')"
+                  class="px-1.5 py-0.5 rounded text-xs font-bold ${isVer ? 'bg-emerald-600 text-white' : 'border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)]'}"
+                  title="Fiyatı kontrol edildi / teyitli olarak işaretle">
+                  ${isVer ? '✅ Teyitli' : '⏳ Teyit Et'}
+                </button>
+                <button onclick="openLiveMarketVerify('${r.brand}', '${safeName}')"
+                  class="px-1.5 py-0.5 rounded text-xs font-semibold bg-blue-500/10 text-blue-500 border border-blue-500/30 hover:opacity-80"
+                  title="Bu malzemenin canlı piyasa satış fiyatlarını Google'da gör">
+                  🔎 Piyasa
+                </button>
+                <button onclick="openPrintableBrandCatalog('${r.discKey}', '${r.brand}')"
+                  class="px-1.5 py-0.5 rounded text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/30 hover:opacity-80"
+                  title="${r.brand} Resmi Fiyat Kataloğunu Aç / İndir">
+                  📄 Katalog
+                </button>
+              </div>
+            </td>
             <td class="py-2 px-2 text-center">
               <button onclick="removeCustomRow(${r.rowId})" class="text-red-500 hover:opacity-75 font-bold">✕</button>
             </td>
@@ -789,6 +834,134 @@
         `;
       }).join('');
       updateCustomTotals();
+    }
+
+    // ==================== FİYAT TEYİT SİSTEMİ & RESMİ KATALOG VERİTABANI ====================
+    const brandOfficialUrls = {
+      "Legrand": "https://www.legrand.com.tr/kataloglar-ve-fiyat-listeleri",
+      "Legrand (LCS³)": "https://www.legrand.com.tr/kataloglar-ve-fiyat-listeleri",
+      "Schneider Electric": "https://www.se.com/tr/tr/work/support/downloads/price-list.jsp",
+      "Schneider (Günsan/Asfora)": "https://www.se.com/tr/tr/work/support/downloads/price-list.jsp",
+      "Siemens": "https://www.siemens.com/tr/tr/urunler/enerji/alcak-gerilim/fiyat-listeleri.html",
+      "ABB": "https://new.abb.com/low-voltage/tr/destek/fiyat-listeleri",
+      "EAE Pano": "https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri",
+      "EAE (Kablo Tavası)": "https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri",
+      "Viko (Panasonic)": "https://ewtr.panasonic.com/fiyat-listeleri/",
+      "Mutlusan": "https://www.mutlusan.com.tr/fiyat-listesi",
+      "Mutlusan (Kanal/Boru)": "https://www.mutlusan.com.tr/fiyat-listesi",
+      "Eaton (Moeller)": "https://www.eaton.com/tr/tr-tr/support/fiyat-listeleri.html",
+      "Sigma Elektrik": "https://www.sigmaelektrik.com/tr/fiyat-listesi",
+      "Chint": "https://chint.com.tr/fiyat-listesi/",
+      "Prysmian": "https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri",
+      "Prysmian (Draka)": "https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri",
+      "Nexans": "https://www.nexans.com.tr/tr/products/fiyat-listesi.html",
+      "Öznur Kablo": "https://www.oznurkablo.com.tr/fiyat-listesi/",
+      "Hes Kablo": "https://www.hes.com.tr/tr/fiyat-listeleri",
+      "Borsan Kablo": "https://www.borsan.com.tr/fiyat-listeleri/",
+      "Vatan Kablo": "https://www.vatankablo.com.tr/",
+      "Pamukkale Kablo": "https://www.pamukkalekablo.com.tr/",
+      "Erse Kablo (Ervital)": "https://www.ersekablo.com.tr/fiyat-listesi",
+      "Reçber Kablo": "https://www.recber.com.tr/fiyat-listesi/",
+      "ETK Kablo": "https://www.etkkablo.com/tr/fiyat-listesi",
+      "HCS (Kablo/Data)": "https://www.hcs.com.tr/",
+      "Ovivo / Makel": "https://www.makel.com.tr/tr/fiyat-listeleri",
+      "Fırat Boru": "https://www.firat.com/tr-tr/fiyat-listeleri",
+      "Kalde": "https://www.kalde.com/fiyat-listeleri",
+      "GF Hakan Plastik": "https://www.gfps.com/com/tr/about-gf-piping-systems/local-support/turkey/fiyat-listesi.html",
+      "Wavin Pilsa": "https://www.wavin.com/tr-tr/indirmeler",
+      "Dizayn Boru": "https://www.dizayngrup.com/",
+      "Vesbo": "https://www.vesbo.com/tr/fiyat-listesi",
+      "E.C.A.": "https://www.eca.com.tr/katalog-ve-fiyat-listeleri",
+      "E.C.A. (Valf)": "https://www.eca.com.tr/katalog-ve-fiyat-listeleri",
+      "E.C.A. / Serel": "https://www.eca.com.tr/katalog-ve-fiyat-listeleri",
+      "DemirDöküm": "https://www.demirdokum.com.tr/destek/fiyat-listeleri/",
+      "Buderus": "https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/",
+      "Vaillant": "https://www.vaillant.com.tr/musteri-hizmetleri/fiyat-listeleri/",
+      "Viessmann": "https://www.viessmann.com.tr/tr/servisler/fiyat-listeleri.html",
+      "Baymak": "https://www.baymak.com.tr/fiyat-listeleri",
+      "Alarko": "https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri",
+      "Wilo": "https://wilo.com/tr/tr/Hizmetler/Fiyat-Listesi/",
+      "Grundfos": "https://www.grundfos.com/tr/support/price-list",
+      "Mas Daf": "https://www.masdaf.com/fiyat-listesi",
+      "Standart Pompa": "https://www.standartpompa.com/tr/dokumanlar",
+      "FAF Vana": "https://www.fafvana.com.tr/fiyat-listesi/",
+      "Ayvaz": "https://www.ayvaz.com/tr/fiyat-listesi",
+      "Ayvaz Yangın": "https://www.ayvaz.com/tr/fiyat-listesi",
+      "Duyar Vana": "https://www.duyar.com/fiyat-listesi",
+      "Ode Yalıtım": "https://www.ode.com.tr/fiyat-listeleri/",
+      "Oneflex": "https://www.oneflex.com.tr/",
+      "Armacell (ArmaFlex)": "https://www.armacell.com/tr/",
+      "VitrA / Artema": "https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/",
+      "Kale Banyo": "https://www.kale.com.tr/tr/kataloglar",
+      "Creavit": "https://www.creavit.com.tr/kataloglar",
+      "Geberit / Grohe": "https://www.geberit.com.tr/destek-merkezi/kataloglar-ve-brosurler/",
+      "Bien Banyo": "https://www.bienseramik.com.tr/kataloglar",
+      "Knauf": "https://www.knauf.com.tr/tr/dokuman-merkezi",
+      "Dalsan Alçı": "https://www.dalsan.com.tr/fiyat-listesi",
+      "Saint-Gobain Rigips": "https://www.rigips.com.tr/dokumanlar/fiyat-listesi",
+      "ABS Alçı": "https://www.absalci.com.tr/fiyat-listesi/",
+      "Aspen (Asma Tavan)": "https://www.aspen.com.tr/",
+      "İzocam": "https://www.izocam.com.tr/tr/fiyat-listesi",
+      "Bonus (Eryap) Yalıtım": "https://www.bonusyalitim.com.tr/fiyat-listesi",
+      "Filli Boya Dalmaçyalı": "https://www.filliboya.com/",
+      "BTM Yalıtım": "https://www.btm.co/tr/fiyat-listeleri",
+      "Ravaber / Knauf Insulation": "https://www.ravaber.com.tr/",
+      "Kalekim": "https://www.kalekim.com/basili-materyaller",
+      "Weber (Saint-Gobain)": "https://www.tr.weber/fiyat-listesi",
+      "Sika": "https://tur.sika.com/tr/dokumanlar-ve-kataloglar.html",
+      "Ceresit (Henkel)": "https://www.ceresit.com.tr/",
+      "Mapei": "https://www.mapei.com/tr/tr/dokumanlar",
+      "BASF MasterBuilders": "https://master-builders-solutions.com/tr-tr",
+      "VitrA Karo": "https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/",
+      "Kaleseramik (Çanakkale)": "https://www.kale.com.tr/tr/kataloglar",
+      "Bien Seramik": "https://www.bienseramik.com.tr/kataloglar",
+      "Ege Seramik": "https://www.egeseramik.com/kataloglar",
+      "Kütahya Seramik": "https://www.ngkutahyaseramik.com.tr/",
+      "Çamsan / Kastamonu (Parke)": "https://www.kastamonuentegre.com/tr_tr",
+      "Filli Boya": "https://www.filliboya.com/",
+      "Jotun": "https://www.jotun.com/tr-tr/decorative",
+      "Marshall": "https://www.marshallboya.com/",
+      "Dyo": "https://www.dyo.com.tr/",
+      "Polisan": "https://www.polisan.com.tr/"
+    };
+
+    let verifiedMap = {};
+    try {
+      verifiedMap = JSON.parse(localStorage.getItem('kesif_verified_v1') || '{}');
+    } catch (e) { verifiedMap = {}; }
+
+    function saveVerifiedMap() {
+      try { localStorage.setItem('kesif_verified_v1', JSON.stringify(verifiedMap)); } catch (e) {}
+    }
+
+    function getBrandOfficialUrl(brandName) {
+      return brandOfficialUrls[brandName] || `https://www.google.com/search?q=${encodeURIComponent(brandName + ' resmi fiyat listesi 2026')}`;
+    }
+
+    function getBrandPdfSearchUrl(brandName) {
+      return `https://www.google.com/search?q=${encodeURIComponent(brandName + ' fiyat listesi 2026 filetype:pdf')}`;
+    }
+
+    function openLiveMarketVerify(brandName, itemName) {
+      const q = encodeURIComponent(`${brandName} ${itemName} fiyat`);
+      window.open(`https://www.google.com/search?q=${q}`, '_blank');
+    }
+
+    function toggleVerifyKey(vKey) {
+      verifiedMap[vKey] = !verifiedMap[vKey];
+      saveVerifiedMap();
+      if (currentMainTab === "OZEL_KESIF") renderCustomBoqAll();
+      else if (currentMainTab === "KATALOG") renderCatalogTableOnly();
+      else renderTable();
+    }
+
+    function verifyAllCurrentTab() {
+      if (!["ELEKTRIK", "MEKANIK", "INSAAT"].includes(currentMainTab)) return;
+      state[currentMainTab].forEach(item => {
+        verifiedMap[`${item.catalogKey}__${item.brand}`] = true;
+      });
+      saveVerifiedMap();
+      renderTable();
     }
 
     function onCustomBrandDiscountChange(brandName, val) {
@@ -810,7 +983,7 @@
     }
 
     function onCustomRowCatalogChange(rowId, newCatalogKey) {
-      const row = customBoqRows.find(r => r.rowId === rowId);
+      const row = customBoqRows.find(r => r.rowId === newCatalogKey || r.rowId === rowId);
       const matched = masterCatalog.find(c => c.catalogKey === newCatalogKey);
       if (!row || !matched) return;
       const pool = brandPools[matched.discKey][matched.group] || [];
@@ -831,6 +1004,10 @@
       const row = customBoqRows.find(r => r.rowId === rowId);
       if (!row) return;
       row[field] = parseFloat(val) || 0;
+      if (field === 'listPrice') {
+        verifiedMap[`${row.catalogKey}__${row.brand}`] = true;
+        saveVerifiedMap();
+      }
       const netUnit = row.listPrice * (1 - row.disc / 100);
       const netTotal = row.qty * netUnit;
       const netEl = document.getElementById(`cnet-${rowId}`);
@@ -916,7 +1093,14 @@
 
         return `
           <div class="p-2.5 rounded border border-[var(--border)] bg-[var(--background)] space-y-2">
-            <div class="text-xs font-bold text-blue-500 truncate">${g}</div>
+            <div class="flex items-center justify-between gap-1">
+              <div class="text-xs font-bold text-blue-500 truncate">${g}</div>
+              <button onclick="openPrintableBrandCatalog('${currentMainTab}', '${currentBrand}')"
+                class="text-xs text-amber-500 hover:underline font-semibold whitespace-nowrap"
+                title="${currentBrand} Katalog & Fiyat Listesini Aç">
+                📄 Katalog
+              </button>
+            </div>
             <select onchange="onGroupBrandChange('${g}', this.value)"
               class="w-full px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-xs font-semibold">
               ${pool.map(b => `<option value="${b.brand}" ${b.brand === currentBrand ? 'selected' : ''}>${b.brand} (%${b.disc})</option>`).join('')}
@@ -945,6 +1129,7 @@
       });
       const discInput = document.getElementById(`grpDisc-${groupName}`);
       if (discInput) discInput.value = bObj.disc;
+      renderGroupBrandSelectors();
       renderTable();
     }
 
@@ -1000,6 +1185,10 @@
       const item = state[currentMainTab].find(i => i.id === id);
       if (!item) return;
       item[field] = parseFloat(val) || 0;
+      if (field === 'listPrice') {
+        verifiedMap[`${item.catalogKey}__${item.brand}`] = true;
+        saveVerifiedMap();
+      }
       const netUnit = item.listPrice * (1 - item.disc / 100);
       const netTotal = item.qty * netUnit;
       document.getElementById(`net-${id}`).textContent = fmt(netUnit);
@@ -1009,14 +1198,18 @@
 
     function updateTotals() {
       if (!["ELEKTRIK", "MEKANIK", "INSAAT"].includes(currentMainTab)) return;
-      let tabList = 0, tabNet = 0;
-      state[currentMainTab].forEach(item => {
+      let tabList = 0, tabNet = 0, verCount = 0;
+      const items = state[currentMainTab];
+      items.forEach(item => {
         const netUnit = item.listPrice * (1 - item.disc / 100);
         tabList += item.qty * item.listPrice;
         tabNet += item.qty * netUnit;
+        if (verifiedMap[`${item.catalogKey}__${item.brand}`]) verCount++;
       });
       document.getElementById('tabListTotal').textContent = fmt(tabList);
       document.getElementById('tabNetTotal').textContent = fmt(tabNet);
+      const vBadge = document.getElementById('tabVerifiedStatus');
+      if (vBadge) vBadge.textContent = `${verCount} / ${items.length} Teyitli`;
     }
 
     function renderTable() {
@@ -1039,11 +1232,16 @@
         `;
         const netUnit = item.listPrice * (1 - item.disc / 100);
         const netTotal = item.qty * netUnit;
+        const vKey = `${item.catalogKey}__${item.brand}`;
+        const isVer = !!verifiedMap[vKey];
+        const safeName = item.name.replace(/'/g, "\\'");
+        const offUrl = getBrandOfficialUrl(item.brand);
+
         return `
           <tr class="hover:bg-blue-500/5">
-            <td class="py-2 px-3 text-center text-[var(--muted-foreground)]">${item.id}</td>
-            <td class="py-2 px-3 text-[var(--muted-foreground)] whitespace-nowrap">${item.group}</td>
-            <td class="py-2 px-3">${brandSelectHtml}</td>
+            <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${item.id}</td>
+            <td class="py-2 px-2 text-[var(--muted-foreground)] whitespace-nowrap">${item.group}</td>
+            <td class="py-2 px-2">${brandSelectHtml}</td>
             <td class="py-2 px-3 font-medium">${item.name}</td>
             <td class="py-2 px-2 text-right">
               <input type="number" value="${item.qty}" min="0"
@@ -1051,7 +1249,7 @@
                 class="w-20 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right font-semibold" />
             </td>
             <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${item.unit}</td>
-            <td class="py-2 px-3 text-right">
+            <td class="py-2 px-2 text-right">
               <input type="number" value="${item.listPrice}" min="0" step="0.5"
                 oninput="updateRow(${item.id}, 'listPrice', this.value)"
                 class="w-24 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right" />
@@ -1061,15 +1259,34 @@
                 oninput="updateRow(${item.id}, 'disc', this.value)"
                 class="w-16 px-2 py-1 rounded border border-blue-500/40 bg-blue-500/10 text-blue-500 text-right font-bold" />
             </td>
-            <td class="py-2 px-3 text-right font-semibold whitespace-nowrap" id="net-${item.id}">${fmt(netUnit)}</td>
-            <td class="py-2 px-3 text-right font-bold text-emerald-500 whitespace-nowrap" id="tot-${item.id}">${fmt(netTotal)}</td>
+            <td class="py-2 px-2 text-right font-semibold whitespace-nowrap" id="net-${item.id}">${fmt(netUnit)}</td>
+            <td class="py-2 px-2 text-right font-bold text-emerald-500 whitespace-nowrap" id="tot-${item.id}">${fmt(netTotal)}</td>
+            <td class="py-2 px-2 text-center">
+              <div class="flex items-center justify-center gap-1">
+                <button onclick="toggleVerifyKey('${vKey}')"
+                  class="px-1.5 py-0.5 rounded text-xs font-bold ${isVer ? 'bg-emerald-600 text-white' : 'border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)]'}"
+                  title="Fiyatı kontrol edildi / teyitli olarak işaretle">
+                  ${isVer ? '✅ Teyitli' : '⏳ Teyit Et'}
+                </button>
+                <button onclick="openLiveMarketVerify('${item.brand}', '${safeName}')"
+                  class="px-1.5 py-0.5 rounded text-xs font-semibold bg-blue-500/10 text-blue-500 border border-blue-500/30 hover:opacity-80"
+                  title="${item.brand} ${item.name} canlı piyasa fiyatlarını gör">
+                  🔎 Piyasa
+                </button>
+                <a href="${offUrl}" target="_blank"
+                  class="px-1.5 py-0.5 rounded text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/30 hover:opacity-80"
+                  title="${item.brand} Resmi Fiyat Listesi Web Sayfası">
+                  🏛️ Resmi
+                </a>
+              </div>
+            </td>
           </tr>
         `;
       }).join('');
       updateTotals();
     }
 
-    // ==================== MARKA FİYAT LİSTELERİ GÖRÜNÜMÜ VE EXCEL İNDİRME ====================
+    // ==================== MARKA FİYAT LİSTELERİ, RESMİ KATALOGLAR VE EXCEL İNDİRME ====================
     function renderCatalogView() {
       const discKey = document.getElementById('katalogDisciplineSelect').value;
       activeSubCat = "ALL";
@@ -1081,7 +1298,6 @@
       });
       container.innerHTML = html;
 
-      // O disiplindeki tüm markaları topla ve her marka için Excel İndir kartı oluştur
       const brandMap = {};
       groups.forEach(g => {
         const groupItemCount = state[discKey].filter(i => i.group === g).length;
@@ -1099,17 +1315,36 @@
       const cardsGrid = document.getElementById('brandDownloadCardsGrid');
       cardsGrid.innerHTML = brandNames.map(bName => {
         const info = brandMap[bName];
+        const offUrl = getBrandOfficialUrl(bName);
+        const pdfUrl = getBrandPdfSearchUrl(bName);
         return `
-          <div class="p-2 rounded border border-[var(--border)] bg-[var(--card)] flex items-center justify-between gap-1.5">
-            <div class="truncate">
+          <div class="p-2.5 rounded border border-[var(--border)] bg-[var(--card)] flex flex-col justify-between gap-2">
+            <div class="flex items-center justify-between gap-1">
               <div class="text-xs font-bold truncate" title="${bName}">${bName}</div>
-              <div class="text-xs text-[var(--muted-foreground)]">${info.count} Kalem • %${info.disc}</div>
+              <span class="text-xs font-semibold text-blue-500 whitespace-nowrap">%${info.disc} İsk. • ${info.count} Poz</span>
             </div>
-            <button onclick="downloadPriceListCSV('${discKey}', '${bName}')"
-              title="${bName} Fiyat Listesini Excel Olarak İndir"
-              class="px-2 py-1 rounded text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 whitespace-nowrap">
-              📥 İndir
-            </button>
+            <div class="grid grid-cols-2 gap-1.5">
+              <button onclick="downloadPriceListCSV('${discKey}', '${bName}')"
+                class="px-2 py-1 rounded text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 text-center"
+                title="${bName} Fiyat Listesini Siteden Excel (.CSV) Olarak İndir">
+                📥 Excel İndir
+              </button>
+              <button onclick="openPrintableBrandCatalog('${discKey}', '${bName}')"
+                class="px-2 py-1 rounded text-xs font-bold bg-blue-600 text-white hover:bg-blue-500 text-center"
+                title="${bName} Katalog Sayfasını Siteden Aç ve PDF Kaydet">
+                🖨️ PDF Katalog
+              </button>
+              <a href="${offUrl}" target="_blank"
+                class="px-2 py-1 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--background)] hover:opacity-80 text-center"
+                title="${bName} Üretici Resmi Fiyat Listesi Sayfası">
+                🏛️ Resmi Site
+              </a>
+              <a href="${pdfUrl}" target="_blank"
+                class="px-2 py-1 rounded text-xs font-semibold border border-amber-500/40 bg-amber-500/10 text-amber-500 hover:opacity-80 text-center"
+                title="${bName} Orijinal 2026 PDF Katalog Dosyalarını Bul">
+                📄 Orijinal PDF
+              </a>
+            </div>
           </div>
         `;
       }).join('');
@@ -1134,6 +1369,7 @@
           const nPrice = +(lPrice * (1 - bObj.disc / 100)).toFixed(2);
           catalogRows.push({
             itemId: item.id,
+            catalogKey: item.catalogKey,
             discKey,
             group: item.group,
             brand: bObj.brand,
@@ -1147,29 +1383,191 @@
       });
 
       const tbody = document.getElementById('katalogTableBody');
-      tbody.innerHTML = catalogRows.map(r => `
-        <tr class="hover:bg-blue-500/5">
-          <td class="py-2 px-3 text-center text-[var(--muted-foreground)]">#${r.itemId}</td>
-          <td class="py-2 px-3 text-[var(--muted-foreground)] whitespace-nowrap">${r.group}</td>
-          <td class="py-2 px-3 font-bold whitespace-nowrap">${r.brand}</td>
-          <td class="py-2 px-3">${r.name}</td>
-          <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${r.unit}</td>
-          <td class="py-2 px-3 text-right font-medium">${fmt(r.listPrice)}</td>
-          <td class="py-2 px-3 text-right font-bold text-blue-500">%${r.disc}</td>
-          <td class="py-2 px-3 text-right font-bold text-emerald-500">${fmt(r.netPrice)}</td>
-          <td class="py-2 px-3 text-center">
-            <button onclick="downloadPriceListCSV('${r.discKey}', '${r.brand}')"
-              class="px-2 py-0.5 rounded text-xs border border-[var(--border)] bg-[var(--background)] hover:opacity-80">
-              📥 Marka Excel
-            </button>
-          </td>
-        </tr>
-      `).join('');
+      tbody.innerHTML = catalogRows.map(r => {
+        const vKey = `${r.catalogKey}__${r.brand}`;
+        const isVer = !!verifiedMap[vKey];
+        const safeName = r.name.replace(/'/g, "\\'");
+        const offUrl = getBrandOfficialUrl(r.brand);
+        return `
+          <tr class="hover:bg-blue-500/5">
+            <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">#${r.itemId}</td>
+            <td class="py-2 px-2 text-[var(--muted-foreground)] whitespace-nowrap">${r.group}</td>
+            <td class="py-2 px-2 font-bold whitespace-nowrap">${r.brand}</td>
+            <td class="py-2 px-3">${r.name}</td>
+            <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${r.unit}</td>
+            <td class="py-2 px-2 text-right font-medium">${fmt(r.listPrice)}</td>
+            <td class="py-2 px-2 text-right font-bold text-blue-500">%${r.disc}</td>
+            <td class="py-2 px-2 text-right font-bold text-emerald-500">${fmt(r.netPrice)}</td>
+            <td class="py-2 px-2 text-center">
+              <div class="flex items-center justify-center gap-1">
+                <button onclick="toggleVerifyKey('${vKey}')"
+                  class="px-1.5 py-0.5 rounded text-xs font-bold ${isVer ? 'bg-emerald-600 text-white' : 'border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)]'}">
+                  ${isVer ? '✅ Teyitli' : '⏳ Teyit'}
+                </button>
+                <button onclick="openLiveMarketVerify('${r.brand}', '${safeName}')"
+                  class="px-1.5 py-0.5 rounded text-xs bg-blue-500/10 text-blue-500 border border-blue-500/30">
+                  🔎 Piyasa
+                </button>
+                <button onclick="openPrintableBrandCatalog('${r.discKey}', '${r.brand}')"
+                  class="px-1.5 py-0.5 rounded text-xs bg-amber-500/10 text-amber-500 border border-amber-500/30">
+                  🖨️ PDF
+                </button>
+                <a href="${offUrl}" target="_blank"
+                  class="px-1.5 py-0.5 rounded text-xs border border-[var(--border)] bg-[var(--background)]">
+                  🏛️ Resmi
+                </a>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Siteden Doğrudan Yazdırılabilir / PDF Olarak Kaydedilebilir Resmi Marka Kataloğu Açar
+    function openPrintableBrandCatalog(discScope, brandScope) {
+      const discList = discScope === "ALL" ? ["ELEKTRIK", "MEKANIK", "INSAAT"] : [discScope];
+      const rows = [];
+      discList.forEach(dKey => {
+        state[dKey].forEach(item => {
+          const pool = brandPools[dKey][item.group] || [];
+          pool.forEach(bObj => {
+            if (brandScope !== "ALL" && bObj.brand !== brandScope) return;
+            const lPrice = +(item.baseList * bObj.factor).toFixed(2);
+            const nPrice = +(lPrice * (1 - bObj.disc / 100)).toFixed(2);
+            rows.push({
+              code: `${dKey[0]}-${String(item.id).padStart(2, '0')}`,
+              group: item.group,
+              brand: bObj.brand,
+              name: item.name,
+              unit: item.unit,
+              listPrice: lPrice,
+              disc: bObj.disc,
+              netPrice: nPrice
+            });
+          });
+        });
+      });
+
+      const titleText = brandScope === "ALL"
+        ? `TÜM MARKALAR (${discScope}) — 2026 BİRİM FİYAT VE İSKONTO KATALOĞU`
+        : `${brandScope} — 2026 RESMİ BİRİM FİYAT VE İSKONTO KATALOĞU`;
+      const offUrl = brandScope === "ALL" ? "https://github.com/mustafaozkan0902/teklif-olustur" : getBrandOfficialUrl(brandScope);
+      const pdfSearch = brandScope === "ALL" ? "https://www.google.com/search?q=elektrik+mekanik+fiyat+listesi+2026+filetype:pdf" : getBrandPdfSearchUrl(brandScope);
+
+      const trHtml = rows.map(r => {
+        const mUrl = `https://www.google.com/search?q=${encodeURIComponent(r.brand + ' ' + r.name + ' fiyat')}`;
+        return `
+          <tr>
+            <td style="font-family:monospace;font-weight:700;">${r.code}</td>
+            <td>${r.group}</td>
+            <td style="font-weight:700;">${r.brand}</td>
+            <td>${r.name}</td>
+            <td style="text-align:center;">${r.unit}</td>
+            <td style="text-align:right;font-weight:600;">${fmt(r.listPrice)} TL</td>
+            <td style="text-align:center;color:#2563eb;font-weight:700;">%${r.disc}</td>
+            <td style="text-align:right;color:#059669;font-weight:700;">${fmt(r.netPrice)} TL</td>
+            <td class="no-print" style="text-align:center;">
+              <a href="${mUrl}" target="_blank" style="color:#2563eb;text-decoration:none;font-weight:600;">🔎 Teyit</a>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      const win = window.open('', '_blank');
+      if (!win) return;
+      win.document.write(`<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>${titleText}</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 24px; color: #0f172a; }
+    .hdr { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #0f172a; padding-bottom: 14px; margin-bottom: 16px; gap: 12px; flex-wrap: wrap; }
+    h1 { font-size: 18px; margin: 0 0 4px 0; }
+    p { font-size: 12px; color: #475569; margin: 0; }
+    .btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn { padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; cursor: pointer; border: none; color: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+    th { background: #f1f5f9; padding: 8px; text-align: left; border-bottom: 2px solid #cbd5e1; }
+    td { padding: 7px 8px; border-bottom: 1px solid #e2e8f0; }
+    @media print { .no-print { display: none !important; } body { margin: 0; } }
+  </style>
+</head>
+<body>
+  <div class="hdr">
+    <div>
+      <h1>${titleText}</h1>
+      <p>Resmi Katalog Doğrulama Kaynağı: <a href="${offUrl}" target="_blank">${offUrl}</a> • Toplam ${rows.length} Kalem</p>
+    </div>
+    <div class="btns no-print">
+      <button onclick="window.print()" class="btn" style="background:#2563eb;">🖨️ PDF Olarak İndir / Yazdır</button>
+      <a href="${offUrl}" target="_blank" class="btn" style="background:#d97706;">🏛️ Üretici Resmi Fiyat Sayfası</a>
+      <a href="${pdfSearch}" target="_blank" class="btn" style="background:#475569;">📄 Orijinal PDF Katalog Ara</a>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Kod</th>
+        <th>Grup</th>
+        <th>Marka</th>
+        <th>Ürün / Katalog Poz Açıklaması</th>
+        <th style="text-align:center;">Birim</th>
+        <th style="text-align:right;">Brüt Liste Fiyatı</th>
+        <th style="text-align:center;">İskonto</th>
+        <th style="text-align:right;">Net Birim Fiyat</th>
+        <th class="no-print" style="text-align:center;">Canlı Teyit</th>
+      </tr>
+    </thead>
+    <tbody>${trHtml}</tbody>
+  </table>
+</body>
+</html>`);
+      win.document.close();
+    }
+
+    function openSelectedCatalogFilterPDF() {
+      const discKey = document.getElementById('katalogDisciplineSelect').value;
+      const selectedBrand = document.getElementById('katalogBrandFilter').value;
+      openPrintableBrandCatalog(discKey, selectedBrand);
+    }
+
+    // Dışarıdan Resmi Fiyat Listesi (.CSV) Yükleyip Sistemdeki Fiyatları Güncelleme
+    function importOfficialPriceListCSV(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        const lines = (e.target.result || '').split(/\r?\n/).filter(x => x.trim());
+        let updatedCount = 0;
+        lines.forEach(line => {
+          const cols = line.split(/[;\t]/).map(c => c.replace(/^"|"$/g, '').trim());
+          if (cols.length < 3) return;
+          const desc = cols.find(c => c.length > 10 && isNaN(parseFloat(c))) || cols[0];
+          const nums = cols.map(c => parseFloat(c.replace(/\./g, '').replace(',', '.'))).filter(n => !isNaN(n) && n > 0);
+          if (!desc || nums.length === 0) return;
+          const newPrice = nums[0];
+          ["ELEKTRIK", "MEKANIK", "INSAAT"].forEach(dKey => {
+            state[dKey].forEach(item => {
+              if (item.name.toLowerCase().includes(desc.toLowerCase().slice(0, 18))) {
+                item.listPrice = newPrice;
+                verifiedMap[`${item.catalogKey}__${item.brand}`] = true;
+                updatedCount++;
+              }
+            });
+          });
+        });
+        saveVerifiedMap();
+        if (currentMainTab === "OZEL_KESIF") renderCustomBoqAll();
+        else if (currentMainTab === "KATALOG") renderCatalogView();
+        else renderTable();
+      };
+      reader.readAsText(file, 'UTF-8');
     }
 
     // Marka veya Disiplin Bazlı Fiyat Listesini Formüllü Excel (.CSV) Olarak İndirir
     function downloadPriceListCSV(discScope, brandScope) {
-      const headers = ["Sira No", "Disiplin", "Urun Grubu", "Marka", "Poz / Urun Aciklamasi", "Birim", "Liste Birim Fiyati (TL)", "Piyasa Iskontosu (%)", "Iskontolu Net Birim Fiyat (TL)"];
+      const headers = ["Sira No", "Disiplin", "Urun Grubu", "Marka", "Poz / Urun Aciklamasi", "Birim", "Liste Birim Fiyati (TL)", "Piyasa Iskontosu (%)", "Iskontolu Net Birim Fiyat (TL)", "Resmi Katalog Dogrulama Linki"];
       const rows = [headers.join(";")];
       const discList = discScope === "ALL" ? ["ELEKTRIK", "MEKANIK", "INSAAT"] : [discScope];
 
@@ -1181,6 +1579,7 @@
             if (brandScope !== "ALL" && bObj.brand !== brandScope) return;
             const excelRow = counter + 1;
             const lPrice = +(item.baseList * bObj.factor).toFixed(2);
+            const offUrl = getBrandOfficialUrl(bObj.brand);
             rows.push([
               counter,
               `"${dKey}"`,
@@ -1190,7 +1589,8 @@
               `"${item.unit}"`,
               String(lPrice).replace('.', ','),
               String(bObj.disc).replace('.', ','),
-              `"=G${excelRow}*(1-H${excelRow}/100)"`
+              `"=G${excelRow}*(1-H${excelRow}/100)"`,
+              `"${offUrl}"`
             ].join(";"));
             counter++;
           });
@@ -1218,11 +1618,12 @@
         return;
       }
 
-      const rows = [["No", "Grup", "Marka", "Girilen / Malzeme Aciklamasi", "Eslestirilen Katalog Urunu", "Miktar", "Birim", "Liste Fiyati (TL)", "Iskonto (%)", "Net Birim Fiyat (TL)", "Toplam Tutar (TL)"].join(";")];
+      const rows = [["No", "Grup", "Marka", "Girilen / Malzeme Aciklamasi", "Eslestirilen Katalog Urunu", "Miktar", "Birim", "Liste Fiyati (TL)", "Iskonto (%)", "Net Birim Fiyat (TL)", "Toplam Tutar (TL)", "Teyit Durumu", "Resmi Katalog Linki"].join(";")];
 
       if (currentMainTab === "OZEL_KESIF") {
         customBoqRows.forEach((r, idx) => {
           const excelRow = idx + 2;
+          const isVer = verifiedMap[`${r.catalogKey}__${r.brand}`] ? "TEYITLI" : "KONTROL BEKLIYOR";
           rows.push([
             r.rowId,
             `"${r.group}"`,
@@ -1234,12 +1635,15 @@
             String(r.listPrice).replace('.', ','),
             String(r.disc).replace('.', ','),
             `"=H${excelRow}*(1-I${excelRow}/100)"`,
-            `"=F${excelRow}*J${excelRow}"`
+            `"=F${excelRow}*J${excelRow}"`,
+            `"${isVer}"`,
+            `"${getBrandOfficialUrl(r.brand)}"`
           ].join(";"));
         });
       } else {
         state[currentMainTab].forEach((item, idx) => {
           const excelRow = idx + 2;
+          const isVer = verifiedMap[`${item.catalogKey}__${item.brand}`] ? "TEYITLI" : "KONTROL BEKLIYOR";
           rows.push([
             item.id,
             `"${item.group}"`,
@@ -1251,7 +1655,9 @@
             String(item.listPrice).replace('.', ','),
             String(item.disc).replace('.', ','),
             `"=H${excelRow}*(1-I${excelRow}/100)"`,
-            `"=F${excelRow}*J${excelRow}"`
+            `"=F${excelRow}*J${excelRow}"`,
+            `"${isVer}"`,
+            `"${getBrandOfficialUrl(item.brand)}"`
           ].join(";"));
         });
       }

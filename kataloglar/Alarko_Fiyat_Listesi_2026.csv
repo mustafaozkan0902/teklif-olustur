@@ -1,0 +1,11 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+MEKANİK;M-13;2. Isıtma & Radyatör;Alarko;28 kW Tam Yoğuşmalı Kombi (Baca Seti Dahil);Adet;44928,00;44;=G2*(1-H2/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-14;2. Isıtma & Radyatör;Alarko;100 kW Duvar Tipi Yoğuşmalı Kaskad Kazan Ünitesi;Adet;161280,00;44;=G3*(1-H3/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-15;2. Isıtma & Radyatör;Alarko;PKKP Tip 22 (600 mm Yükseklik) Çelik Panel Radyatör (Toplam Metraj);m;4656,00;44;=G4*(1-H4/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-16;2. Isıtma & Radyatör;Alarko;500x1000 mm Beyaz/Krom Banyo Havlupan Radyatör;Adet;3312,00;44;=G5*(1-H5/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-17;2. Isıtma & Radyatör;Alarko;"1/2"" Köşe Tipi Termostatik Radyatör Valfi + Dönüş Valfi Takımı";Takım;1324,80;44;=G6*(1-H6/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-18;2. Isıtma & Radyatör;Alarko;"1"" Debi Ayarlı / Dengeleme Valfli Isıtma Kollektörü (8 Çıkışlı + Dolap)";Set;8832,00;44;=G7*(1-H7/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-19;2. Isıtma & Radyatör;Alarko;PEX-b Ø16x2.0 mm Oksijen Bariyerli Kılıflı Mobil / Yerden Isıtma Borusu;m;51,84;44;=G8*(1-H8/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-20;2. Isıtma & Radyatör;Alarko;Kapalı Genleşme Tankı 200 Litre (10 Bar) + Hava Ayırıcı ve Tortu Tutucu;Set;27360,00;44;=G9*(1-H9/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-21;2. Isıtma & Radyatör;Alarko;Boyler 500 Litre Çift Serpantinli Emaye Sıcak Su Hazırlayıcı;Adet;61440,00;44;=G10*(1-H10/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri
+MEKANİK;M-22;2. Isıtma & Radyatör;Alarko;Oda Termostatı (Kablosuz Dijital Programlanabilir Modülasyonlu);Adet;3696,00;44;=G11*(1-H11/100);https://www.alarko-carrier.com.tr/tr/dokumanlar/fiyat-listeleri

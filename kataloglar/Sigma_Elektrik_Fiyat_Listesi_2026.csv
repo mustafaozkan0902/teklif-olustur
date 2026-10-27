@@ -1,0 +1,13 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+ELEKTRİK;E-08;2. Şalt & Sigorta;Sigma Elektrik;Termik-Manyetik Kompakt Şalter (MCCB) 3x160A 25kA Ana Giriş Şalteri;Adet;10692,00;60;=G2*(1-H2/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-09;2. Şalt & Sigorta;Sigma Elektrik;Termik-Manyetik Kompakt Şalter (MCCB) 3x100A 16kA Tali Pano Şalteri;Adet;7848,00;60;=G3*(1-H3/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-10;2. Şalt & Sigorta;Sigma Elektrik;4x63A 300mA AC Tipi Kaçak Akım Koruma Şalteri (Yangın Koruma);Adet;3261,60;60;=G4*(1-H4/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-11;2. Şalt & Sigorta;Sigma Elektrik;4x40A 30mA AC Tipi Trifaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;3153,60;60;=G5*(1-H5/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-12;2. Şalt & Sigorta;Sigma Elektrik;2x40A 30mA AC Tipi Monofaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;2462,40;60;=G6*(1-H6/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-13;2. Şalt & Sigorta;Sigma Elektrik;1P B10A 6kA Otomatik Sigorta (Aydınlatma Linyesi);Adet;320,40;60;=G7*(1-H7/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-14;2. Şalt & Sigorta;Sigma Elektrik;1P C16A 6kA Otomatik Sigorta (Priz Linyesi);Adet;313,20;60;=G8*(1-H8/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-15;2. Şalt & Sigorta;Sigma Elektrik;1P C20A 6kA Otomatik Sigorta (Klima / Özel Yük Hattı);Adet;334,80;60;=G9*(1-H9/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-16;2. Şalt & Sigorta;Sigma Elektrik;1P C25A 6kA Otomatik Sigorta (Mutfak / Fırın Hattı);Adet;356,40;60;=G10*(1-H10/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-17;2. Şalt & Sigorta;Sigma Elektrik;3P C32A 6kA Trifaze Otomatik Sigorta (Mekanik / Pompa);Adet;1180,80;60;=G11*(1-H11/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-18;2. Şalt & Sigorta;Sigma Elektrik;3P C40A 6kA Trifaze Otomatik Sigorta (Kolon Besleme);Adet;1288,80;60;=G12*(1-H12/100);https://www.sigmaelektrik.com/tr/fiyat-listesi
+ELEKTRİK;E-19;2. Şalt & Sigorta;Sigma Elektrik;B+C Tipi AG Parafudr 3P+N 50kA + 25A Kontaktör Seti;Set;11232,00;60;=G13*(1-H13/100);https://www.sigmaelektrik.com/tr/fiyat-listesi

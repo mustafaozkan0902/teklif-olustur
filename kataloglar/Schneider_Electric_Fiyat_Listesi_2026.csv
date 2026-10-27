@@ -1,0 +1,20 @@
+﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
+ELEKTRİK;E-01;1. Pano & Kutu;Schneider Electric;Ana Dağıtım Panosu (ADP) Dikili Tip Metal Pano Gövdesi + Bara Seti;Adet;50440,00;68;=G2*(1-H2/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-02;1. Pano & Kutu;Schneider Electric;Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano (96 Modül, 4 Sıra);Adet;17056,00;68;=G3*(1-H3/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-03;1. Pano & Kutu;Schneider Electric;36 Modül (3x12) Sıva Altı Sigorta Kutusu (Klemensli);Adet;3005,60;68;=G4*(1-H4/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-04;1. Pano & Kutu;Schneider Electric;24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu;Adet;2059,20;68;=G5*(1-H5/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-05;1. Pano & Kutu;Schneider Electric;12 Modül (1x12) Sıva Altı Sigorta Kutusu;Adet;1164,80;68;=G6*(1-H6/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-06;1. Pano & Kutu;Schneider Electric;IP65 Su Geçirmez Sıva Üstü Sigorta Kutusu (18 Modül);Adet;3796,00;68;=G7*(1-H7/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-07;1. Pano & Kutu;Schneider Electric;"Zayıf Akım / Data Kabini 19"" 15U Duvar Tipi Rack Kabin + Fan + Priz";Adet;19656,00;68;=G8*(1-H8/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-08;2. Şalt & Sigorta;Schneider Electric;Termik-Manyetik Kompakt Şalter (MCCB) 3x160A 25kA Ana Giriş Şalteri;Adet;15592,50;68;=G9*(1-H9/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-09;2. Şalt & Sigorta;Schneider Electric;Termik-Manyetik Kompakt Şalter (MCCB) 3x100A 16kA Tali Pano Şalteri;Adet;11445,00;68;=G10*(1-H10/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-10;2. Şalt & Sigorta;Schneider Electric;4x63A 300mA AC Tipi Kaçak Akım Koruma Şalteri (Yangın Koruma);Adet;4756,50;68;=G11*(1-H11/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-11;2. Şalt & Sigorta;Schneider Electric;4x40A 30mA AC Tipi Trifaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;4599,00;68;=G12*(1-H12/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-12;2. Şalt & Sigorta;Schneider Electric;2x40A 30mA AC Tipi Monofaze Kaçak Akım Koruma Şalteri (Hayat Koruma);Adet;3591,00;68;=G13*(1-H13/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-13;2. Şalt & Sigorta;Schneider Electric;1P B10A 6kA Otomatik Sigorta (Aydınlatma Linyesi);Adet;467,25;68;=G14*(1-H14/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-14;2. Şalt & Sigorta;Schneider Electric;1P C16A 6kA Otomatik Sigorta (Priz Linyesi);Adet;456,75;68;=G15*(1-H15/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-15;2. Şalt & Sigorta;Schneider Electric;1P C20A 6kA Otomatik Sigorta (Klima / Özel Yük Hattı);Adet;488,25;68;=G16*(1-H16/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-16;2. Şalt & Sigorta;Schneider Electric;1P C25A 6kA Otomatik Sigorta (Mutfak / Fırın Hattı);Adet;519,75;68;=G17*(1-H17/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-17;2. Şalt & Sigorta;Schneider Electric;3P C32A 6kA Trifaze Otomatik Sigorta (Mekanik / Pompa);Adet;1722,00;68;=G18*(1-H18/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-18;2. Şalt & Sigorta;Schneider Electric;3P C40A 6kA Trifaze Otomatik Sigorta (Kolon Besleme);Adet;1879,50;68;=G19*(1-H19/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-19;2. Şalt & Sigorta;Schneider Electric;B+C Tipi AG Parafudr 3P+N 50kA + 25A Kontaktör Seti;Set;16380,00;68;=G20*(1-H20/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dyo - 2026 Resmi Katalog Fiyat Listesi ve Doğrulama</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 24px; color: #0f172a; background: #f8fafc; }
+    .sheet { max-width: 1100px; margin: 0 auto; background: #fff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 28px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #0f172a; padding-bottom: 16px; margin-bottom: 20px; gap: 16px; flex-wrap: wrap; }
+    .title { font-size: 22px; font-weight: 800; color: #0f172a; margin: 0 0 6px 0; }
+    .subtitle { font-size: 13px; color: #475569; margin: 0; }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 9px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; cursor: pointer; border: none; }
+    .btn-print { background: #2563eb; color: #fff; }
+    .btn-csv { background: #059669; color: #fff; }
+    .btn-official { background: #f59e0b; color: #fff; }
+    .btn-pdf { background: #475569; color: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th { background: #f1f5f9; color: #1e293b; padding: 10px 8px; text-align: left; border-bottom: 2px solid #cbd5e1; }
+    td { padding: 9px 8px; border-bottom: 1px solid #e2e8f0; }
+    .center { text-align: center; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+    .net { color: #059669; font-weight: 700; }
+    .code { font-family: monospace; font-weight: 700; color: #475569; }
+    .name { font-weight: 600; }
+    .verify-btn { display: inline-block; padding: 4px 8px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; border-radius: 4px; text-decoration: none; font-size: 11px; font-weight: 600; }
+    .footer { margin-top: 20px; font-size: 11px; color: #64748b; display: flex; justify-content: space-between; border-top: 1px solid #e2e8f0; padding-top: 12px; }
+    @media print {
+      body { background: #fff; margin: 0; }
+      .sheet { border: none; box-shadow: none; padding: 0; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="header">
+      <div>
+        <div style="font-size:11px; font-weight:700; color:#2563eb; text-transform:uppercase; margin-bottom:4px;">İNŞAAT DİSİPLİNİ — MARKA FİYAT KATALOĞU</div>
+        <h1 class="title">Dyo — 2026 Birim Fiyat ve İskonto Kataloğu</h1>
+        <p class="subtitle">Resmi Katalog Kaynağı: <a href="https://www.dyo.com.tr/" target="_blank">https://www.dyo.com.tr/</a></p>
+      </div>
+      <div class="actions no-print">
+        <button onclick="window.print()" class="btn btn-print">🖨️ PDF Olarak Kaydet / Yazdır</button>
+        <a href="../kataloglar/Dyo_Fiyat_Listesi_2026.csv" download class="btn btn-csv">📥 Excel (.CSV) İndir</a>
+        <a href="https://www.dyo.com.tr/" target="_blank" class="btn btn-official">🏛️ Üretici Resmi Fiyat Sayfası</a>
+        <a href="https://www.google.com/search?q=Dyo%20fiyat%20listesi%202026%20filetype%3Apdf" target="_blank" class="btn btn-pdf">📄 Orijinal PDF Katalog Ara</a>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:65px;">Kod</th>
+          <th style="width:150px;">Grup</th>
+          <th>Ürün / Katalog Poz Açıklaması</th>
+          <th class="center" style="width:55px;">Birim</th>
+          <th class="num" style="width:125px;">Brüt Liste (TL)</th>
+          <th class="center" style="width:85px;">İskonto (%)</th>
+          <th class="num" style="width:125px;">Net Birim (TL)</th>
+          <th class="center no-print" style="width:130px;">Canlı Teyit</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td class="code">I-25</td>
+          <td>5. Boya & Astar</td>
+          <td class="name">15L Silinebilir Silikonlu İpek Mat İç Cephe Boyası</td>
+          <td class="center">Kova</td>
+          <td class="num">4,371.00 ₺</td>
+          <td class="center">%36</td>
+          <td class="num net">2,797.44 ₺</td>
+          <td class="center no-print">
+            <a href="https://www.google.com/search?q=Dyo%2015L%20Silinebilir%20Silikonlu%20%C4%B0pek%20Mat%20%C4%B0%C3%A7%20Cephe%20Boyas%C4%B1%20fiyat" target="_blank" class="verify-btn">🔎 Piyasada Doğrula</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="code">I-26</td>
+          <td>5. Boya & Astar</td>
+          <td class="name">Plastik Tavan Boyası 17.5 kg</td>
+          <td class="center">Kova</td>
+          <td class="num">2,049.20 ₺</td>
+          <td class="center">%36</td>
+          <td class="num net">1,311.49 ₺</td>
+          <td class="center no-print">
+            <a href="https://www.google.com/search?q=Dyo%20Plastik%20Tavan%20Boyas%C4%B1%2017.5%20kg%20fiyat" target="_blank" class="verify-btn">🔎 Piyasada Doğrula</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="code">I-27</td>
+          <td>5. Boya & Astar</td>
+          <td class="name">15L Alçı ve İç Cephe Boya Altı Geçiş Astarı</td>
+          <td class="center">Kova</td>
+          <td class="num">2,716.60 ₺</td>
+          <td class="center">%36</td>
+          <td class="num net">1,738.62 ₺</td>
+          <td class="center no-print">
+            <a href="https://www.google.com/search?q=Dyo%2015L%20Al%C3%A7%C4%B1%20ve%20%C4%B0%C3%A7%20Cephe%20Boya%20Alt%C4%B1%20Ge%C3%A7i%C5%9F%20Astar%C4%B1%20fiyat" target="_blank" class="verify-btn">🔎 Piyasada Doğrula</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="code">I-28</td>
+          <td>5. Boya & Astar</td>
+          <td class="name">15L Tam Akrilik Dış Cephe Boyası</td>
+          <td class="center">Kova</td>
+          <td class="num">5,123.00 ₺</td>
+          <td class="center">%36</td>
+          <td class="num net">3,278.72 ₺</td>
+          <td class="center no-print">
+            <a href="https://www.google.com/search?q=Dyo%2015L%20Tam%20Akrilik%20D%C4%B1%C5%9F%20Cephe%20Boyas%C4%B1%20fiyat" target="_blank" class="verify-btn">🔎 Piyasada Doğrula</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="code">I-29</td>
+          <td>5. Boya & Astar</td>
+          <td class="name">Dış Cephe Kaplama Astarı + Dekoratif Mineral Sıva (25 kg)</td>
+          <td class="center">Torba</td>
+          <td class="num">733.20 ₺</td>
+          <td class="center">%36</td>
+          <td class="num net">469.25 ₺</td>
+          <td class="center no-print">
+            <a href="https://www.google.com/search?q=Dyo%20D%C4%B1%C5%9F%20Cephe%20Kaplama%20Astar%C4%B1%20%2B%20Dekoratif%20Mineral%20S%C4%B1va%20%2825%20kg%29%20fiyat" target="_blank" class="verify-btn">🔎 Piyasada Doğrula</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="code">I-30</td>
+          <td>5. Boya & Astar</td>
+          <td class="name">Otopark / Teknik Hacim Epoksi Zemin Boyası ve Astar Seti</td>
+          <td class="center">Set</td>
+          <td class="num">6,392.00 ₺</td>
+          <td class="center">%36</td>
+          <td class="num net">4,090.88 ₺</td>
+          <td class="center no-print">
+            <a href="https://www.google.com/search?q=Dyo%20Otopark%20/%20Teknik%20Hacim%20Epoksi%20Zemin%20Boyas%C4%B1%20ve%20Astar%20Seti%20fiyat" target="_blank" class="verify-btn">🔎 Piyasada Doğrula</a>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <span>Not: Fiyatlar KDV hariç 2026 yılı TL katalog liste fiyatlarıdır. "PDF Olarak Kaydet / Yazdır" butonu ile resmi katalog çıktısı alabilirsiniz.</span>
+      <span>Toplam Kalem: 6 Poz</span>
+    </div>
+  </div>
+</body>
+</html>
