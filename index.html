@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektrik - Mekanik - İnşaat Çoklu Marka Fiyat Listesi ve Keşif Sistemi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --background: #f8fafc;
+      --card: #ffffff;
+      --foreground: #0f172a;
+      --muted-foreground: #64748b;
+      --border: #e2e8f0;
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4">
+  <div class="max-w-7xl mx-auto space-y-4">
+
+    <!-- 1. ANA SEKMELER: ELEKTRİK / MEKANİK / İNŞAAT / TÜM MARKA LİSTELERİ -->
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 pb-4 border-b border-[var(--border)]">
+        <div class="flex flex-wrap gap-2">
+          <button onclick="switchMainTab('ELEKTRIK')" id="tab-ELEKTRIK"
+            class="px-4 py-2.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition">
+            ⚡ ELEKTRİK KEŞFİ (50 Kalem)
+          </button>
+          <button onclick="switchMainTab('MEKANIK')" id="tab-MEKANIK"
+            class="px-4 py-2.5 rounded-lg text-xs font-bold border border-[var(--border)] bg-[var(--background)] transition">
+            🔧 MEKANİK KEŞFİ (50 Kalem)
+          </button>
+          <button onclick="switchMainTab('INSAAT')" id="tab-INSAAT"
+            class="px-4 py-2.5 rounded-lg text-xs font-bold border border-[var(--border)] bg-[var(--background)] transition">
+            🏗️ İNŞAAT KEŞFİ (30 Kalem)
+          </button>
+          <button onclick="switchMainTab('KATALOG')" id="tab-KATALOG"
+            class="px-4 py-2.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/10 text-amber-600 transition">
+            📚 TÜM MARKA FİYAT LİSTELERİ (55+ Marka)
+          </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="px-3 py-1.5 rounded border border-[var(--border)] bg-[var(--background)] text-xs">
+            <span class="text-[var(--muted-foreground)]">3 Disiplin Genel Net Toplam:</span>
+            <strong class="ml-1 text-emerald-600 text-sm" id="allProjectTotal">0,00 TL</strong>
+          </div>
+          <button onclick="exportCSV()" class="px-4 py-2 rounded bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-500">
+            📥 Excel İndir (.CSV)
+          </button>
+        </div>
+      </div>
+
+      <!-- KEŞİF MODU ÜST PANELİ: GRUP BAZLI MARKA SEÇİMİ + İSKONTO GİRİŞİ -->
+      <div id="kesifHeaderPanel" class="mt-4">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+          <div>
+            <h2 class="text-base font-bold" id="activeTabTitle">⚡ Elektrik Keşfi - Marka Seçimi ve İskonto Tablosu</h2>
+            <p class="text-xs text-[var(--muted-foreground)]">
+              İster üst kutulardan tüm grubun markasını tek tıkla değiştirin, ister tablodaki her satırda farklı marka seçin. Seçtiğiniz markanın liste fiyatı ve iskontosu otomatik gelir.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="px-3 py-1.5 rounded border border-[var(--border)] bg-[var(--background)] text-right">
+              <div class="text-xs text-[var(--muted-foreground)]">Sekme Liste Toplamı</div>
+              <div class="text-sm font-bold" id="tabListTotal">0,00 TL</div>
+            </div>
+            <div class="px-3 py-1.5 rounded border border-emerald-500/50 bg-[var(--background)] text-right">
+              <div class="text-xs font-semibold text-emerald-600">Sekme İskontolu Net Toplam</div>
+              <div class="text-base font-extrabold text-emerald-600" id="tabNetTotal">0,00 TL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grup Bazlı Marka Seçici ve İskonto Kutuları -->
+        <div id="groupBrandSelectorGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5">
+          <!-- JS ile doldurulur -->
+        </div>
+      </div>
+
+      <!-- KATALOG MODU ÜST PANELİ -->
+      <div id="katalogHeaderPanel" class="hidden mt-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+          <div>
+            <h2 class="text-base font-bold">📚 Tüm Markaların Çekilen Birim Fiyat Listeleri (Katalog Havuzu)</h2>
+            <p class="text-xs text-[var(--muted-foreground)]">
+              Her malzeme kalemi için sektörde fiyat listesi yayınlayan tüm alternatif markaların baz liste fiyatlarını ve piyasa iskonto oranlarını yan yana görebilirsiniz.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <select id="katalogDisciplineSelect" onchange="renderCatalogView()"
+              class="px-3 py-1.5 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--background)]">
+              <option value="ELEKTRIK">⚡ Elektrik Markaları (21 Marka)</option>
+              <option value="MEKANIK">🔧 Mekanik Markaları (24 Marka)</option>
+              <option value="INSAAT">🏗️ İnşaat Markaları (22 Marka)</option>
+            </select>
+            <select id="katalogBrandFilter" onchange="renderCatalogTableOnly()"
+              class="px-3 py-1.5 rounded text-xs font-semibold border border-[var(--border)] bg-[var(--background)]">
+              <option value="ALL">Tüm Markaları Göster</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. ALT GRUP FİLTRESİ VE ARAMA KUTUSU -->
+    <div id="filterBar" class="flex flex-wrap items-center justify-between gap-2">
+      <div class="flex flex-wrap gap-1.5" id="subCategoryButtons"></div>
+      <input type="text" id="searchBox" oninput="onSearchInput()" placeholder="Malzeme veya marka ara..."
+        class="px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)] w-full sm:w-64" />
+    </div>
+
+    <!-- 3A. KEŞİF TABLOSU (HER SATIRDA MARKA SEÇENEKLİ) -->
+    <div id="kesifTableWrapper" class="bg-[var(--card)] border border-[var(--border)] rounded-lg shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-[var(--border)] bg-[var(--background)] font-bold">
+              <th class="py-2.5 px-3 w-10 text-center">No</th>
+              <th class="py-2.5 px-3 w-36">Grup</th>
+              <th class="py-2.5 px-3 w-44">Marka Seçeneği</th>
+              <th class="py-2.5 px-3">Malzeme Açıklaması</th>
+              <th class="py-2.5 px-2 w-24 text-right">Miktar</th>
+              <th class="py-2.5 px-2 w-14 text-center">Birim</th>
+              <th class="py-2.5 px-3 w-28 text-right">Marka Liste Fiyatı</th>
+              <th class="py-2.5 px-2 w-24 text-right">İskonto (%)</th>
+              <th class="py-2.5 px-3 w-28 text-right">Net Birim Fiyat</th>
+              <th class="py-2.5 px-3 w-32 text-right">Toplam Tutar</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody" class="divide-y divide-[var(--border)]"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 3B. TÜM MARKA FİYAT LİSTELERİ KARŞILAŞTIRMA TABLOSU -->
+    <div id="katalogTableWrapper" class="hidden bg-[var(--card)] border border-[var(--border)] rounded-lg shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-[var(--border)] bg-[var(--background)] font-bold">
+              <th class="py-2.5 px-3 w-10 text-center">Kod</th>
+              <th class="py-2.5 px-3 w-36">Grup</th>
+              <th class="py-2.5 px-3 w-36">Marka</th>
+              <th class="py-2.5 px-3">Ürün / Poz Açıklaması</th>
+              <th class="py-2.5 px-2 w-16 text-center">Birim</th>
+              <th class="py-2.5 px-3 w-32 text-right">Liste Fiyatı (TL)</th>
+              <th class="py-2.5 px-3 w-28 text-right">Piyasa İskontosu (%)</th>
+              <th class="py-2.5 px-3 w-32 text-right">İskontolu Net Birim (TL)</th>
+              <th class="py-2.5 px-3 w-28 text-center">Keşifte Kullan</th>
+            </tr>
+          </thead>
+          <tbody id="katalogTableBody" class="divide-y divide-[var(--border)]"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const brandPools = {
+      ELEKTRIK: {
+        "1. Pano & Kutu": [
+          { brand: "Legrand", factor: 1.00, disc: 70 },
+          { brand: "Schneider Electric", factor: 1.04, disc: 68 },
+          { brand: "Siemens", factor: 1.02, disc: 68 },
+          { brand: "ABB", factor: 0.98, disc: 67 },
+          { brand: "EAE Pano", factor: 0.88, disc: 62 },
+          { brand: "Viko (Panasonic)", factor: 0.76, disc: 60 },
+          { brand: "Mutlusan", factor: 0.68, disc: 58 }
+        ],
+        "2. Şalt & Sigorta": [
+          { brand: "Legrand", factor: 1.00, disc: 70 },
+          { brand: "Schneider Electric", factor: 1.05, disc: 68 },
+          { brand: "Siemens", factor: 1.03, disc: 68 },
+          { brand: "ABB", factor: 0.99, disc: 67 },
+          { brand: "Eaton (Moeller)", factor: 0.95, disc: 65 },
+          { brand: "Sigma Elektrik", factor: 0.72, disc: 60 },
+          { brand: "Chint", factor: 0.65, disc: 58 }
+        ],
+        "3. KA Kablo": [
+          { brand: "Prysmian", factor: 1.00, disc: 58 },
+          { brand: "Nexans", factor: 0.99, disc: 58 },
+          { brand: "Öznur Kablo", factor: 0.94, disc: 60 },
+          { brand: "Hes Kablo", factor: 0.95, disc: 59 },
+          { brand: "Borsan Kablo", factor: 0.90, disc: 60 },
+          { brand: "Vatan Kablo", factor: 0.91, disc: 60 },
+          { brand: "Pamukkale Kablo", factor: 0.92, disc: 59 }
+        ],
+        "4. ZA Kablo": [
+          { brand: "Prysmian (Draka)", factor: 1.00, disc: 58 },
+          { brand: "Erse Kablo (Ervital)", factor: 0.92, disc: 62 },
+          { brand: "Reçber Kablo", factor: 0.90, disc: 62 },
+          { brand: "ETK Kablo", factor: 0.89, disc: 60 },
+          { brand: "HCS (Kablo/Data)", factor: 0.96, disc: 55 },
+          { brand: "Legrand (LCS³)", factor: 1.05, disc: 68 },
+          { brand: "Nexans", factor: 0.98, disc: 58 }
+        ],
+        "5. Kanal & Priz": [
+          { brand: "Legrand", factor: 1.00, disc: 70 },
+          { brand: "Viko (Panasonic)", factor: 0.82, disc: 62 },
+          { brand: "Schneider (Günsan/Asfora)", factor: 0.86, disc: 64 },
+          { brand: "EAE (Kablo Tavası)", factor: 0.92, disc: 60 },
+          { brand: "Mutlusan (Kanal/Boru)", factor: 0.74, disc: 60 },
+          { brand: "Ovivo / Makel", factor: 0.70, disc: 60 }
+        ]
+      },
+
+      MEKANIK: {
+        "1. Sıhhi & Pis Su Boru": [
+          { brand: "Fırat Boru", factor: 1.00, disc: 55 },
+          { brand: "Kalde", factor: 0.96, disc: 56 },
+          { brand: "GF Hakan Plastik", factor: 0.98, disc: 55 },
+          { brand: "Wavin Pilsa", factor: 0.97, disc: 54 },
+          { brand: "Dizayn Boru", factor: 0.91, disc: 57 },
+          { brand: "Vesbo", factor: 0.93, disc: 56 }
+        ],
+        "2. Isıtma & Radyatör": [
+          { brand: "E.C.A.", factor: 1.00, disc: 45 },
+          { brand: "DemirDöküm", factor: 0.98, disc: 44 },
+          { brand: "Buderus", factor: 1.12, disc: 42 },
+          { brand: "Vaillant", factor: 1.15, disc: 40 },
+          { brand: "Viessmann", factor: 1.10, disc: 42 },
+          { brand: "Baymak", factor: 0.92, disc: 46 },
+          { brand: "Alarko", factor: 0.96, disc: 44 }
+        ],
+        "3. Pompa & Vana": [
+          { brand: "Wilo", factor: 1.00, disc: 38 },
+          { brand: "Grundfos", factor: 1.04, disc: 38 },
+          { brand: "Mas Daf", factor: 0.88, disc: 42 },
+          { brand: "Standart Pompa", factor: 0.86, disc: 42 },
+          { brand: "E.C.A. (Valf)", factor: 0.95, disc: 45 },
+          { brand: "FAF Vana", factor: 0.90, disc: 50 },
+          { brand: "Ayvaz", factor: 0.92, disc: 48 }
+        ],
+        "4. Yangın & İzolasyon": [
+          { brand: "Duyar Vana", factor: 1.00, disc: 50 },
+          { brand: "FAF Vana", factor: 0.96, disc: 50 },
+          { brand: "Ayvaz Yangın", factor: 0.98, disc: 48 },
+          { brand: "Ode Yalıtım", factor: 1.00, disc: 42 },
+          { brand: "Oneflex", factor: 0.94, disc: 44 },
+          { brand: "Armacell (ArmaFlex)", factor: 1.12, disc: 38 }
+        ],
+        "5. Vitrifiye & Armatür": [
+          { brand: "VitrA / Artema", factor: 1.00, disc: 42 },
+          { brand: "E.C.A. / Serel", factor: 0.94, disc: 45 },
+          { brand: "Kale Banyo", factor: 0.95, disc: 44 },
+          { brand: "Creavit", factor: 0.84, disc: 46 },
+          { brand: "Geberit / Grohe", factor: 1.28, disc: 36 },
+          { brand: "Bien Banyo", factor: 0.86, disc: 45 }
+        ]
+      },
+
+      INSAAT: {
+        "1. Alçıpan & Tavan": [
+          { brand: "Knauf", factor: 1.00, disc: 35 },
+          { brand: "Dalsan Alçı", factor: 0.96, disc: 36 },
+          { brand: "Saint-Gobain Rigips", factor: 0.99, disc: 35 },
+          { brand: "ABS Alçı", factor: 0.92, disc: 38 },
+          { brand: "Aspen (Asma Tavan)", factor: 1.02, disc: 34 }
+        ],
+        "2. Yalıtım": [
+          { brand: "İzocam", factor: 1.00, disc: 40 },
+          { brand: "Bonus (Eryap) Yalıtım", factor: 0.93, disc: 42 },
+          { brand: "Filli Boya Dalmaçyalı", factor: 0.98, disc: 38 },
+          { brand: "BTM Yalıtım", factor: 0.95, disc: 40 },
+          { brand: "Ravaber / Knauf Insulation", factor: 0.96, disc: 40 }
+        ],
+        "3. Yapı Kimyasalları": [
+          { brand: "Kalekim", factor: 1.00, disc: 38 },
+          { brand: "Weber (Saint-Gobain)", factor: 0.99, disc: 38 },
+          { brand: "Sika", factor: 1.06, disc: 36 },
+          { brand: "Ceresit (Henkel)", factor: 0.96, disc: 39 },
+          { brand: "Mapei", factor: 1.04, disc: 36 },
+          { brand: "BASF MasterBuilders", factor: 1.05, disc: 36 }
+        ],
+        "4. Seramik & Kaplama": [
+          { brand: "VitrA Karo", factor: 1.00, disc: 40 },
+          { brand: "Kaleseramik (Çanakkale)", factor: 0.98, disc: 40 },
+          { brand: "Bien Seramik", factor: 0.89, disc: 42 },
+          { brand: "Ege Seramik", factor: 0.90, disc: 42 },
+          { brand: "Kütahya Seramik", factor: 0.92, disc: 41 },
+          { brand: "Çamsan / Kastamonu (Parke)", factor: 0.94, disc: 38 }
+        ],
+        "5. Boya & Astar": [
+          { brand: "Filli Boya", factor: 1.00, disc: 35 },
+          { brand: "Jotun", factor: 1.08, disc: 32 },
+          { brand: "Marshall", factor: 0.95, disc: 36 },
+          { brand: "Dyo", factor: 0.94, disc: 36 },
+          { brand: "Polisan", factor: 0.92, disc: 37 }
+        ]
+      }
+    };
+
+    const rawElektrik = [
+      { id: 1, group: "1. Pano & Kutu", brand: "Legrand", name: "Ana Dağıtım Panosu (ADP) Dikili Tip Metal Pano Gövdesi + Bara Seti", qty: 1, unit: "Adet", baseList: 48500 },
+      { id: 2, group: "1. Pano & Kutu", brand: "Legrand", name: "Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano (96 Modül, 4 Sıra)", qty: 3, unit: "Adet", baseList: 16400 },
+      { id: 3, group: "1. Pano & Kutu", brand: "Legrand", name: "36 Modül (3x12) Sıva Altı Sigorta Kutusu (Klemensli)", qty: 8, unit: "Adet", baseList: 2890 },
+      { id: 4, group: "1. Pano & Kutu", brand: "Legrand", name: "24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu", qty: 12, unit: "Adet", baseList: 1980 },
+      { id: 5, group: "1. Pano & Kutu", brand: "Legrand", name: "12 Modül (1x12) Sıva Altı Sigorta Kutusu", qty: 6, unit: "Adet", baseList: 1120 },
+      { id: 6, group: "1. Pano & Kutu", brand: "Legrand", name: "IP65 Su Geçirmez Sıva Üstü Sigorta Kutusu (18 Modül)", qty: 4, unit: "Adet", baseList: 3650 },
+      { id: 7, group: "1. Pano & Kutu", brand: "Legrand", name: "Zayıf Akım / Data Kabini 19\" 15U Duvar Tipi Rack Kabin + Fan + Priz", qty: 2, unit: "Adet", baseList: 18900 },
+      { id: 8, group: "2. Şalt & Sigorta", brand: "Legrand", name: "Termik-Manyetik Kompakt Şalter (MCCB) 3x160A 25kA Ana Giriş Şalteri", qty: 1, unit: "Adet", baseList: 14850 },
+      { id: 9, group: "2. Şalt & Sigorta", brand: "Legrand", name: "Termik-Manyetik Kompakt Şalter (MCCB) 3x100A 16kA Tali Pano Şalteri", qty: 3, unit: "Adet", baseList: 10900 },
+      { id: 10, group: "2. Şalt & Sigorta", brand: "Legrand", name: "4x63A 300mA AC Tipi Kaçak Akım Koruma Şalteri (Yangın Koruma)", qty: 4, unit: "Adet", baseList: 4530 },
+      { id: 11, group: "2. Şalt & Sigorta", brand: "Legrand", name: "4x40A 30mA AC Tipi Trifaze Kaçak Akım Koruma Şalteri (Hayat Koruma)", qty: 12, unit: "Adet", baseList: 4380 },
+      { id: 12, group: "2. Şalt & Sigorta", brand: "Legrand", name: "2x40A 30mA AC Tipi Monofaze Kaçak Akım Koruma Şalteri (Hayat Koruma)", qty: 18, unit: "Adet", baseList: 3420 },
+      { id: 13, group: "2. Şalt & Sigorta", brand: "Legrand", name: "1P B10A 6kA Otomatik Sigorta (Aydınlatma Linyesi)", qty: 85, unit: "Adet", baseList: 445 },
+      { id: 14, group: "2. Şalt & Sigorta", brand: "Legrand", name: "1P C16A 6kA Otomatik Sigorta (Priz Linyesi)", qty: 140, unit: "Adet", baseList: 435 },
+      { id: 15, group: "2. Şalt & Sigorta", brand: "Legrand", name: "1P C20A 6kA Otomatik Sigorta (Klima / Özel Yük Hattı)", qty: 32, unit: "Adet", baseList: 465 },
+      { id: 16, group: "2. Şalt & Sigorta", brand: "Legrand", name: "1P C25A 6kA Otomatik Sigorta (Mutfak / Fırın Hattı)", qty: 20, unit: "Adet", baseList: 495 },
+      { id: 17, group: "2. Şalt & Sigorta", brand: "Legrand", name: "3P C32A 6kA Trifaze Otomatik Sigorta (Mekanik / Pompa)", qty: 14, unit: "Adet", baseList: 1640 },
+      { id: 18, group: "2. Şalt & Sigorta", brand: "Legrand", name: "3P C40A 6kA Trifaze Otomatik Sigorta (Kolon Besleme)", qty: 8, unit: "Adet", baseList: 1790 },
+      { id: 19, group: "2. Şalt & Sigorta", brand: "Legrand", name: "B+C Tipi AG Parafudr 3P+N 50kA + 25A Kontaktör Seti", qty: 2, unit: "Set", baseList: 15600 },
+      { id: 20, group: "3. KA Kablo", brand: "Prysmian", name: "3x50+25 mm² N2XH Halojensiz Ana Besleme Enerji Kablosu", qty: 65, unit: "m", baseList: 4650 },
+      { id: 21, group: "3. KA Kablo", brand: "Prysmian", name: "4x25+16 mm² N2XH Halojensiz Tali Pano Kolon Kablosu", qty: 140, unit: "m", baseList: 2980 },
+      { id: 22, group: "3. KA Kablo", brand: "Prysmian", name: "4x16 mm² N2XH Halojensiz Kat Panosu Kolon Kablosu", qty: 220, unit: "m", baseList: 1725 },
+      { id: 23, group: "3. KA Kablo", brand: "Prysmian", name: "4x10 mm² N2XH Halojensiz Daire / Ofis Ana Kolon Kablosu", qty: 380, unit: "m", baseList: 1120 },
+      { id: 24, group: "3. KA Kablo", brand: "Prysmian", name: "4x6 mm² N2XH Halojensiz Trifaze Cihaz Besleme Kablosu", qty: 310, unit: "m", baseList: 685 },
+      { id: 25, group: "3. KA Kablo", brand: "Prysmian", name: "3x2.5 mm² N2XH (NHXMH) Halojensiz Priz Linye Kablosu", qty: 3200, unit: "m", baseList: 248 },
+      { id: 26, group: "3. KA Kablo", brand: "Prysmian", name: "3x1.5 mm² N2XH (NHXMH) Halojensiz Aydınlatma Kablosu", qty: 2600, unit: "m", baseList: 172 },
+      { id: 27, group: "3. KA Kablo", brand: "Prysmian", name: "3x2.5 mm² NYM (Antigron) PVC Priz Tesisat Kablosu", qty: 1500, unit: "m", baseList: 212 },
+      { id: 28, group: "3. KA Kablo", brand: "Prysmian", name: "3x1.5 mm² NYM (Antigron) PVC Aydınlatma Tesisat Kablosu", qty: 1800, unit: "m", baseList: 136 },
+      { id: 29, group: "3. KA Kablo", brand: "Prysmian", name: "3x2.5 mm² N2XH FE180 Yangına Dayanıklı Acil Hat Kablosu", qty: 450, unit: "m", baseList: 365 },
+      { id: 30, group: "3. KA Kablo", brand: "Prysmian", name: "4x16 mm² NYY Yeraltı ve Dış Saha Enerji Kablosu", qty: 180, unit: "m", baseList: 1590 },
+      { id: 31, group: "3. KA Kablo", brand: "Prysmian", name: "1x16 mm² H07Z1-R Sarı-Yeşil Halojensiz Topraklama Kablosu", qty: 350, unit: "m", baseList: 385 },
+      { id: 32, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "CAT6 U/UTP 23AWG Halojensiz (LSOH) Data / İnternet Kablosu", qty: 3050, unit: "m", baseList: 34.50 },
+      { id: 33, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "CAT6 F/UTP (FTP Ekranlı) Halojensiz Data / Kamera Kablosu", qty: 1220, unit: "m", baseList: 44.00 },
+      { id: 34, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "JE-H(St)H FE180 1x2x0.8+0.8 Yangın Algılama ve İhbar Kablosu", qty: 1400, unit: "m", baseList: 46.50 },
+      { id: 35, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "JE-H(St)H 2x2x0.8 Halojensiz Telefon / Diyafon Sinyal Kablosu", qty: 850, unit: "m", baseList: 41.00 },
+      { id: 36, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "LIYCY 2x0.75 mm² Ekranlı Kumanda ve Anons Hoparlör Kablosu", qty: 900, unit: "m", baseList: 52.00 },
+      { id: 37, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "LIYCY 4x0.75 mm² Ekranlı Otomasyon / Kartlı Geçiş Kablosu", qty: 500, unit: "m", baseList: 84.00 },
+      { id: 38, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "RG6/U-6 Tam Bakır Halojensiz TV / Uydu Koaksiyel Kablo", qty: 750, unit: "m", baseList: 32.00 },
+      { id: 39, group: "4. ZA Kablo", brand: "Prysmian (Draka)", name: "4 Core Singlemode (SM) LSZH Fiber Optik Omurga Kablosu", qty: 240, unit: "m", baseList: 68.00 },
+      { id: 40, group: "4. ZA Kablo", brand: "Legrand (LCS³)", name: "CAT6 24 Port Dolu Patch Panel + Kablo Düzenleyici", qty: 6, unit: "Set", baseList: 9000 },
+      { id: 41, group: "4. ZA Kablo", brand: "Legrand (LCS³)", name: "CAT6 RJ45 Patch Cord Ara Bağlantı Kablosu (1m/2m)", qty: 140, unit: "Adet", baseList: 390 },
+      { id: 42, group: "5. Kanal & Priz", brand: "Legrand", name: "105x50 mm Kapaklı Duvar Tipi PVC Kablo Kanalı", qty: 280, unit: "m", baseList: 690 },
+      { id: 43, group: "5. Kanal & Priz", brand: "Legrand", name: "40x25 mm / 25x16 mm Sıva Üstü PVC Kablo Kanalı", qty: 450, unit: "m", baseList: 135 },
+      { id: 44, group: "5. Kanal & Priz", brand: "EAE (Kablo Tavası)", name: "Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı Takımı", qty: 160, unit: "m", baseList: 920 },
+      { id: 45, group: "5. Kanal & Priz", brand: "Mutlusan (Kanal/Boru)", name: "Halojensiz Sıva Altı Kangal Boru Ø20/25mm + Buat ve Kasa", qty: 3400, unit: "m", baseList: 42 },
+      { id: 46, group: "5. Kanal & Priz", brand: "Legrand", name: "Sıva Altı Beyaz Aydınlatma Anahtarı / Komütatör (Çerçeveli)", qty: 165, unit: "Adet", baseList: 385 },
+      { id: 47, group: "5. Kanal & Priz", brand: "Legrand", name: "Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Çerçeveli)", qty: 310, unit: "Adet", baseList: 420 },
+      { id: 48, group: "5. Kanal & Priz", brand: "Legrand", name: "Sıva Altı Kırmızı UPS Prizi (Kesintisiz Güç Kaynağı Prizi)", qty: 95, unit: "Adet", baseList: 495 },
+      { id: 49, group: "5. Kanal & Priz", brand: "Legrand", name: "Sıva Altı 2xRJ45 CAT6 İkili Data / İnternet Prizi", qty: 70, unit: "Adet", baseList: 1180 },
+      { id: 50, group: "5. Kanal & Priz", brand: "Legrand", name: "LED Acil Çıkış Yönlendirme Armatürü (3 Saat Akülü) + Topraklama Seti", qty: 28, unit: "Adet", baseList: 3850 }
+    ];
+
+    const rawMekanik = [
+      { id: 1, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PPRC Ø20 mm PN20 Temiz Su Borusu (Soğuk/Sıcak Su)", qty: 1400, unit: "m", baseList: 92 },
+      { id: 2, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PPRC Ø25 mm PN20 Kompozit (Folyo/Cam Elyaf) Temiz Su Borusu", qty: 950, unit: "m", baseList: 158 },
+      { id: 3, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PPRC Ø32 mm PN20 Kompozit Kolon Temiz Su Borusu", qty: 420, unit: "m", baseList: 265 },
+      { id: 4, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PPRC Ø40 mm PN20 Kompozit Ana Kolon Temiz Su Borusu", qty: 210, unit: "m", baseList: 410 },
+      { id: 5, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PPRC Ø50 mm PN20 Kompozit Hidrofor Çıkış / Ana Dağıtım Borusu", qty: 120, unit: "m", baseList: 640 },
+      { id: 6, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PPRC Ek Parça Paketi (Dirsek, Te, Manşon, İstavroz, Rakor - Ø20-50mm)", qty: 1, unit: "Set", baseList: 85000 },
+      { id: 7, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PVC Ø50 mm (3.2mm) Conta Yuvalı Pis Su Borusu", qty: 650, unit: "m", baseList: 148 },
+      { id: 8, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PVC Ø75 mm (3.2mm) Conta Yuvalı Pis Su Borusu", qty: 320, unit: "m", baseList: 235 },
+      { id: 9, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "Sessiz Boru (Silence) Ø110 mm Bina İçi Atık Su / Pis Su Kolon Borusu", qty: 480, unit: "m", baseList: 520 },
+      { id: 10, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PVC Ø160 mm Bina Altı / Yatay Ana Pis Su Toplayıcı Boru", qty: 140, unit: "m", baseList: 890 },
+      { id: 11, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "PVC Atık Su Ek Parçaları (45°/87° Dirsek, Çatal, Temizleme Parçası)", qty: 1, unit: "Set", baseList: 64000 },
+      { id: 12, group: "1. Sıhhi & Pis Su Boru", brand: "Fırat Boru", name: "Paslanmaz Izgaralı Koku Fermalı Yer Süzgeci ve Balkon/Teras Süzgeçleri", qty: 65, unit: "Adet", baseList: 680 },
+      { id: 13, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "28 kW Tam Yoğuşmalı Kombi (Baca Seti Dahil)", qty: 12, unit: "Adet", baseList: 46800 },
+      { id: 14, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "100 kW Duvar Tipi Yoğuşmalı Kaskad Kazan Ünitesi", qty: 2, unit: "Adet", baseList: 168000 },
+      { id: 15, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "PKKP Tip 22 (600 mm Yükseklik) Çelik Panel Radyatör (Toplam Metraj)", qty: 96, unit: "m", baseList: 4850 },
+      { id: 16, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "500x1000 mm Beyaz/Krom Banyo Havlupan Radyatör", qty: 24, unit: "Adet", baseList: 3450 },
+      { id: 17, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "1/2\" Köşe Tipi Termostatik Radyatör Valfi + Dönüş Valfi Takımı", qty: 85, unit: "Takım", baseList: 1380 },
+      { id: 18, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "1\" Debi Ayarlı / Dengeleme Valfli Isıtma Kollektörü (8 Çıkışlı + Dolap)", qty: 14, unit: "Set", baseList: 9200 },
+      { id: 19, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "PEX-b Ø16x2.0 mm Oksijen Bariyerli Kılıflı Mobil / Yerden Isıtma Borusu", qty: 3600, unit: "m", baseList: 54 },
+      { id: 20, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "Kapalı Genleşme Tankı 200 Litre (10 Bar) + Hava Ayırıcı ve Tortu Tutucu", qty: 2, unit: "Set", baseList: 28500 },
+      { id: 21, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "Boyler 500 Litre Çift Serpantinli Emaye Sıcak Su Hazırlayıcı", qty: 1, unit: "Adet", baseList: 64000 },
+      { id: 22, group: "2. Isıtma & Radyatör", brand: "E.C.A.", name: "Oda Termostatı (Kablosuz Dijital Programlanabilir Modülasyonlu)", qty: 12, unit: "Adet", baseList: 3850 },
+      { id: 23, group: "3. Pompa & Vana", brand: "Wilo", name: "İki Pompalı Frekans Konvertörlü Paket Hidrofor Seti", qty: 1, unit: "Set", baseList: 195000 },
+      { id: 24, group: "3. Pompa & Vana", brand: "Wilo", name: "25/1-6 Islak Rotorlu Frekans Konvertörlü Sirkülasyon Pompası", qty: 4, unit: "Adet", baseList: 12400 },
+      { id: 25, group: "3. Pompa & Vana", brand: "Wilo", name: "40/0.5-12 Flanşlı Yüksek Verimli Ana Isıtma Sirkülasyon Pompası", qty: 2, unit: "Adet", baseList: 54800 },
+      { id: 26, group: "3. Pompa & Vana", brand: "Wilo", name: "Flatörlü Pis Su / Drenaj Dalgıç Pompası", qty: 2, unit: "Adet", baseList: 14200 },
+      { id: 27, group: "3. Pompa & Vana", brand: "E.C.A. (Valf)", name: "1/2\" ve 3/4\" Tam Geçişli Pirinç Küresel Vana (PN25 - Ortalama)", qty: 95, unit: "Adet", baseList: 540 },
+      { id: 28, group: "3. Pompa & Vana", brand: "E.C.A. (Valf)", name: "1\" ve 1 1/4\" Tam Geçişli Pirinç Küresel Vana (Kolon Kesme Vanaları)", qty: 36, unit: "Adet", baseList: 1280 },
+      { id: 29, group: "3. Pompa & Vana", brand: "FAF Vana", name: "DN65 / DN80 Wafer Tipi EPDM Contalı Kelebek Vana (Kollu)", qty: 14, unit: "Adet", baseList: 2850 },
+      { id: 30, group: "3. Pompa & Vana", brand: "FAF Vana", name: "DN50 / DN65 Flanşlı Pislik Tutucu + Çalpara/Wafer Çekvalf Seti", qty: 10, unit: "Set", baseList: 4600 },
+      { id: 31, group: "3. Pompa & Vana", brand: "Ayvaz", name: "DN65 / DN80 Kauçuk Kompansatör + Basınç Düşürücü Vana Grubu", qty: 6, unit: "Set", baseList: 6900 },
+      { id: 32, group: "3. Pompa & Vana", brand: "E.C.A. (Valf)", name: "Otomatik Hava Purjörü 1/2\" + Manometre (0-10 Bar) + Termometre Seti", qty: 18, unit: "Set", baseList: 1150 },
+      { id: 33, group: "4. Yangın & İzolasyon", brand: "Duyar Vana", name: "Sıva Altı / Üstü Tüplü Yangın Dolabı (1\" 30m Kauçuk Hortumlu + 6kg KKT)", qty: 8, unit: "Adet", baseList: 14500 },
+      { id: 34, group: "4. Yangın & İzolasyon", brand: "Duyar Vana", name: "UL/FM Onaylı 1/2\" K=80 68°C Sarkık/Dik Tip Sprinkler Başlığı + Rozet", qty: 160, unit: "Adet", baseList: 380 },
+      { id: 35, group: "4. Yangın & İzolasyon", brand: "Duyar Vana", name: "1\"x1/2\" Paslanmaz Esnek (Flex) Sprinkler Bağlantı Hortumu (100 cm)", qty: 160, unit: "Adet", baseList: 740 },
+      { id: 36, group: "4. Yangın & İzolasyon", brand: "Duyar Vana", name: "Kat Kontrol Vana Grubu (İzleme Anahtarlı Kelebek Vana + Akış Anahtarı)", qty: 4, unit: "Set", baseList: 16800 },
+      { id: 37, group: "4. Yangın & İzolasyon", brand: "Duyar Vana", name: "Islak Alarm Vana İstasyonu DN100 + İtfaiye Su Verme Ağzı (Siyam İkizi)", qty: 1, unit: "Set", baseList: 44000 },
+      { id: 38, group: "4. Yangın & İzolasyon", brand: "Ode Yalıtım", name: "9mm / 13mm Elastomerik Kauçuk Köpüğü Boru İzolasyonu (Ø20-Ø63 Ortalama)", qty: 2400, unit: "m", baseList: 78 },
+      { id: 39, group: "4. Yangın & İzolasyon", brand: "Ode Yalıtım", name: "Alüminyum Folyo Kaplı Camyünü Havalandırma Kanal İzolasyonu (25mm)", qty: 450, unit: "m²", baseList: 245 },
+      { id: 40, group: "4. Yangın & İzolasyon", brand: "Ode Yalıtım", name: "Galvaniz Sac Hava Kanalı + Menfez / Anemostad + Ses İzolasyonlu Flex Kanal", qty: 320, unit: "m²", baseList: 1180 },
+      { id: 41, group: "4. Yangın & İzolasyon", brand: "Ode Yalıtım", name: "Split / VRF Klima Bakır Borulama Çifti (İzoleli) + Drenaj Hattı", qty: 380, unit: "m", baseList: 890 },
+      { id: 42, group: "5. Vitrifiye & Armatür", brand: "VitrA / Artema", name: "Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı", qty: 24, unit: "Takım", baseList: 8950 },
+      { id: 43, group: "5. Vitrifiye & Armatür", brand: "VitrA / Artema", name: "8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli", qty: 24, unit: "Set", baseList: 6400 },
+      { id: 44, group: "5. Vitrifiye & Armatür", brand: "VitrA / Artema", name: "60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo", qty: 28, unit: "Adet", baseList: 4200 },
+      { id: 45, group: "5. Vitrifiye & Armatür", brand: "VitrA / Artema", name: "Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti", qty: 8, unit: "Takım", baseList: 9800 },
+      { id: 46, group: "5. Vitrifiye & Armatür", brand: "E.C.A. / Serel", name: "Krom Lavabo Bataryası (Perlatörlü, Çelik Flex Bağlantılı)", qty: 28, unit: "Adet", baseList: 4150 },
+      { id: 47, group: "5. Vitrifiye & Armatür", brand: "E.C.A. / Serel", name: "Döner Borulu Mutfak / Ofis Eviye Bataryası", qty: 14, unit: "Adet", baseList: 4850 },
+      { id: 48, group: "5. Vitrifiye & Armatür", brand: "E.C.A. / Serel", name: "Banyo Bataryası + Sürgülü El Duşu Takımı", qty: 12, unit: "Set", baseList: 6900 },
+      { id: 49, group: "5. Vitrifiye & Armatür", brand: "E.C.A. / Serel", name: "1/2\" Filtreli Krom Ara Musluk + Taharet Musluğu", qty: 96, unit: "Adet", baseList: 690 },
+      { id: 50, group: "5. Vitrifiye & Armatür", brand: "VitrA / Artema", name: "Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti", qty: 2, unit: "Set", baseList: 26500 }
+    ];
+
+    const rawInsaat = [
+      { id: 1, group: "1. Alçıpan & Tavan", brand: "Knauf", name: "12.5 mm Beyaz Standart Alçıpan Plaka (Duvar ve Asma Tavan İçin)", qty: 1850, unit: "m²", baseList: 185 },
+      { id: 2, group: "1. Alçıpan & Tavan", brand: "Knauf", name: "12.5 mm Yeşil (WR) Suya ve Neme Dayanıklı Alçıpan Plaka (Islak Hacim)", qty: 620, unit: "m²", baseList: 260 },
+      { id: 3, group: "1. Alçıpan & Tavan", brand: "Knauf", name: "12.5 mm Kırmızı (FR) Yangına Dayanıklı Alçıpan Plaka", qty: 450, unit: "m²", baseList: 275 },
+      { id: 4, group: "1. Alçıpan & Tavan", brand: "Knauf", name: "Galvaniz Duvar ve Tavan Profilleri (DC75, DU75, TC60, TU28 - Ortalama)", qty: 4800, unit: "m", baseList: 96 },
+      { id: 5, group: "1. Alçıpan & Tavan", brand: "Knauf", name: "60x60 cm Taşyünü Akustik Modüler Asma Tavan Plakası + T24 Taşıyıcı Sistem", qty: 680, unit: "m²", baseList: 540 },
+      { id: 6, group: "1. Alçıpan & Tavan", brand: "Knauf", name: "Makine Sıva Alçısı + Saten Perdah Alçısı + Derz Dolgu Alçısı (25/30 kg Torba)", qty: 420, unit: "Torba", baseList: 310 },
+      { id: 7, group: "2. Yalıtım", brand: "İzocam", name: "Ara Bölme Duvar Levhası 5 cm (50 kg/m³ Taşyünü Ses ve Yangın Yalıtımı)", qty: 1450, unit: "m²", baseList: 215 },
+      { id: 8, group: "2. Yalıtım", brand: "İzocam", name: "Taşyünü Dış Cephe Mantolama Levhası 8 cm (150 kg/m³)", qty: 1200, unit: "m²", baseList: 680 },
+      { id: 9, group: "2. Yalıtım", brand: "İzocam", name: "XPS 5 cm Ekstrüde Polistiren Teras / Temel Isı Yalıtım Levhası", qty: 850, unit: "m²", baseList: 340 },
+      { id: 10, group: "2. Yalıtım", brand: "İzocam", name: "Camyünü Şilte 10 cm (Alüminyum Folyo Kaplı Çatı Arası Isı Yalıtımı)", qty: 750, unit: "m²", baseList: 195 },
+      { id: 11, group: "2. Yalıtım", brand: "İzocam", name: "PE Köpük Şap Altı Darbe Ses Yalıtım Şiltesi (5 mm)", qty: 1600, unit: "m²", baseList: 68 },
+      { id: 12, group: "2. Yalıtım", brand: "İzocam", name: "Bitümlü Membran 3 mm / 4 mm Polyester Keçeli Temel ve Teras Su Yalıtımı", qty: 1100, unit: "m²", baseList: 290 },
+      { id: 13, group: "3. Yapı Kimyasalları", brand: "Kalekim", name: "C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg)", qty: 380, unit: "Torba", baseList: 485 },
+      { id: 14, group: "3. Yapı Kimyasalları", brand: "Kalekim", name: "Standart Seramik Yapıştırma Harcı (25 kg Torba)", qty: 260, unit: "Torba", baseList: 285 },
+      { id: 15, group: "3. Yapı Kimyasalları", brand: "Kalekim", name: "Silikonlu Esnek Derz Dolgu (20 kg Torba)", qty: 75, unit: "Torba", baseList: 640 },
+      { id: 16, group: "3. Yapı Kimyasalları", brand: "Kalekim", name: "Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Islak Hacim Set)", qty: 85, unit: "Set", baseList: 2450 },
+      { id: 17, group: "3. Yapı Kimyasalları", brand: "Kalekim", name: "Mantolama Yapıştırma + Elyaflı Sıva Harcı + File ve Dübel Paketi", qty: 1200, unit: "m²", baseList: 360 },
+      { id: 18, group: "3. Yapı Kimyasalları", brand: "Kalekim", name: "Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg)", qty: 140, unit: "Torba", baseList: 590 },
+      { id: 19, group: "4. Seramik & Kaplama", brand: "VitrA Karo", name: "60x60 cm Mat Rektifiyeli Porselen Yer Karosu (Ofis / Koridor / Hol)", qty: 950, unit: "m²", baseList: 890 },
+      { id: 20, group: "4. Seramik & Kaplama", brand: "VitrA Karo", name: "60x120 cm Mermer Dokulu Lappato Porselen Giriş / Lobi Seramiği", qty: 320, unit: "m²", baseList: 1480 },
+      { id: 21, group: "4. Seramik & Kaplama", brand: "VitrA Karo", name: "30x60 cm Rektifiyeli Banyo / WC Duvar Seramiği", qty: 680, unit: "m²", baseList: 690 },
+      { id: 22, group: "4. Seramik & Kaplama", brand: "VitrA Karo", name: "45x45 cm R10 Kaymaz (Antislip) Islak Hacim ve Teras Yer Seramiği", qty: 340, unit: "m²", baseList: 740 },
+      { id: 23, group: "4. Seramik & Kaplama", brand: "VitrA Karo", name: "8 mm AC4 32. Sınıf Derzli Laminat Parke + Süpürgelik ve Şilte Dahil", qty: 650, unit: "m²", baseList: 720 },
+      { id: 24, group: "4. Seramik & Kaplama", brand: "VitrA Karo", name: "Alüminyum Seramik Köşe Profili, Dilatasyon Profili ve Süpürgelik Seti", qty: 450, unit: "m", baseList: 165 },
+      { id: 25, group: "5. Boya & Astar", brand: "Filli Boya", name: "15L Silinebilir Silikonlu İpek Mat İç Cephe Boyası", qty: 95, unit: "Kova", baseList: 4650 },
+      { id: 26, group: "5. Boya & Astar", brand: "Filli Boya", name: "Plastik Tavan Boyası 17.5 kg", qty: 45, unit: "Kova", baseList: 2180 },
+      { id: 27, group: "5. Boya & Astar", brand: "Filli Boya", name: "15L Alçı ve İç Cephe Boya Altı Geçiş Astarı", qty: 42, unit: "Kova", baseList: 2890 },
+      { id: 28, group: "5. Boya & Astar", brand: "Filli Boya", name: "15L Tam Akrilik Dış Cephe Boyası", qty: 38, unit: "Kova", baseList: 5450 },
+      { id: 29, group: "5. Boya & Astar", brand: "Filli Boya", name: "Dış Cephe Kaplama Astarı + Dekoratif Mineral Sıva (25 kg)", qty: 110, unit: "Torba", baseList: 780 },
+      { id: 30, group: "5. Boya & Astar", brand: "Filli Boya", name: "Otopark / Teknik Hacim Epoksi Zemin Boyası ve Astar Seti", qty: 24, unit: "Set", baseList: 6800 }
+    ];
+
+    function initItems(rawArr, discKey) {
+      return rawArr.map(r => {
+        const pool = brandPools[discKey][r.group] || [];
+        const bObj = pool.find(x => x.brand === r.brand) || pool[0] || { brand: r.brand, factor: 1, disc: 50 };
+        return {
+          ...r,
+          brand: bObj.brand,
+          listPrice: +(r.baseList * bObj.factor).toFixed(2),
+          disc: bObj.disc
+        };
+      });
+    }
+
+    const state = {
+      ELEKTRIK: initItems(rawElektrik, "ELEKTRIK"),
+      MEKANIK: initItems(rawMekanik, "MEKANIK"),
+      INSAAT: initItems(rawInsaat, "INSAAT")
+    };
+
+    let currentMainTab = "ELEKTRIK";
+    let activeSubCat = "ALL";
+
+    function fmt(n) {
+      return new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(n) + " TL";
+    }
+
+    function switchMainTab(tabKey) {
+      currentMainTab = tabKey;
+      activeSubCat = "ALL";
+
+      ["ELEKTRIK", "MEKANIK", "INSAAT", "KATALOG"].forEach(k => {
+        const btn = document.getElementById(`tab-${k}`);
+        if (k === tabKey) {
+          btn.className = "px-4 py-2.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition";
+        } else if (k === "KATALOG") {
+          btn.className = "px-4 py-2.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/10 text-amber-600 transition";
+        } else {
+          btn.className = "px-4 py-2.5 rounded-lg text-xs font-bold border border-[var(--border)] bg-[var(--background)] transition";
+        }
+      });
+
+      if (tabKey === "KATALOG") {
+        document.getElementById('kesifHeaderPanel').classList.add('hidden');
+        document.getElementById('kesifTableWrapper').classList.add('hidden');
+        document.getElementById('katalogHeaderPanel').classList.remove('hidden');
+        document.getElementById('katalogTableWrapper').classList.remove('hidden');
+        renderCatalogView();
+        return;
+      }
+
+      document.getElementById('kesifHeaderPanel').classList.remove('hidden');
+      document.getElementById('kesifTableWrapper').classList.remove('hidden');
+      document.getElementById('katalogHeaderPanel').classList.add('hidden');
+      document.getElementById('katalogTableWrapper').classList.add('hidden');
+
+      const titles = {
+        ELEKTRIK: "⚡ Elektrik Keşfi (50 Kalem) - Çoklu Marka Seçimi ve İskonto Tablosu",
+        MEKANIK: "🔧 Mekanik Tesisat Keşfi (50 Kalem) - Çoklu Marka Seçimi ve İskonto Tablosu",
+        INSAAT: "🏗️ İnşaat & Mimari Keşfi (30 Kalem) - Çoklu Marka Seçimi ve İskonto Tablosu"
+      };
+      document.getElementById('activeTabTitle').textContent = titles[tabKey];
+
+      renderGroupBrandSelectors();
+      renderSubCategoryButtons();
+      renderTable();
+    }
+
+    function renderGroupBrandSelectors() {
+      const items = state[currentMainTab];
+      const groups = Object.keys(brandPools[currentMainTab]);
+      const grid = document.getElementById('groupBrandSelectorGrid');
+
+      grid.innerHTML = groups.map(g => {
+        const pool = brandPools[currentMainTab][g];
+        const sampleItem = items.find(i => i.group === g);
+        const currentBrand = sampleItem ? sampleItem.brand : pool[0].brand;
+        const currentDisc = sampleItem ? sampleItem.disc : pool[0].disc;
+
+        const optionsHtml = pool.map(b =>
+          `<option value="${b.brand}" ${b.brand === currentBrand ? 'selected' : ''}>${b.brand} (%${b.disc})</option>`
+        ).join('');
+
+        return `
+          <div class="p-2.5 rounded border border-[var(--border)] bg-[var(--background)] space-y-2">
+            <div class="text-xs font-bold text-blue-600 truncate">${g}</div>
+            <div>
+              <label class="text-xs text-[var(--muted-foreground)] block mb-0.5">Marka Seç (Gruba Uygula):</label>
+              <select onchange="onGroupBrandChange('${g}', this.value)"
+                class="w-full px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-xs font-semibold">
+                ${optionsHtml}
+              </select>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <span class="text-xs text-[var(--muted-foreground)]">Grup İskonto (%):</span>
+              <input type="number" id="grpDisc-${g}" value="${currentDisc}" min="0" max="95" step="1"
+                oninput="onGroupDiscountChange('${g}', this.value)"
+                class="w-16 px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-xs font-bold text-right" />
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function onGroupBrandChange(groupName, newBrandName) {
+      const pool = brandPools[currentMainTab][groupName] || [];
+      const bObj = pool.find(x => x.brand === newBrandName);
+      if (!bObj) return;
+
+      state[currentMainTab].forEach(item => {
+        if (item.group === groupName) {
+          item.brand = bObj.brand;
+          item.listPrice = +(item.baseList * bObj.factor).toFixed(2);
+          item.disc = bObj.disc;
+        }
+      });
+
+      const discInput = document.getElementById(`grpDisc-${groupName}`);
+      if (discInput) discInput.value = bObj.disc;
+      renderTable();
+    }
+
+    function onGroupDiscountChange(groupName, val) {
+      const d = parseFloat(val) || 0;
+      state[currentMainTab].forEach(item => {
+        if (item.group === groupName) item.disc = d;
+      });
+      renderTable();
+    }
+
+    function onRowBrandChange(id, newBrandName) {
+      const items = state[currentMainTab];
+      const item = items.find(i => i.id === id);
+      if (!item) return;
+      const pool = brandPools[currentMainTab][item.group] || [];
+      const bObj = pool.find(x => x.brand === newBrandName);
+      if (!bObj) return;
+
+      item.brand = bObj.brand;
+      item.listPrice = +(item.baseList * bObj.factor).toFixed(2);
+      item.disc = bObj.disc;
+      renderTable();
+    }
+
+    function renderSubCategoryButtons() {
+      const items = state[currentMainTab];
+      const groups = Object.keys(brandPools[currentMainTab]);
+      const container = document.getElementById('subCategoryButtons');
+
+      let html = `
+        <button onclick="filterSubCat('ALL')" data-sub="ALL"
+          class="sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white">
+          Tümü (${items.length})
+        </button>
+      `;
+      groups.forEach(g => {
+        const count = items.filter(i => i.group === g).length;
+        html += `
+          <button onclick="filterSubCat('${g}')" data-sub="${g}"
+            class="sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]">
+            ${g} (${count})
+          </button>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function filterSubCat(sub) {
+      activeSubCat = sub;
+      document.querySelectorAll('.sub-btn').forEach(b => {
+        if (b.getAttribute('data-sub') === sub) {
+          b.className = "sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white";
+        } else {
+          b.className = "sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]";
+        }
+      });
+      if (currentMainTab === "KATALOG") {
+        renderCatalogTableOnly();
+      } else {
+        renderTable();
+      }
+    }
+
+    function onSearchInput() {
+      if (currentMainTab === "KATALOG") {
+        renderCatalogTableOnly();
+      } else {
+        renderTable();
+      }
+    }
+
+    function updateRow(id, field, val) {
+      const item = state[currentMainTab].find(i => i.id === id);
+      if (!item) return;
+      item[field] = parseFloat(val) || 0;
+      const netUnit = item.listPrice * (1 - item.disc / 100);
+      const netTotal = item.qty * netUnit;
+      document.getElementById(`net-${id}`).textContent = fmt(netUnit);
+      document.getElementById(`tot-${id}`).textContent = fmt(netTotal);
+      updateTotals();
+    }
+
+    function updateTotals() {
+      if (currentMainTab !== "KATALOG") {
+        const items = state[currentMainTab];
+        let tabList = 0, tabNet = 0;
+        items.forEach(item => {
+          const netUnit = item.listPrice * (1 - item.disc / 100);
+          tabList += item.qty * item.listPrice;
+          tabNet += item.qty * netUnit;
+        });
+        document.getElementById('tabListTotal').textContent = fmt(tabList);
+        document.getElementById('tabNetTotal').textContent = fmt(tabNet);
+      }
+
+      let grandNet = 0;
+      ["ELEKTRIK", "MEKANIK", "INSAAT"].forEach(k => {
+        state[k].forEach(item => {
+          grandNet += item.qty * item.listPrice * (1 - item.disc / 100);
+        });
+      });
+      document.getElementById('allProjectTotal').textContent = fmt(grandNet);
+    }
+
+    function renderTable() {
+      const items = state[currentMainTab];
+      const q = (document.getElementById('searchBox').value || '').toLowerCase().trim();
+      const filtered = items.filter(item => {
+        if (activeSubCat !== 'ALL' && item.group !== activeSubCat) return false;
+        if (q && !(`${item.name} ${item.brand} ${item.group}`.toLowerCase().includes(q))) return false;
+        return true;
+      });
+
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = filtered.map(item => {
+        const pool = brandPools[currentMainTab][item.group] || [];
+        const brandSelectHtml = `
+          <select onchange="onRowBrandChange(${item.id}, this.value)"
+            class="w-full px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-xs font-bold">
+            ${pool.map(b => `<option value="${b.brand}" ${b.brand === item.brand ? 'selected' : ''}>${b.brand}</option>`).join('')}
+          </select>
+        `;
+
+        const netUnit = item.listPrice * (1 - item.disc / 100);
+        const netTotal = item.qty * netUnit;
+        return `
+          <tr class="hover:bg-blue-500/5">
+            <td class="py-2 px-3 text-center text-[var(--muted-foreground)]">${item.id}</td>
+            <td class="py-2 px-3 text-[var(--muted-foreground)] whitespace-nowrap">${item.group}</td>
+            <td class="py-2 px-3">${brandSelectHtml}</td>
+            <td class="py-2 px-3 font-medium">${item.name}</td>
+            <td class="py-2 px-2 text-right">
+              <input type="number" value="${item.qty}" min="0"
+                oninput="updateRow(${item.id}, 'qty', this.value)"
+                class="w-20 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right font-semibold" />
+            </td>
+            <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${item.unit}</td>
+            <td class="py-2 px-3 text-right">
+              <input type="number" value="${item.listPrice}" min="0" step="0.5"
+                oninput="updateRow(${item.id}, 'listPrice', this.value)"
+                class="w-24 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right" />
+            </td>
+            <td class="py-2 px-2 text-right">
+              <input type="number" value="${item.disc}" min="0" max="95" step="1"
+                oninput="updateRow(${item.id}, 'disc', this.value)"
+                class="w-16 px-2 py-1 rounded border border-blue-500/40 bg-blue-500/10 text-blue-600 text-right font-bold" />
+            </td>
+            <td class="py-2 px-3 text-right font-semibold whitespace-nowrap" id="net-${item.id}">${fmt(netUnit)}</td>
+            <td class="py-2 px-3 text-right font-bold text-emerald-600 whitespace-nowrap" id="tot-${item.id}">${fmt(netTotal)}</td>
+          </tr>
+        `;
+      }).join('');
+
+      updateTotals();
+    }
+
+    function renderCatalogView() {
+      const discKey = document.getElementById('katalogDisciplineSelect').value;
+      activeSubCat = "ALL";
+
+      const groups = Object.keys(brandPools[discKey]);
+      const container = document.getElementById('subCategoryButtons');
+      let html = `
+        <button onclick="filterSubCat('ALL')" data-sub="ALL"
+          class="sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white">
+          Tüm Gruplar
+        </button>
+      `;
+      groups.forEach(g => {
+        html += `
+          <button onclick="filterSubCat('${g}')" data-sub="${g}"
+            class="sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]">
+            ${g}
+          </button>
+        `;
+      });
+      container.innerHTML = html;
+
+      const allBrandsInDisc = new Set();
+      groups.forEach(g => brandPools[discKey][g].forEach(b => allBrandsInDisc.add(b.brand)));
+      const brandSel = document.getElementById('katalogBrandFilter');
+      brandSel.innerHTML = `<option value="ALL">Tüm Markalar (${allBrandsInDisc.size} Marka)</option>` +
+        [...allBrandsInDisc].map(b => `<option value="${b}">${b}</option>`).join('');
+
+      renderCatalogTableOnly();
+    }
+
+    function renderCatalogTableOnly() {
+      const discKey = document.getElementById('katalogDisciplineSelect').value;
+      const selectedBrand = document.getElementById('katalogBrandFilter').value;
+      const q = (document.getElementById('searchBox').value || '').toLowerCase().trim();
+      const baseItems = state[discKey];
+
+      const catalogRows = [];
+      baseItems.forEach(item => {
+        if (activeSubCat !== 'ALL' && item.group !== activeSubCat) return;
+        const pool = brandPools[discKey][item.group] || [];
+        pool.forEach(bObj => {
+          if (selectedBrand !== 'ALL' && bObj.brand !== selectedBrand) return;
+          if (q && !(`${item.name} ${bObj.brand} ${item.group}`.toLowerCase().includes(q))) return;
+
+          const lPrice = +(item.baseList * bObj.factor).toFixed(2);
+          const nPrice = +(lPrice * (1 - bObj.disc / 100)).toFixed(2);
+          catalogRows.push({
+            itemId: item.id,
+            discKey,
+            group: item.group,
+            brand: bObj.brand,
+            name: item.name,
+            unit: item.unit,
+            listPrice: lPrice,
+            disc: bObj.disc,
+            netPrice: nPrice,
+            isSelectedInBoq: item.brand === bObj.brand
+          });
+        });
+      });
+
+      const tbody = document.getElementById('katalogTableBody');
+      tbody.innerHTML = catalogRows.map(r => `
+        <tr class="hover:bg-blue-500/5">
+          <td class="py-2 px-3 text-center text-[var(--muted-foreground)]">#${r.itemId}</td>
+          <td class="py-2 px-3 text-[var(--muted-foreground)] whitespace-nowrap">${r.group}</td>
+          <td class="py-2 px-3 font-bold whitespace-nowrap">${r.brand}</td>
+          <td class="py-2 px-3">${r.name}</td>
+          <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${r.unit}</td>
+          <td class="py-2 px-3 text-right font-medium">${fmt(r.listPrice)}</td>
+          <td class="py-2 px-3 text-right font-bold text-blue-600">%${r.disc}</td>
+          <td class="py-2 px-3 text-right font-bold text-emerald-600">${fmt(r.netPrice)}</td>
+          <td class="py-2 px-3 text-center">
+            ${r.isSelectedInBoq
+              ? `<span class="px-2 py-0.5 rounded text-xs font-bold bg-emerald-500/15 text-emerald-600">✓ Seçili</span>`
+              : `<button onclick="selectBrandFromCatalog('${r.discKey}', ${r.itemId}, '${r.brand}')"
+                   class="px-2.5 py-1 rounded text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500">
+                   Keşfe Seç
+                 </button>`
+            }
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function selectBrandFromCatalog(discKey, itemId, brandName) {
+      const item = state[discKey].find(i => i.id === itemId);
+      if (!item) return;
+      const pool = brandPools[discKey][item.group] || [];
+      const bObj = pool.find(x => x.brand === brandName);
+      if (!bObj) return;
+      item.brand = bObj.brand;
+      item.listPrice = +(item.baseList * bObj.factor).toFixed(2);
+      item.disc = bObj.disc;
+      updateTotals();
+      renderCatalogTableOnly();
+    }
+
+    function exportCSV() {
+      const targetKey = currentMainTab === "KATALOG"
+        ? document.getElementById('katalogDisciplineSelect').value
+        : currentMainTab;
+      const items = state[targetKey];
+      const rows = [["No", "Disiplin", "Grup", "Secilen Marka", "Malzeme Aciklamasi", "Miktar", "Birim", "Liste Fiyati (TL)", "Iskonto (%)", "Net Birim Fiyat (TL)", "Toplam Tutar (TL)"].join(";")];
+      items.forEach((item, idx) => {
+        const r = idx + 2;
+        rows.push([
+          item.id,
+          `"${targetKey}"`,
+          `"${item.group}"`,
+          `"${item.brand}"`,
+          `"${item.name}"`,
+          item.qty,
+          `"${item.unit}"`,
+          String(item.listPrice).replace('.', ','),
+          String(item.disc).replace('.', ','),
+          `"=H${r}*(1-I${r}/100)"`,
+          `"=F${r}*J${r}"`
+        ].join(";"));
+      });
+      const blob = new Blob(["\uFEFF" + rows.join("\r\n")], { type: "text/csv;charset=utf-8;" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `${targetKey}_Coklu_Marka_Kesif.csv`;
+      a.click();
+    }
+
+    switchMainTab("ELEKTRIK");
+  </script>
+</body>
+</html>
