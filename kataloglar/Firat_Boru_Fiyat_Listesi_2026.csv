@@ -1,13 +1,13 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-MEKANİK;M-01;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø20 mm PN20 Temiz Su Borusu (Soğuk/Sıcak Su);m;92,00;55;=G2*(1-H2/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-02;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø25 mm PN20 Kompozit (Folyo/Cam Elyaf) Temiz Su Borusu;m;158,00;55;=G3*(1-H3/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-03;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø32 mm PN20 Kompozit Kolon Temiz Su Borusu;m;265,00;55;=G4*(1-H4/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-04;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø40 mm PN20 Kompozit Ana Kolon Temiz Su Borusu;m;410,00;55;=G5*(1-H5/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-05;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø50 mm PN20 Kompozit Hidrofor Çıkış / Ana Dağıtım Borusu;m;640,00;55;=G6*(1-H6/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-06;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ek Parça Paketi (Dirsek, Te, Manşon, İstavroz, Rakor - Ø20-50mm);Set;85000,00;55;=G7*(1-H7/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-07;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Ø50 mm (3.2mm) Conta Yuvalı Pis Su Borusu;m;148,00;55;=G8*(1-H8/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-08;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Ø75 mm (3.2mm) Conta Yuvalı Pis Su Borusu;m;235,00;55;=G9*(1-H9/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-09;1. Sıhhi & Pis Su Boru;Fırat Boru;Sessiz Boru (Silence) Ø110 mm Bina İçi Atık Su / Pis Su Kolon Borusu;m;520,00;55;=G10*(1-H10/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-10;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Ø160 mm Bina Altı / Yatay Ana Pis Su Toplayıcı Boru;m;890,00;55;=G11*(1-H11/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-11;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Atık Su Ek Parçaları (45°/87° Dirsek, Çatal, Temizleme Parçası);Set;64000,00;55;=G12*(1-H12/100);https://www.firat.com/tr-tr/fiyat-listeleri
-MEKANİK;M-12;1. Sıhhi & Pis Su Boru;Fırat Boru;Paslanmaz Izgaralı Koku Fermalı Yer Süzgeci ve Balkon/Teras Süzgeçleri;Adet;680,00;55;=G13*(1-H13/100);https://www.firat.com/tr-tr/fiyat-listeleri
+MEKANİK;M-01;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırattherm PN25 PPRC Ø20 mm (3.4mm) Temiz Su Borusu (Fırat Resmi Liste Kod: 7B00020020);m;31,03;55;=G2*(1-H2/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-02;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat PN25 Kompozit (Cam Elyaf Takviyeli) PPRC Ø25 mm Boru (Fırat Kod: 7B00023025);m;51,69;55;=G3*(1-H3/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-03;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat PN25 Kompozit (Cam Elyaf Takviyeli) PPRC Ø32 mm Kolon Borusu (Fırat Kod: 7B00023032);m;93,37;55;=G4*(1-H4/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-04;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat PN25 Kompozit (Cam Elyaf Takviyeli) PPRC Ø40 mm Ana Kolon Borusu (Fırat Kod: 7B00023040);m;142,16;55;=G5*(1-H5/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-05;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat PN25 Kompozit (Cam Elyaf Takviyeli) PPRC Ø50 mm Dağıtım Borusu (Fırat Kod: 7B00023050);m;230,59;55;=G6*(1-H6/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-06;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırattherm PPRC Ek Parça Paketi (90° Dirsek 7B11000020, Manşon 7B21000020, Te, Rakor Seti);Set;65000,00;55;=G7*(1-H7/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-07;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat Dublex PVC Ø50/1000 mm Conta Yuvalı Atık Su Borusu (Fırat Kod: 7030050100);m;75,63;55;=G8*(1-H8/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-08;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat Dublex PVC Ø75/1000 mm Conta Yuvalı Atık Su Borusu (Fırat Kod: 7030070100);m;125,93;55;=G9*(1-H9/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-09;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat Yeni Residence Sessiz Boru (4.2mm) Ø110/1000 mm (Fırat Kod: 7052100100);m;238,74;55;=G10*(1-H10/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-10;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat Dublex PVC Ø160/1000 mm Bina Altı Ana Pis Su Borusu (Fırat Kod: 7030150100);m;418,80;55;=G11*(1-H11/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-11;1. Sıhhi & Pis Su Boru;Fırat Boru;Fırat Residence & Dublex PVC Atık Su Ek Parçaları (Dirsek 7071100045, Çatal, Temizleme Seti);Set;52000,00;55;=G12*(1-H12/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf
+MEKANİK;M-12;1. Sıhhi & Pis Su Boru;Fırat Boru;Paslanmaz Izgaralı Koku Fermalı Yer ve Balkon Süzgeci (10x10 / 15x15 cm);Adet;245,00;55;=G13*(1-H13/100);https://www.firat.com/cmsfiles/documents/firatboru_fiyat_listesi.pdf

@@ -2,9 +2,9 @@
 MEKANİK;M-33;4. Yangın & İzolasyon;Oneflex;"Sıva Altı / Üstü Tüplü Yangın Dolabı (1"" 30m Kauçuk Hortumlu + 6kg KKT)";Adet;13630,00;44;=G2*(1-H2/100);https://www.oneflex.com.tr/
 MEKANİK;M-34;4. Yangın & İzolasyon;Oneflex;"UL/FM Onaylı 1/2"" K=80 68°C Sarkık/Dik Tip Sprinkler Başlığı + Rozet";Adet;357,20;44;=G3*(1-H3/100);https://www.oneflex.com.tr/
 MEKANİK;M-35;4. Yangın & İzolasyon;Oneflex;"1""x1/2"" Paslanmaz Esnek (Flex) Sprinkler Bağlantı Hortumu (100 cm)";Adet;695,60;44;=G4*(1-H4/100);https://www.oneflex.com.tr/
-MEKANİK;M-36;4. Yangın & İzolasyon;Oneflex;Kat Kontrol Vana Grubu (İzleme Anahtarlı Kelebek Vana + Akış Anahtarı);Set;15792,00;44;=G5*(1-H5/100);https://www.oneflex.com.tr/
+MEKANİK;M-36;4. Yangın & İzolasyon;Oneflex;Kat Kontrol Vana Grubu (İzleme Anahtarlı Kelebek Vana + Akış Anahtarı + Test Drenaj);Set;15792,00;44;=G5*(1-H5/100);https://www.oneflex.com.tr/
 MEKANİK;M-37;4. Yangın & İzolasyon;Oneflex;Islak Alarm Vana İstasyonu DN100 + İtfaiye Su Verme Ağzı (Siyam İkizi);Set;41360,00;44;=G6*(1-H6/100);https://www.oneflex.com.tr/
-MEKANİK;M-38;4. Yangın & İzolasyon;Oneflex;9mm / 13mm Elastomerik Kauçuk Köpüğü Boru İzolasyonu (Ø20-Ø63 Ortalama);m;73,32;44;=G7*(1-H7/100);https://www.oneflex.com.tr/
+MEKANİK;M-38;4. Yangın & İzolasyon;Oneflex;9mm / 13mm R-Flex Elastomerik Kauçuk Köpüğü Boru İzolasyonu (Ø20-Ø63 Ortalama);m;73,32;44;=G7*(1-H7/100);https://www.oneflex.com.tr/
 MEKANİK;M-39;4. Yangın & İzolasyon;Oneflex;Alüminyum Folyo Kaplı Camyünü Havalandırma Kanal İzolasyonu (25mm);m²;230,30;44;=G8*(1-H8/100);https://www.oneflex.com.tr/
 MEKANİK;M-40;4. Yangın & İzolasyon;Oneflex;Galvaniz Sac Hava Kanalı + Menfez / Anemostad + Ses İzolasyonlu Flex Kanal;m²;1109,20;44;=G9*(1-H9/100);https://www.oneflex.com.tr/
 MEKANİK;M-41;4. Yangın & İzolasyon;Oneflex;Split / VRF Klima Bakır Borulama Çifti (İzoleli) + Drenaj Hattı;m;836,60;44;=G10*(1-H10/100);https://www.oneflex.com.tr/

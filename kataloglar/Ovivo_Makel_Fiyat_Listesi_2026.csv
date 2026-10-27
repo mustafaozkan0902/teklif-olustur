@@ -1,10 +1,10 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-42;5. Kanal & Priz;Ovivo / Makel;105x50 mm Kapaklı Duvar Tipi PVC Kablo Kanalı;m;483,00;60;=G2*(1-H2/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-43;5. Kanal & Priz;Ovivo / Makel;40x25 mm / 25x16 mm Sıva Üstü PVC Kablo Kanalı;m;94,50;60;=G3*(1-H3/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-44;5. Kanal & Priz;Ovivo / Makel;Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı Takımı;m;644,00;60;=G4*(1-H4/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-45;5. Kanal & Priz;Ovivo / Makel;Halojensiz Sıva Altı Kangal Boru Ø20/25mm + Buat ve Kasa;m;29,40;60;=G5*(1-H5/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-46;5. Kanal & Priz;Ovivo / Makel;Sıva Altı Beyaz Aydınlatma Anahtarı / Komütatör (Çerçeveli);Adet;269,50;60;=G6*(1-H6/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-47;5. Kanal & Priz;Ovivo / Makel;Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Çerçeveli);Adet;294,00;60;=G7*(1-H7/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-48;5. Kanal & Priz;Ovivo / Makel;Sıva Altı Kırmızı UPS Prizi (Kesintisiz Güç Kaynağı Prizi);Adet;346,50;60;=G8*(1-H8/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-49;5. Kanal & Priz;Ovivo / Makel;Sıva Altı 2xRJ45 CAT6 İkili Data / İnternet Prizi;Adet;826,00;60;=G9*(1-H9/100);https://www.makel.com.tr/tr/fiyat-listeleri
-ELEKTRİK;E-50;5. Kanal & Priz;Ovivo / Makel;LED Acil Çıkış Yönlendirme Armatürü (3 Saat Akülü) + Topraklama Seti;Adet;2695,00;60;=G10*(1-H10/100);https://www.makel.com.tr/tr/fiyat-listeleri
+ELEKTRİK;E-42;5. Kanal & Priz;Ovivo / Makel;105x50 mm DLP Kapaklı Duvar Tipi PVC Kablo Kanalı Gövde+Kapak (Legrand Ref. 010422+010522);m;1383,90;60;=G2*(1-H2/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-43;5. Kanal & Priz;Ovivo / Makel;40x25 mm / 25x16 mm Kapalı Tip PVC Kablo Kanalı (Mutlusan Canalex Ref. 001 156 040025);m;45,59;60;=G3*(1-H3/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-44;5. Kanal & Priz;Ovivo / Makel;Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı ve Konsol Takımı;m;644,00;60;=G4*(1-H4/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-45;5. Kanal & Priz;Ovivo / Makel;Halojensiz Sıva Altı Kangal Boru Ø20mm Telli (Mutlusan Ref. 001 020 151020);m;22,05;60;=G5*(1-H5/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-46;5. Kanal & Priz;Ovivo / Makel;Sıva Altı Beyaz Aydınlatma Anahtarı (Legrand Valena Ref. 7 744 01);Adet;569,10;60;=G6*(1-H6/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-47;5. Kanal & Priz;Ovivo / Makel;Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Legrand Valena Ref. 7 744 21);Adet;784,00;60;=G7*(1-H7/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-48;5. Kanal & Priz;Ovivo / Makel;Sıva Altı Kırmızı UPS Prizi - Fransız St. Topraklı (Legrand Valena Ref. 7 743 69);Adet;840,00;60;=G8*(1-H8/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-49;5. Kanal & Priz;Ovivo / Makel;Sıva Altı RJ45 CAT6 UTP Data / İnternet Prizi (Legrand Valena Ref. 7 702 46);Adet;1337,00;60;=G9*(1-H9/100);https://www.makel.com.tr/tr
+ELEKTRİK;E-50;5. Kanal & Priz;Ovivo / Makel;URA ONE LED Acil Yönlendirme Armatürü 100lm IP42 (Legrand Ref. 6 616 21);Adet;5831,00;60;=G10*(1-H10/100);https://www.makel.com.tr/tr

@@ -1,7 +1,7 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-İNŞAAT;I-13;3. Yapı Kimyasalları;Sika;C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg);Torba;514,10;36;=G2*(1-H2/100);https://tur.sika.com/tr/dokumanlar-ve-kataloglar.html
-İNŞAAT;I-14;3. Yapı Kimyasalları;Sika;Standart Seramik Yapıştırma Harcı (25 kg Torba);Torba;302,10;36;=G3*(1-H3/100);https://tur.sika.com/tr/dokumanlar-ve-kataloglar.html
-İNŞAAT;I-15;3. Yapı Kimyasalları;Sika;Silikonlu Esnek Derz Dolgu (20 kg Torba);Torba;678,40;36;=G4*(1-H4/100);https://tur.sika.com/tr/dokumanlar-ve-kataloglar.html
-İNŞAAT;I-16;3. Yapı Kimyasalları;Sika;Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Islak Hacim Set);Set;2597,00;36;=G5*(1-H5/100);https://tur.sika.com/tr/dokumanlar-ve-kataloglar.html
-İNŞAAT;I-17;3. Yapı Kimyasalları;Sika;Mantolama Yapıştırma + Elyaflı Sıva Harcı + File ve Dübel Paketi;m²;381,60;36;=G6*(1-H6/100);https://tur.sika.com/tr/dokumanlar-ve-kataloglar.html
-İNŞAAT;I-18;3. Yapı Kimyasalları;Sika;Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg);Torba;625,40;36;=G7*(1-H7/100);https://tur.sika.com/tr/dokumanlar-ve-kataloglar.html
+İNŞAAT;I-13;3. Yapı Kimyasalları;Sika;Technoflex C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg);Torba;514,10;36;=G2*(1-H2/100);https://tur.sika.com/
+İNŞAAT;I-14;3. Yapı Kimyasalları;Sika;1051 Standart Seramik Yapıştırma Harcı (25 kg Torba);Torba;302,10;36;=G3*(1-H3/100);https://tur.sika.com/
+İNŞAAT;I-15;3. Yapı Kimyasalları;Sika;Fugapool / Fugaflex Silikonlu Esnek Derz Dolgu (20 kg Torba);Torba;678,40;36;=G4*(1-H4/100);https://tur.sika.com/
+İNŞAAT;I-16;3. Yapı Kimyasalları;Sika;İzolatex Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Set);Set;2597,00;36;=G5*(1-H5/100);https://tur.sika.com/
+İNŞAAT;I-17;3. Yapı Kimyasalları;Sika;Mantolama Yapıştırma + Elyaflı Sıva Harcı + File ve Dübel Paketi;m²;381,60;36;=G6*(1-H6/100);https://tur.sika.com/
+İNŞAAT;I-18;3. Yapı Kimyasalları;Sika;Mastar 10 Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg);Torba;625,40;36;=G7*(1-H7/100);https://tur.sika.com/

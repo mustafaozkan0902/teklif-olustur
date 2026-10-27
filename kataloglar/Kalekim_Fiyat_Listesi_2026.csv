@@ -1,7 +1,7 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-İNŞAAT;I-13;3. Yapı Kimyasalları;Kalekim;C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg);Torba;485,00;38;=G2*(1-H2/100);https://www.kalekim.com/basili-materyaller
-İNŞAAT;I-14;3. Yapı Kimyasalları;Kalekim;Standart Seramik Yapıştırma Harcı (25 kg Torba);Torba;285,00;38;=G3*(1-H3/100);https://www.kalekim.com/basili-materyaller
-İNŞAAT;I-15;3. Yapı Kimyasalları;Kalekim;Silikonlu Esnek Derz Dolgu (20 kg Torba);Torba;640,00;38;=G4*(1-H4/100);https://www.kalekim.com/basili-materyaller
-İNŞAAT;I-16;3. Yapı Kimyasalları;Kalekim;Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Islak Hacim Set);Set;2450,00;38;=G5*(1-H5/100);https://www.kalekim.com/basili-materyaller
+İNŞAAT;I-13;3. Yapı Kimyasalları;Kalekim;Technoflex C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg);Torba;485,00;38;=G2*(1-H2/100);https://www.kalekim.com/basili-materyaller
+İNŞAAT;I-14;3. Yapı Kimyasalları;Kalekim;1051 Standart Seramik Yapıştırma Harcı (25 kg Torba);Torba;285,00;38;=G3*(1-H3/100);https://www.kalekim.com/basili-materyaller
+İNŞAAT;I-15;3. Yapı Kimyasalları;Kalekim;Fugapool / Fugaflex Silikonlu Esnek Derz Dolgu (20 kg Torba);Torba;640,00;38;=G4*(1-H4/100);https://www.kalekim.com/basili-materyaller
+İNŞAAT;I-16;3. Yapı Kimyasalları;Kalekim;İzolatex Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Set);Set;2450,00;38;=G5*(1-H5/100);https://www.kalekim.com/basili-materyaller
 İNŞAAT;I-17;3. Yapı Kimyasalları;Kalekim;Mantolama Yapıştırma + Elyaflı Sıva Harcı + File ve Dübel Paketi;m²;360,00;38;=G6*(1-H6/100);https://www.kalekim.com/basili-materyaller
-İNŞAAT;I-18;3. Yapı Kimyasalları;Kalekim;Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg);Torba;590,00;38;=G7*(1-H7/100);https://www.kalekim.com/basili-materyaller
+İNŞAAT;I-18;3. Yapı Kimyasalları;Kalekim;Mastar 10 Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg);Torba;590,00;38;=G7*(1-H7/100);https://www.kalekim.com/basili-materyaller

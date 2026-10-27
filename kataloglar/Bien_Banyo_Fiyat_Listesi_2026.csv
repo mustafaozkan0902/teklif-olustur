@@ -1,10 +1,10 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-MEKANİK;M-42;5. Vitrifiye & Armatür;Bien Banyo;Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı;Takım;7697,00;45;=G2*(1-H2/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-43;5. Vitrifiye & Armatür;Bien Banyo;8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli;Set;5504,00;45;=G3*(1-H3/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-44;5. Vitrifiye & Armatür;Bien Banyo;60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo;Adet;3612,00;45;=G4*(1-H4/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-45;5. Vitrifiye & Armatür;Bien Banyo;Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti;Takım;8428,00;45;=G5*(1-H5/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-46;5. Vitrifiye & Armatür;Bien Banyo;Krom Lavabo Bataryası (Perlatörlü, Çelik Flex Bağlantılı);Adet;3569,00;45;=G6*(1-H6/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-47;5. Vitrifiye & Armatür;Bien Banyo;Döner Borulu Mutfak / Ofis Eviye Bataryası;Adet;4171,00;45;=G7*(1-H7/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-48;5. Vitrifiye & Armatür;Bien Banyo;Banyo Bataryası + Sürgülü El Duşu Takımı;Set;5934,00;45;=G8*(1-H8/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-49;5. Vitrifiye & Armatür;Bien Banyo;"1/2"" Filtreli Krom Ara Musluk + Taharet Musluğu";Adet;593,40;45;=G9*(1-H9/100);https://www.bienseramik.com.tr/kataloglar
-MEKANİK;M-50;5. Vitrifiye & Armatür;Bien Banyo;Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti;Set;22790,00;45;=G10*(1-H10/100);https://www.bienseramik.com.tr/kataloglar
+MEKANİK;M-42;5. Vitrifiye & Armatür;Bien Banyo;Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı;Takım;7697,00;45;=G2*(1-H2/100);https://www.bienseramik.com.tr/
+MEKANİK;M-43;5. Vitrifiye & Armatür;Bien Banyo;8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli;Set;5504,00;45;=G3*(1-H3/100);https://www.bienseramik.com.tr/
+MEKANİK;M-44;5. Vitrifiye & Armatür;Bien Banyo;60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo;Adet;3612,00;45;=G4*(1-H4/100);https://www.bienseramik.com.tr/
+MEKANİK;M-45;5. Vitrifiye & Armatür;Bien Banyo;Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti;Takım;8428,00;45;=G5*(1-H5/100);https://www.bienseramik.com.tr/
+MEKANİK;M-46;5. Vitrifiye & Armatür;Bien Banyo;Lunetta Krom Lavabo Bataryası (E.C.A. Resmi Liste S.3 Kod: 102188107);Adet;3977,50;45;=G6*(1-H6/100);https://www.bienseramik.com.tr/
+MEKANİK;M-47;5. Vitrifiye & Armatür;Bien Banyo;Lunetta Döner Borulu Krom Eviye Bataryası (E.C.A. Resmi Liste S.3 Kod: 102118119);Adet;4736,88;45;=G7*(1-H7/100);https://www.bienseramik.com.tr/
+MEKANİK;M-48;5. Vitrifiye & Armatür;Bien Banyo;Lunetta Krom Banyo Bataryası (E.C.A. Resmi Liste S.3 Kod: 102102484);Set;5375,00;45;=G8*(1-H8/100);https://www.bienseramik.com.tr/
+MEKANİK;M-49;5. Vitrifiye & Armatür;Bien Banyo;"1/2"" Filtreli Krom Ara Musluk + Taharet Musluğu";Adet;593,40;45;=G9*(1-H9/100);https://www.bienseramik.com.tr/
+MEKANİK;M-50;5. Vitrifiye & Armatür;Bien Banyo;Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti;Set;22790,00;45;=G10*(1-H10/100);https://www.bienseramik.com.tr/

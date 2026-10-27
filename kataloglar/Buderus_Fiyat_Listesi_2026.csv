@@ -1,11 +1,11 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-MEKANİK;M-13;2. Isıtma & Radyatör;Buderus;28 kW Tam Yoğuşmalı Kombi (Baca Seti Dahil);Adet;52416,00;42;=G2*(1-H2/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-14;2. Isıtma & Radyatör;Buderus;100 kW Duvar Tipi Yoğuşmalı Kaskad Kazan Ünitesi;Adet;188160,00;42;=G3*(1-H3/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-15;2. Isıtma & Radyatör;Buderus;PKKP Tip 22 (600 mm Yükseklik) Çelik Panel Radyatör (Toplam Metraj);m;5432,00;42;=G4*(1-H4/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-16;2. Isıtma & Radyatör;Buderus;500x1000 mm Beyaz/Krom Banyo Havlupan Radyatör;Adet;3864,00;42;=G5*(1-H5/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-17;2. Isıtma & Radyatör;Buderus;"1/2"" Köşe Tipi Termostatik Radyatör Valfi + Dönüş Valfi Takımı";Takım;1545,60;42;=G6*(1-H6/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-18;2. Isıtma & Radyatör;Buderus;"1"" Debi Ayarlı / Dengeleme Valfli Isıtma Kollektörü (8 Çıkışlı + Dolap)";Set;10304,00;42;=G7*(1-H7/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-19;2. Isıtma & Radyatör;Buderus;PEX-b Ø16x2.0 mm Oksijen Bariyerli Kılıflı Mobil / Yerden Isıtma Borusu;m;60,48;42;=G8*(1-H8/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-20;2. Isıtma & Radyatör;Buderus;Kapalı Genleşme Tankı 200 Litre (10 Bar) + Hava Ayırıcı ve Tortu Tutucu;Set;31920,00;42;=G9*(1-H9/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-21;2. Isıtma & Radyatör;Buderus;Boyler 500 Litre Çift Serpantinli Emaye Sıcak Su Hazırlayıcı;Adet;71680,00;42;=G10*(1-H10/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
-MEKANİK;M-22;2. Isıtma & Radyatör;Buderus;Oda Termostatı (Kablosuz Dijital Programlanabilir Modülasyonlu);Adet;4312,00;42;=G11*(1-H11/100);https://www.buderus.com/tr/tr/dokumanlar/fiyat-listesi/
+MEKANİK;M-13;2. Isıtma & Radyatör;Buderus;28 kW Proteus Premix Tam Yoğuşmalı Kombi (Baca Seti Dahil - E.C.A. Resmi Liste);Adet;52472,00;42;=G2*(1-H2/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-14;2. Isıtma & Radyatör;Buderus;100 kW Felis / Gerda Duvar Tipi Yoğuşmalı Kaskad Kazan Ünitesi;Adet;188160,00;42;=G3*(1-H3/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-15;2. Isıtma & Radyatör;Buderus;PKKP Tip 22 (600 mm Yükseklik) Çelik Panel Radyatör (E.C.A. 1 Metre Baz Liste);m;3864,00;42;=G4*(1-H4/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-16;2. Isıtma & Radyatör;Buderus;500x1000 mm Beyaz/Krom Banyo Havlupan Radyatör;Adet;2968,00;42;=G5*(1-H5/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-17;2. Isıtma & Radyatör;Buderus;"TRV4 1/2"" Köşe Tipi Termostatik Radyatör Valfi + Dönüş Valfi Takımı (E.C.A. Resmi Liste)";Takım;1658,72;42;=G6*(1-H6/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-18;2. Isıtma & Radyatör;Buderus;"1"" Debi Ayarlı / Dengeleme Valfli Isıtma Kollektörü (8 Çıkışlı + Kollektör Dolabı)";Set;10304,00;42;=G7*(1-H7/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-19;2. Isıtma & Radyatör;Buderus;PE-Xb Ø16x2.0 mm Oksijen Bariyerli Mobil / Yerden Isıtma Borusu (Fırat Kod: 74900010016);m;44,15;42;=G8*(1-H8/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-20;2. Isıtma & Radyatör;Buderus;Kapalı Genleşme Tankı 200 Litre (10 Bar) + Hava Ayırıcı ve Tortu Tutucu;Set;31920,00;42;=G9*(1-H9/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-21;2. Isıtma & Radyatör;Buderus;Boyler 500 Litre Çift Serpantinli Emaye Sıcak Su Hazırlayıcı;Adet;71680,00;42;=G10*(1-H10/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/
+MEKANİK;M-22;2. Isıtma & Radyatör;Buderus;Poly / Lago Kablosuz Dijital Programlanabilir Oda Termostatı;Adet;3192,00;42;=G11*(1-H11/100);https://www.buderus.com/tr/tr/ocs/bireysel-urunler/yogusmali-kombiler-735153-c/

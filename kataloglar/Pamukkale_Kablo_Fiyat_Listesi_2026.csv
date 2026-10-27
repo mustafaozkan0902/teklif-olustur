@@ -1,13 +1,13 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-20;3. KA Kablo;Pamukkale Kablo;3x50+25 mm² N2XH Halojensiz Ana Besleme Enerji Kablosu;m;4278,00;59;=G2*(1-H2/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-21;3. KA Kablo;Pamukkale Kablo;4x25+16 mm² N2XH Halojensiz Tali Pano Kolon Kablosu;m;2741,60;59;=G3*(1-H3/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-22;3. KA Kablo;Pamukkale Kablo;4x16 mm² N2XH Halojensiz Kat Panosu Kolon Kablosu;m;1587,00;59;=G4*(1-H4/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-23;3. KA Kablo;Pamukkale Kablo;4x10 mm² N2XH Halojensiz Daire / Ofis Ana Kolon Kablosu;m;1030,40;59;=G5*(1-H5/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-24;3. KA Kablo;Pamukkale Kablo;4x6 mm² N2XH Halojensiz Trifaze Cihaz Besleme Kablosu;m;630,20;59;=G6*(1-H6/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-25;3. KA Kablo;Pamukkale Kablo;3x2.5 mm² N2XH (NHXMH) Halojensiz Priz Linye Kablosu;m;228,16;59;=G7*(1-H7/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-26;3. KA Kablo;Pamukkale Kablo;3x1.5 mm² N2XH (NHXMH) Halojensiz Aydınlatma Kablosu;m;158,24;59;=G8*(1-H8/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-27;3. KA Kablo;Pamukkale Kablo;3x2.5 mm² NYM (Antigron) PVC Priz Tesisat Kablosu;m;195,04;59;=G9*(1-H9/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-28;3. KA Kablo;Pamukkale Kablo;3x1.5 mm² NYM (Antigron) PVC Aydınlatma Tesisat Kablosu;m;125,12;59;=G10*(1-H10/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-29;3. KA Kablo;Pamukkale Kablo;3x2.5 mm² N2XH FE180 Yangına Dayanıklı Acil Hat Kablosu;m;335,80;59;=G11*(1-H11/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-30;3. KA Kablo;Pamukkale Kablo;4x16 mm² NYY Yeraltı ve Dış Saha Enerji Kablosu;m;1462,80;59;=G12*(1-H12/100);https://www.pamukkalekablo.com.tr/
-ELEKTRİK;E-31;3. KA Kablo;Pamukkale Kablo;1x16 mm² H07Z1-R Sarı-Yeşil Halojensiz Topraklama Kablosu;m;354,20;59;=G13*(1-H13/100);https://www.pamukkalekablo.com.tr/
+ELEKTRİK;E-20;3. KA Kablo;Pamukkale Kablo;3x50+25 mm² N2XH 0,6/1 kV Halojensiz Ana Besleme Enerji Kablosu (Resmi Liste S.10);m;4310,20;59;=G2*(1-H2/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-21;3. KA Kablo;Pamukkale Kablo;3x25+16 mm² N2XH 0,6/1 kV Halojensiz Tali Pano Kolon Kablosu (Resmi Liste S.10);m;2480,32;59;=G3*(1-H3/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-22;3. KA Kablo;Pamukkale Kablo;4x16 mm² N2XH 0,6/1 kV Halojensiz Kat Panosu Kolon Kablosu (Resmi Liste S.6);m;1404,84;59;=G4*(1-H4/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-23;3. KA Kablo;Pamukkale Kablo;4x10 mm² N2XH 0,6/1 kV Halojensiz Daire / Ofis Ana Kolon Kablosu (Resmi Liste S.6);m;925,52;59;=G5*(1-H5/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-24;3. KA Kablo;Pamukkale Kablo;4x6 mm² N2XH 0,6/1 kV Halojensiz Trifaze Cihaz Besleme Kablosu (Resmi Liste S.6);m;553,29;59;=G6*(1-H6/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-25;3. KA Kablo;Pamukkale Kablo;3x2.5 mm² N2XH (NHXMH) Halojensiz Priz Linye Kablosu (Resmi Liste S.6);m;195,41;59;=G7*(1-H7/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-26;3. KA Kablo;Pamukkale Kablo;3x1.5 mm² N2XH (NHXMH) Halojensiz Aydınlatma Kablosu (Resmi Liste S.6);m;135,24;59;=G8*(1-H8/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-27;3. KA Kablo;Pamukkale Kablo;3x2.5 mm² NVV (NYM) 300/500 V PVC Priz Tesisat Kablosu (Resmi Liste S.15);m;168,64;59;=G9*(1-H9/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-28;3. KA Kablo;Pamukkale Kablo;3x1.5 mm² NVV (NYM) 300/500 V PVC Aydınlatma Tesisat Kablosu (Resmi Liste S.15);m;107,09;59;=G10*(1-H10/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-29;3. KA Kablo;Pamukkale Kablo;3x2.5 mm² N2XH FE180 0,6/1 kV Yangına Dayanıklı Acil Hat Kablosu (Resmi Liste S.14);m;237,36;59;=G11*(1-H11/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-30;3. KA Kablo;Pamukkale Kablo;4x16 mm² YVV-R (NYY) 0,6/1 kV Yeraltı ve Dış Saha Enerji Kablosu (Resmi Liste S.18);m;1387,36;59;=G12*(1-H12/100);https://www.pamukkalekablo.com.tr/login_up.php
+ELEKTRİK;E-31;3. KA Kablo;Pamukkale Kablo;1x16 mm² H07Z1-R / H07V-R Sarı-Yeşil Topraklama Kablosu (Resmi Liste S.14);m;334,24;59;=G13*(1-H13/100);https://www.pamukkalekablo.com.tr/login_up.php

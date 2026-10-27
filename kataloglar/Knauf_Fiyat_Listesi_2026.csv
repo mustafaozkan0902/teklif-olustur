@@ -1,7 +1,7 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-İNŞAAT;I-01;1. Alçıpan & Tavan;Knauf;12.5 mm Beyaz Standart Alçıpan Plaka (Duvar ve Asma Tavan İçin);m²;185,00;35;=G2*(1-H2/100);https://www.knauf.com.tr/tr/dokuman-merkezi
-İNŞAAT;I-02;1. Alçıpan & Tavan;Knauf;12.5 mm Yeşil (WR) Suya ve Neme Dayanıklı Alçıpan Plaka (Islak Hacim);m²;260,00;35;=G3*(1-H3/100);https://www.knauf.com.tr/tr/dokuman-merkezi
-İNŞAAT;I-03;1. Alçıpan & Tavan;Knauf;12.5 mm Kırmızı (FR) Yangına Dayanıklı Alçıpan Plaka;m²;275,00;35;=G4*(1-H4/100);https://www.knauf.com.tr/tr/dokuman-merkezi
-İNŞAAT;I-04;1. Alçıpan & Tavan;Knauf;Galvaniz Duvar ve Tavan Profilleri (DC75, DU75, TC60, TU28 - Ortalama);m;96,00;35;=G5*(1-H5/100);https://www.knauf.com.tr/tr/dokuman-merkezi
-İNŞAAT;I-05;1. Alçıpan & Tavan;Knauf;60x60 cm Taşyünü Akustik Modüler Asma Tavan Plakası + T24 Taşıyıcı Sistem;m²;540,00;35;=G6*(1-H6/100);https://www.knauf.com.tr/tr/dokuman-merkezi
-İNŞAAT;I-06;1. Alçıpan & Tavan;Knauf;Makine Sıva Alçısı + Saten Perdah Alçısı + Derz Dolgu Alçısı (25/30 kg Torba);Torba;310,00;35;=G7*(1-H7/100);https://www.knauf.com.tr/tr/dokuman-merkezi
+İNŞAAT;I-01;1. Alçıpan & Tavan;Knauf;12.5 mm Beyaz Standart Alçıpan Plaka (Duvar ve Asma Tavan İçin);m²;185,00;35;=G2*(1-H2/100);https://knauf.com/tr-TR
+İNŞAAT;I-02;1. Alçıpan & Tavan;Knauf;12.5 mm Yeşil (WR) Suya ve Neme Dayanıklı Alçıpan Plaka (Islak Hacim);m²;260,00;35;=G3*(1-H3/100);https://knauf.com/tr-TR
+İNŞAAT;I-03;1. Alçıpan & Tavan;Knauf;12.5 mm Kırmızı (FR) Yangına Dayanıklı Alçıpan Plaka;m²;275,00;35;=G4*(1-H4/100);https://knauf.com/tr-TR
+İNŞAAT;I-04;1. Alçıpan & Tavan;Knauf;Galvaniz Duvar ve Tavan Profilleri (DC75, DU75, TC60, TU28 - Ortalama);m;96,00;35;=G5*(1-H5/100);https://knauf.com/tr-TR
+İNŞAAT;I-05;1. Alçıpan & Tavan;Knauf;60x60 cm Taşyünü Akustik Modüler Asma Tavan Plakası + T24 Taşıyıcı Sistem;m²;540,00;35;=G6*(1-H6/100);https://knauf.com/tr-TR
+İNŞAAT;I-06;1. Alçıpan & Tavan;Knauf;Makine Sıva Alçısı + Saten Perdah Alçısı + Derz Dolgu Alçısı (25/30 kg Torba);Torba;310,00;35;=G7*(1-H7/100);https://knauf.com/tr-TR

@@ -1,10 +1,10 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-MEKANİK;M-42;5. Vitrifiye & Armatür;Creavit;Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı;Takım;7518,00;46;=G2*(1-H2/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-43;5. Vitrifiye & Armatür;Creavit;8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli;Set;5376,00;46;=G3*(1-H3/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-44;5. Vitrifiye & Armatür;Creavit;60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo;Adet;3528,00;46;=G4*(1-H4/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-45;5. Vitrifiye & Armatür;Creavit;Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti;Takım;8232,00;46;=G5*(1-H5/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-46;5. Vitrifiye & Armatür;Creavit;Krom Lavabo Bataryası (Perlatörlü, Çelik Flex Bağlantılı);Adet;3486,00;46;=G6*(1-H6/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-47;5. Vitrifiye & Armatür;Creavit;Döner Borulu Mutfak / Ofis Eviye Bataryası;Adet;4074,00;46;=G7*(1-H7/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-48;5. Vitrifiye & Armatür;Creavit;Banyo Bataryası + Sürgülü El Duşu Takımı;Set;5796,00;46;=G8*(1-H8/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-49;5. Vitrifiye & Armatür;Creavit;"1/2"" Filtreli Krom Ara Musluk + Taharet Musluğu";Adet;579,60;46;=G9*(1-H9/100);https://www.creavit.com.tr/kataloglar
-MEKANİK;M-50;5. Vitrifiye & Armatür;Creavit;Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti;Set;22260,00;46;=G10*(1-H10/100);https://www.creavit.com.tr/kataloglar
+MEKANİK;M-42;5. Vitrifiye & Armatür;Creavit;Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı;Takım;7518,00;46;=G2*(1-H2/100);https://www.creavit.com.tr/
+MEKANİK;M-43;5. Vitrifiye & Armatür;Creavit;8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli;Set;5376,00;46;=G3*(1-H3/100);https://www.creavit.com.tr/
+MEKANİK;M-44;5. Vitrifiye & Armatür;Creavit;60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo;Adet;3528,00;46;=G4*(1-H4/100);https://www.creavit.com.tr/
+MEKANİK;M-45;5. Vitrifiye & Armatür;Creavit;Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti;Takım;8232,00;46;=G5*(1-H5/100);https://www.creavit.com.tr/
+MEKANİK;M-46;5. Vitrifiye & Armatür;Creavit;Lunetta Krom Lavabo Bataryası (E.C.A. Resmi Liste S.3 Kod: 102188107);Adet;3885,00;46;=G6*(1-H6/100);https://www.creavit.com.tr/
+MEKANİK;M-47;5. Vitrifiye & Armatür;Creavit;Lunetta Döner Borulu Krom Eviye Bataryası (E.C.A. Resmi Liste S.3 Kod: 102118119);Adet;4626,72;46;=G7*(1-H7/100);https://www.creavit.com.tr/
+MEKANİK;M-48;5. Vitrifiye & Armatür;Creavit;Lunetta Krom Banyo Bataryası (E.C.A. Resmi Liste S.3 Kod: 102102484);Set;5250,00;46;=G8*(1-H8/100);https://www.creavit.com.tr/
+MEKANİK;M-49;5. Vitrifiye & Armatür;Creavit;"1/2"" Filtreli Krom Ara Musluk + Taharet Musluğu";Adet;579,60;46;=G9*(1-H9/100);https://www.creavit.com.tr/
+MEKANİK;M-50;5. Vitrifiye & Armatür;Creavit;Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti;Set;22260,00;46;=G10*(1-H10/100);https://www.creavit.com.tr/

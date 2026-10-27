@@ -1,11 +1,11 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-32;4. ZA Kablo;Prysmian (Draka);CAT6 U/UTP 23AWG Halojensiz (LSOH) Data / İnternet Kablosu;m;34,50;58;=G2*(1-H2/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-33;4. ZA Kablo;Prysmian (Draka);CAT6 F/UTP (FTP Ekranlı) Halojensiz Data / Kamera Kablosu;m;44,00;58;=G3*(1-H3/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-34;4. ZA Kablo;Prysmian (Draka);JE-H(St)H FE180 1x2x0.8+0.8 Yangın Algılama ve İhbar Kablosu;m;46,50;58;=G4*(1-H4/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-35;4. ZA Kablo;Prysmian (Draka);JE-H(St)H 2x2x0.8 Halojensiz Telefon / Diyafon Sinyal Kablosu;m;41,00;58;=G5*(1-H5/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-36;4. ZA Kablo;Prysmian (Draka);LIYCY 2x0.75 mm² Ekranlı Kumanda ve Anons Hoparlör Kablosu;m;52,00;58;=G6*(1-H6/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-37;4. ZA Kablo;Prysmian (Draka);LIYCY 4x0.75 mm² Ekranlı Otomasyon / Kartlı Geçiş Kablosu;m;84,00;58;=G7*(1-H7/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-38;4. ZA Kablo;Prysmian (Draka);RG6/U-6 Tam Bakır Halojensiz TV / Uydu Koaksiyel Kablo;m;32,00;58;=G8*(1-H8/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-39;4. ZA Kablo;Prysmian (Draka);4 Core Singlemode (SM) LSZH Fiber Optik Omurga Kablosu;m;68,00;58;=G9*(1-H9/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-40;4. ZA Kablo;Prysmian (Draka);CAT6 24 Port Dolu Patch Panel + Kablo Düzenleyici;Set;9000,00;58;=G10*(1-H10/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
-ELEKTRİK;E-41;4. ZA Kablo;Prysmian (Draka);CAT6 RJ45 Patch Cord Ara Bağlantı Kablosu (1m/2m);Adet;390,00;58;=G11*(1-H11/100);https://tr.prysmian.com/tr/dokumanlar-ve-fiyat-listeleri
+ELEKTRİK;E-32;4. ZA Kablo;Prysmian (Draka);CAT6 U/UTP 23AWG Halojensiz (LSOH) Data / İnternet Kablosu;m;36,80;58;=G2*(1-H2/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-33;4. ZA Kablo;Prysmian (Draka);CAT6 F/UTP (FTP Ekranlı) Halojensiz Data / Kamera Kablosu;m;48,50;58;=G3*(1-H3/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-34;4. ZA Kablo;Prysmian (Draka);JE-H(St)H FE180/PH120 1x2x0.80+0.80 Yangın İhbar Kablosu (Erse Ref. MDER009200100080O);m;71,99;58;=G4*(1-H4/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-35;4. ZA Kablo;Prysmian (Draka);JE-H(St)H...Bd 2x2x0.80+0.80 Halojensiz Sinyal / Diyafon Kablosu (Erse Ref. MDER033800200080R);m;102,54;58;=G5*(1-H5/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-36;4. ZA Kablo;Prysmian (Draka);LIYCY 2x0.75 mm² Ekranlı Kumanda ve Sinyal Kablosu (Erse Ref. MDER005700200075G);m;81,99;58;=G6*(1-H6/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-37;4. ZA Kablo;Prysmian (Draka);LIYCY 4x0.75 mm² Ekranlı Otomasyon / Kartlı Geçiş Kablosu (Erse Ref. MDER005700400075G);m;137,82;58;=G7*(1-H7/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-38;4. ZA Kablo;Prysmian (Draka);RG 6/U-6 Cu/Cu Class B HFFR Halojensiz TV / Uydu Koaksiyel Kablo (Erse Ref. FDER017800100102G);m;75,77;58;=G8*(1-H8/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-39;4. ZA Kablo;Prysmian (Draka);4 Core Singlemode (SM) LSZH Fiber Optik Omurga Kablosu;m;68,00;58;=G9*(1-H9/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-40;4. ZA Kablo;Prysmian (Draka);CAT6 24 Port Dolu Patch Panel + Kablo Düzenleyici;Set;9000,00;58;=G10*(1-H10/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri
+ELEKTRİK;E-41;4. ZA Kablo;Prysmian (Draka);CAT6 RJ45 LSZH Patch Cord Ara Bağlantı Kablosu (1m/2m);Adet;390,00;58;=G11*(1-H11/100);https://tr.prysmian.com/tr/dokumanlar/fiyat-listeleri

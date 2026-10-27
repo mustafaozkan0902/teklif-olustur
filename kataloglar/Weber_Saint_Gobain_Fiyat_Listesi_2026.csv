@@ -1,7 +1,7 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-İNŞAAT;I-13;3. Yapı Kimyasalları;Weber (Saint-Gobain);C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg);Torba;480,15;38;=G2*(1-H2/100);https://www.tr.weber/fiyat-listesi
-İNŞAAT;I-14;3. Yapı Kimyasalları;Weber (Saint-Gobain);Standart Seramik Yapıştırma Harcı (25 kg Torba);Torba;282,15;38;=G3*(1-H3/100);https://www.tr.weber/fiyat-listesi
-İNŞAAT;I-15;3. Yapı Kimyasalları;Weber (Saint-Gobain);Silikonlu Esnek Derz Dolgu (20 kg Torba);Torba;633,60;38;=G4*(1-H4/100);https://www.tr.weber/fiyat-listesi
-İNŞAAT;I-16;3. Yapı Kimyasalları;Weber (Saint-Gobain);Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Islak Hacim Set);Set;2425,50;38;=G5*(1-H5/100);https://www.tr.weber/fiyat-listesi
-İNŞAAT;I-17;3. Yapı Kimyasalları;Weber (Saint-Gobain);Mantolama Yapıştırma + Elyaflı Sıva Harcı + File ve Dübel Paketi;m²;356,40;38;=G6*(1-H6/100);https://www.tr.weber/fiyat-listesi
-İNŞAAT;I-18;3. Yapı Kimyasalları;Weber (Saint-Gobain);Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg);Torba;584,10;38;=G7*(1-H7/100);https://www.tr.weber/fiyat-listesi
+İNŞAAT;I-13;3. Yapı Kimyasalları;Weber (Saint-Gobain);Technoflex C2TES1 Esnek Porselen / Granit Seramik Yapıştırma Harcı (25 kg);Torba;480,15;38;=G2*(1-H2/100);https://www.tr.weber/
+İNŞAAT;I-14;3. Yapı Kimyasalları;Weber (Saint-Gobain);1051 Standart Seramik Yapıştırma Harcı (25 kg Torba);Torba;282,15;38;=G3*(1-H3/100);https://www.tr.weber/
+İNŞAAT;I-15;3. Yapı Kimyasalları;Weber (Saint-Gobain);Fugapool / Fugaflex Silikonlu Esnek Derz Dolgu (20 kg Torba);Torba;633,60;38;=G4*(1-H4/100);https://www.tr.weber/
+İNŞAAT;I-16;3. Yapı Kimyasalları;Weber (Saint-Gobain);İzolatex Çift Bileşenli Tam Elastik Sürme Su Yalıtım Malzemesi (Set);Set;2425,50;38;=G5*(1-H5/100);https://www.tr.weber/
+İNŞAAT;I-17;3. Yapı Kimyasalları;Weber (Saint-Gobain);Mantolama Yapıştırma + Elyaflı Sıva Harcı + File ve Dübel Paketi;m²;356,40;38;=G6*(1-H6/100);https://www.tr.weber/
+İNŞAAT;I-18;3. Yapı Kimyasalları;Weber (Saint-Gobain);Mastar 10 Kendiliğinden Yayılan (Self-Leveling) Tesviye Şapı (25 kg);Torba;584,10;38;=G7*(1-H7/100);https://www.tr.weber/

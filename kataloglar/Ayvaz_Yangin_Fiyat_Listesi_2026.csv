@@ -1,10 +1,10 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-MEKANİK;M-33;4. Yangın & İzolasyon;Ayvaz Yangın;"Sıva Altı / Üstü Tüplü Yangın Dolabı (1"" 30m Kauçuk Hortumlu + 6kg KKT)";Adet;14210,00;48;=G2*(1-H2/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-34;4. Yangın & İzolasyon;Ayvaz Yangın;"UL/FM Onaylı 1/2"" K=80 68°C Sarkık/Dik Tip Sprinkler Başlığı + Rozet";Adet;372,40;48;=G3*(1-H3/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-35;4. Yangın & İzolasyon;Ayvaz Yangın;"1""x1/2"" Paslanmaz Esnek (Flex) Sprinkler Bağlantı Hortumu (100 cm)";Adet;725,20;48;=G4*(1-H4/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-36;4. Yangın & İzolasyon;Ayvaz Yangın;Kat Kontrol Vana Grubu (İzleme Anahtarlı Kelebek Vana + Akış Anahtarı);Set;16464,00;48;=G5*(1-H5/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-37;4. Yangın & İzolasyon;Ayvaz Yangın;Islak Alarm Vana İstasyonu DN100 + İtfaiye Su Verme Ağzı (Siyam İkizi);Set;43120,00;48;=G6*(1-H6/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-38;4. Yangın & İzolasyon;Ayvaz Yangın;9mm / 13mm Elastomerik Kauçuk Köpüğü Boru İzolasyonu (Ø20-Ø63 Ortalama);m;76,44;48;=G7*(1-H7/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-39;4. Yangın & İzolasyon;Ayvaz Yangın;Alüminyum Folyo Kaplı Camyünü Havalandırma Kanal İzolasyonu (25mm);m²;240,10;48;=G8*(1-H8/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-40;4. Yangın & İzolasyon;Ayvaz Yangın;Galvaniz Sac Hava Kanalı + Menfez / Anemostad + Ses İzolasyonlu Flex Kanal;m²;1156,40;48;=G9*(1-H9/100);https://www.ayvaz.com/tr/fiyat-listesi
-MEKANİK;M-41;4. Yangın & İzolasyon;Ayvaz Yangın;Split / VRF Klima Bakır Borulama Çifti (İzoleli) + Drenaj Hattı;m;872,20;48;=G10*(1-H10/100);https://www.ayvaz.com/tr/fiyat-listesi
+MEKANİK;M-33;4. Yangın & İzolasyon;Ayvaz Yangın;"Sıva Altı / Üstü Tüplü Yangın Dolabı (1"" 30m Kauçuk Hortumlu + 6kg KKT)";Adet;14210,00;48;=G2*(1-H2/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-34;4. Yangın & İzolasyon;Ayvaz Yangın;"UL/FM Onaylı 1/2"" K=80 68°C Sarkık/Dik Tip Sprinkler Başlığı + Rozet";Adet;372,40;48;=G3*(1-H3/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-35;4. Yangın & İzolasyon;Ayvaz Yangın;"1""x1/2"" Paslanmaz Esnek (Flex) Sprinkler Bağlantı Hortumu (100 cm)";Adet;725,20;48;=G4*(1-H4/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-36;4. Yangın & İzolasyon;Ayvaz Yangın;Kat Kontrol Vana Grubu (İzleme Anahtarlı Kelebek Vana + Akış Anahtarı + Test Drenaj);Set;16464,00;48;=G5*(1-H5/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-37;4. Yangın & İzolasyon;Ayvaz Yangın;Islak Alarm Vana İstasyonu DN100 + İtfaiye Su Verme Ağzı (Siyam İkizi);Set;43120,00;48;=G6*(1-H6/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-38;4. Yangın & İzolasyon;Ayvaz Yangın;9mm / 13mm R-Flex Elastomerik Kauçuk Köpüğü Boru İzolasyonu (Ø20-Ø63 Ortalama);m;76,44;48;=G7*(1-H7/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-39;4. Yangın & İzolasyon;Ayvaz Yangın;Alüminyum Folyo Kaplı Camyünü Havalandırma Kanal İzolasyonu (25mm);m²;240,10;48;=G8*(1-H8/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-40;4. Yangın & İzolasyon;Ayvaz Yangın;Galvaniz Sac Hava Kanalı + Menfez / Anemostad + Ses İzolasyonlu Flex Kanal;m²;1156,40;48;=G9*(1-H9/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf
+MEKANİK;M-41;4. Yangın & İzolasyon;Ayvaz Yangın;Split / VRF Klima Bakır Borulama Çifti (İzoleli) + Drenaj Hattı;m;872,20;48;=G10*(1-H10/100);https://www.ayvaz.com/wp-content/uploads/2026/10/Fiyat-Listesi-Ekim-2026.pdf

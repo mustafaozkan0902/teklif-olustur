@@ -1,8 +1,8 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-01;1. Pano & Kutu;EAE Pano;Ana Dağıtım Panosu (ADP) Dikili Tip Metal Pano Gövdesi + Bara Seti;Adet;42680,00;62;=G2*(1-H2/100);https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri
-ELEKTRİK;E-02;1. Pano & Kutu;EAE Pano;Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano (96 Modül, 4 Sıra);Adet;14432,00;62;=G3*(1-H3/100);https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri
-ELEKTRİK;E-03;1. Pano & Kutu;EAE Pano;36 Modül (3x12) Sıva Altı Sigorta Kutusu (Klemensli);Adet;2543,20;62;=G4*(1-H4/100);https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri
-ELEKTRİK;E-04;1. Pano & Kutu;EAE Pano;24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu;Adet;1742,40;62;=G5*(1-H5/100);https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri
-ELEKTRİK;E-05;1. Pano & Kutu;EAE Pano;12 Modül (1x12) Sıva Altı Sigorta Kutusu;Adet;985,60;62;=G6*(1-H6/100);https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri
-ELEKTRİK;E-06;1. Pano & Kutu;EAE Pano;IP65 Su Geçirmez Sıva Üstü Sigorta Kutusu (18 Modül);Adet;3212,00;62;=G7*(1-H7/100);https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri
-ELEKTRİK;E-07;1. Pano & Kutu;EAE Pano;"Zayıf Akım / Data Kabini 19"" 15U Duvar Tipi Rack Kabin + Fan + Priz";Adet;16632,00;62;=G8*(1-H8/100);https://www.eaegroup.com/tr/kataloglar-ve-fiyat-listeleri
+ELEKTRİK;E-01;1. Pano & Kutu;EAE Pano;Ana Dağıtım Panosu (ADP) Modüler Metal Pano + Kapı (Legrand XL³ S 288M Ref. 337238+337268);Adet;53680,00;62;=G2*(1-H2/100);https://www.eaeelectric.com/
+ELEKTRİK;E-02;1. Pano & Kutu;EAE Pano;Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano 96 Modül 4 Sıra + Kapı (Legrand XL³ S Ref. 337204+337254);Adet;25071,20;62;=G3*(1-H3/100);https://www.eaeelectric.com/
+ELEKTRİK;E-03;1. Pano & Kutu;EAE Pano;36 Modül (3x12) Sıva Altı Sigorta Kutusu (Legrand Practibox S Ref. 1 350 03);Adet;3696,00;62;=G4*(1-H4/100);https://www.eaeelectric.com/
+ELEKTRİK;E-04;1. Pano & Kutu;EAE Pano;24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu (Legrand Practibox S Ref. 1 350 02);Adet;2807,20;62;=G5*(1-H5/100);https://www.eaeelectric.com/
+ELEKTRİK;E-05;1. Pano & Kutu;EAE Pano;12 Modül (1x12) Sıva Altı Sigorta Kutusu (Legrand Practibox S Ref. 1 350 01);Adet;1592,80;62;=G6*(1-H6/100);https://www.eaeelectric.com/
+ELEKTRİK;E-06;1. Pano & Kutu;EAE Pano;IP65 Su Geçirmez Sıva Üstü Nemli Yer Sigorta Kutusu 18 Modül (Legrand Plexo³ Ref. 6 018 35);Adet;7849,60;62;=G7*(1-H7/100);https://www.eaeelectric.com/
+ELEKTRİK;E-07;1. Pano & Kutu;EAE Pano;"Zayıf Akım / Data Kabini 19"" 15U Duvar Tipi Rack Kabin + Fan + Priz Grubu";Adet;16632,00;62;=G8*(1-H8/100);https://www.eaeelectric.com/

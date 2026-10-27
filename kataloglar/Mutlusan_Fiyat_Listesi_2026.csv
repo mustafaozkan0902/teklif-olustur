@@ -1,8 +1,8 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-01;1. Pano & Kutu;Mutlusan;Ana Dağıtım Panosu (ADP) Dikili Tip Metal Pano Gövdesi + Bara Seti;Adet;32980,00;58;=G2*(1-H2/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-02;1. Pano & Kutu;Mutlusan;Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano (96 Modül, 4 Sıra);Adet;11152,00;58;=G3*(1-H3/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-03;1. Pano & Kutu;Mutlusan;36 Modül (3x12) Sıva Altı Sigorta Kutusu (Klemensli);Adet;1965,20;58;=G4*(1-H4/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-04;1. Pano & Kutu;Mutlusan;24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu;Adet;1346,40;58;=G5*(1-H5/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-05;1. Pano & Kutu;Mutlusan;12 Modül (1x12) Sıva Altı Sigorta Kutusu;Adet;761,60;58;=G6*(1-H6/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-06;1. Pano & Kutu;Mutlusan;IP65 Su Geçirmez Sıva Üstü Sigorta Kutusu (18 Modül);Adet;2482,00;58;=G7*(1-H7/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-07;1. Pano & Kutu;Mutlusan;"Zayıf Akım / Data Kabini 19"" 15U Duvar Tipi Rack Kabin + Fan + Priz";Adet;12852,00;58;=G8*(1-H8/100);https://www.mutlusan.com.tr/fiyat-listesi
+ELEKTRİK;E-01;1. Pano & Kutu;Mutlusan;Ana Dağıtım Panosu (ADP) Modüler Metal Pano + Kapı (Legrand XL³ S 288M Ref. 337238+337268);Adet;41480,00;58;=G2*(1-H2/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-02;1. Pano & Kutu;Mutlusan;Kat / Tali Dağıtım Panosu Sıva Üstü Metal Pano 96 Modül 4 Sıra + Kapı (Legrand XL³ S Ref. 337204+337254);Adet;19373,20;58;=G3*(1-H3/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-03;1. Pano & Kutu;Mutlusan;36 Modül (3x12) Sıva Altı Sigorta Kutusu (Legrand Practibox S Ref. 1 350 03);Adet;2856,00;58;=G4*(1-H4/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-04;1. Pano & Kutu;Mutlusan;24 Modül (2x12) Sıva Altı Daire/Ofis Sigorta Kutusu (Legrand Practibox S Ref. 1 350 02);Adet;2169,20;58;=G5*(1-H5/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-05;1. Pano & Kutu;Mutlusan;12 Modül (1x12) Sıva Altı Sigorta Kutusu (Legrand Practibox S Ref. 1 350 01);Adet;1230,80;58;=G6*(1-H6/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-06;1. Pano & Kutu;Mutlusan;IP65 Su Geçirmez Sıva Üstü Nemli Yer Sigorta Kutusu 18 Modül (Legrand Plexo³ Ref. 6 018 35);Adet;6065,60;58;=G7*(1-H7/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-07;1. Pano & Kutu;Mutlusan;"Zayıf Akım / Data Kabini 19"" 15U Duvar Tipi Rack Kabin + Fan + Priz Grubu";Adet;12852,00;58;=G8*(1-H8/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi

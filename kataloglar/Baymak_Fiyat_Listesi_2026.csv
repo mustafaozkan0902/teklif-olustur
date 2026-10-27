@@ -1,11 +1,11 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-MEKANİK;M-13;2. Isıtma & Radyatör;Baymak;28 kW Tam Yoğuşmalı Kombi (Baca Seti Dahil);Adet;43056,00;46;=G2*(1-H2/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-14;2. Isıtma & Radyatör;Baymak;100 kW Duvar Tipi Yoğuşmalı Kaskad Kazan Ünitesi;Adet;154560,00;46;=G3*(1-H3/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-15;2. Isıtma & Radyatör;Baymak;PKKP Tip 22 (600 mm Yükseklik) Çelik Panel Radyatör (Toplam Metraj);m;4462,00;46;=G4*(1-H4/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-16;2. Isıtma & Radyatör;Baymak;500x1000 mm Beyaz/Krom Banyo Havlupan Radyatör;Adet;3174,00;46;=G5*(1-H5/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-17;2. Isıtma & Radyatör;Baymak;"1/2"" Köşe Tipi Termostatik Radyatör Valfi + Dönüş Valfi Takımı";Takım;1269,60;46;=G6*(1-H6/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-18;2. Isıtma & Radyatör;Baymak;"1"" Debi Ayarlı / Dengeleme Valfli Isıtma Kollektörü (8 Çıkışlı + Dolap)";Set;8464,00;46;=G7*(1-H7/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-19;2. Isıtma & Radyatör;Baymak;PEX-b Ø16x2.0 mm Oksijen Bariyerli Kılıflı Mobil / Yerden Isıtma Borusu;m;49,68;46;=G8*(1-H8/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-20;2. Isıtma & Radyatör;Baymak;Kapalı Genleşme Tankı 200 Litre (10 Bar) + Hava Ayırıcı ve Tortu Tutucu;Set;26220,00;46;=G9*(1-H9/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-21;2. Isıtma & Radyatör;Baymak;Boyler 500 Litre Çift Serpantinli Emaye Sıcak Su Hazırlayıcı;Adet;58880,00;46;=G10*(1-H10/100);https://www.baymak.com.tr/fiyat-listeleri
-MEKANİK;M-22;2. Isıtma & Radyatör;Baymak;Oda Termostatı (Kablosuz Dijital Programlanabilir Modülasyonlu);Adet;3542,00;46;=G11*(1-H11/100);https://www.baymak.com.tr/fiyat-listeleri
+MEKANİK;M-13;2. Isıtma & Radyatör;Baymak;28 kW Proteus Premix Tam Yoğuşmalı Kombi (Baca Seti Dahil - E.C.A. Resmi Liste);Adet;43102,00;46;=G2*(1-H2/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-14;2. Isıtma & Radyatör;Baymak;100 kW Felis / Gerda Duvar Tipi Yoğuşmalı Kaskad Kazan Ünitesi;Adet;154560,00;46;=G3*(1-H3/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-15;2. Isıtma & Radyatör;Baymak;PKKP Tip 22 (600 mm Yükseklik) Çelik Panel Radyatör (E.C.A. 1 Metre Baz Liste);m;3174,00;46;=G4*(1-H4/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-16;2. Isıtma & Radyatör;Baymak;500x1000 mm Beyaz/Krom Banyo Havlupan Radyatör;Adet;2438,00;46;=G5*(1-H5/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-17;2. Isıtma & Radyatör;Baymak;"TRV4 1/2"" Köşe Tipi Termostatik Radyatör Valfi + Dönüş Valfi Takımı (E.C.A. Resmi Liste)";Takım;1362,52;46;=G6*(1-H6/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-18;2. Isıtma & Radyatör;Baymak;"1"" Debi Ayarlı / Dengeleme Valfli Isıtma Kollektörü (8 Çıkışlı + Kollektör Dolabı)";Set;8464,00;46;=G7*(1-H7/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-19;2. Isıtma & Radyatör;Baymak;PE-Xb Ø16x2.0 mm Oksijen Bariyerli Mobil / Yerden Isıtma Borusu (Fırat Kod: 74900010016);m;36,27;46;=G8*(1-H8/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-20;2. Isıtma & Radyatör;Baymak;Kapalı Genleşme Tankı 200 Litre (10 Bar) + Hava Ayırıcı ve Tortu Tutucu;Set;26220,00;46;=G9*(1-H9/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-21;2. Isıtma & Radyatör;Baymak;Boyler 500 Litre Çift Serpantinli Emaye Sıcak Su Hazırlayıcı;Adet;58880,00;46;=G10*(1-H10/100);https://www.baymak.com.tr/urunler
+MEKANİK;M-22;2. Isıtma & Radyatör;Baymak;Poly / Lago Kablosuz Dijital Programlanabilir Oda Termostatı;Adet;2622,00;46;=G11*(1-H11/100);https://www.baymak.com.tr/urunler

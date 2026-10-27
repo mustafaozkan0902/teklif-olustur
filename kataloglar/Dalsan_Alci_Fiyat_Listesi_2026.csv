@@ -1,7 +1,7 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-İNŞAAT;I-01;1. Alçıpan & Tavan;Dalsan Alçı;12.5 mm Beyaz Standart Alçıpan Plaka (Duvar ve Asma Tavan İçin);m²;177,60;36;=G2*(1-H2/100);https://www.dalsan.com.tr/fiyat-listesi
-İNŞAAT;I-02;1. Alçıpan & Tavan;Dalsan Alçı;12.5 mm Yeşil (WR) Suya ve Neme Dayanıklı Alçıpan Plaka (Islak Hacim);m²;249,60;36;=G3*(1-H3/100);https://www.dalsan.com.tr/fiyat-listesi
-İNŞAAT;I-03;1. Alçıpan & Tavan;Dalsan Alçı;12.5 mm Kırmızı (FR) Yangına Dayanıklı Alçıpan Plaka;m²;264,00;36;=G4*(1-H4/100);https://www.dalsan.com.tr/fiyat-listesi
-İNŞAAT;I-04;1. Alçıpan & Tavan;Dalsan Alçı;Galvaniz Duvar ve Tavan Profilleri (DC75, DU75, TC60, TU28 - Ortalama);m;92,16;36;=G5*(1-H5/100);https://www.dalsan.com.tr/fiyat-listesi
-İNŞAAT;I-05;1. Alçıpan & Tavan;Dalsan Alçı;60x60 cm Taşyünü Akustik Modüler Asma Tavan Plakası + T24 Taşıyıcı Sistem;m²;518,40;36;=G6*(1-H6/100);https://www.dalsan.com.tr/fiyat-listesi
-İNŞAAT;I-06;1. Alçıpan & Tavan;Dalsan Alçı;Makine Sıva Alçısı + Saten Perdah Alçısı + Derz Dolgu Alçısı (25/30 kg Torba);Torba;297,60;36;=G7*(1-H7/100);https://www.dalsan.com.tr/fiyat-listesi
+İNŞAAT;I-01;1. Alçıpan & Tavan;Dalsan Alçı;12.5 mm Beyaz Standart Alçıpan Plaka (Duvar ve Asma Tavan İçin);m²;177,60;36;=G2*(1-H2/100);https://dalsan.com.tr/
+İNŞAAT;I-02;1. Alçıpan & Tavan;Dalsan Alçı;12.5 mm Yeşil (WR) Suya ve Neme Dayanıklı Alçıpan Plaka (Islak Hacim);m²;249,60;36;=G3*(1-H3/100);https://dalsan.com.tr/
+İNŞAAT;I-03;1. Alçıpan & Tavan;Dalsan Alçı;12.5 mm Kırmızı (FR) Yangına Dayanıklı Alçıpan Plaka;m²;264,00;36;=G4*(1-H4/100);https://dalsan.com.tr/
+İNŞAAT;I-04;1. Alçıpan & Tavan;Dalsan Alçı;Galvaniz Duvar ve Tavan Profilleri (DC75, DU75, TC60, TU28 - Ortalama);m;92,16;36;=G5*(1-H5/100);https://dalsan.com.tr/
+İNŞAAT;I-05;1. Alçıpan & Tavan;Dalsan Alçı;60x60 cm Taşyünü Akustik Modüler Asma Tavan Plakası + T24 Taşıyıcı Sistem;m²;518,40;36;=G6*(1-H6/100);https://dalsan.com.tr/
+İNŞAAT;I-06;1. Alçıpan & Tavan;Dalsan Alçı;Makine Sıva Alçısı + Saten Perdah Alçısı + Derz Dolgu Alçısı (25/30 kg Torba);Torba;297,60;36;=G7*(1-H7/100);https://dalsan.com.tr/

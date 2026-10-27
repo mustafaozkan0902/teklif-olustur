@@ -1,7 +1,7 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-İNŞAAT;I-07;2. Yalıtım;BTM Yalıtım;Ara Bölme Duvar Levhası 5 cm (50 kg/m³ Taşyünü Ses ve Yangın Yalıtımı);m²;204,25;40;=G2*(1-H2/100);https://www.btm.co/tr/fiyat-listeleri
-İNŞAAT;I-08;2. Yalıtım;BTM Yalıtım;Taşyünü Dış Cephe Mantolama Levhası 8 cm (150 kg/m³);m²;646,00;40;=G3*(1-H3/100);https://www.btm.co/tr/fiyat-listeleri
-İNŞAAT;I-09;2. Yalıtım;BTM Yalıtım;XPS 5 cm Ekstrüde Polistiren Teras / Temel Isı Yalıtım Levhası;m²;323,00;40;=G4*(1-H4/100);https://www.btm.co/tr/fiyat-listeleri
-İNŞAAT;I-10;2. Yalıtım;BTM Yalıtım;Camyünü Şilte 10 cm (Alüminyum Folyo Kaplı Çatı Arası Isı Yalıtımı);m²;185,25;40;=G5*(1-H5/100);https://www.btm.co/tr/fiyat-listeleri
-İNŞAAT;I-11;2. Yalıtım;BTM Yalıtım;PE Köpük Şap Altı Darbe Ses Yalıtım Şiltesi (5 mm);m²;64,60;40;=G6*(1-H6/100);https://www.btm.co/tr/fiyat-listeleri
-İNŞAAT;I-12;2. Yalıtım;BTM Yalıtım;Bitümlü Membran 3 mm / 4 mm Polyester Keçeli Temel ve Teras Su Yalıtımı;m²;275,50;40;=G7*(1-H7/100);https://www.btm.co/tr/fiyat-listeleri
+İNŞAAT;I-07;2. Yalıtım;BTM Yalıtım;Ara Bölme Duvar Levhası 5 cm (Taşyünü Ses ve Yangın Yalıtımı - İzocam Resmi Liste);m²;204,25;40;=G2*(1-H2/100);https://www.btm.co/tr
+İNŞAAT;I-08;2. Yalıtım;BTM Yalıtım;Manto Taşyünü Dış Cephe Levhası 8 cm (150 kg/m³ - İzocam Resmi Liste);m²;460,75;40;=G3*(1-H3/100);https://www.btm.co/tr
+İNŞAAT;I-09;2. Yalıtım;BTM Yalıtım;Foamboard / XPS 5 cm Ekstrüde Polistiren Isı Yalıtım Levhası (İzocam Resmi Liste);m²;494,00;40;=G4*(1-H4/100);https://www.btm.co/tr
+İNŞAAT;I-10;2. Yalıtım;BTM Yalıtım;Camyünü Çatı Şiltesi 10 cm Alüminyum Folyo Kaplı (İzocam Resmi Liste);m²;213,75;40;=G5*(1-H5/100);https://www.btm.co/tr
+İNŞAAT;I-11;2. Yalıtım;BTM Yalıtım;PE Köpük Şap Altı Darbe Ses Yalıtım Şiltesi 5 mm (İzocam Resmi Liste);m²;52,25;40;=G6*(1-H6/100);https://www.btm.co/tr
+İNŞAAT;I-12;2. Yalıtım;BTM Yalıtım;Bitümlü Membran 3 mm / 4 mm Polyester Keçeli Temel ve Teras Su Yalıtımı;m²;275,50;40;=G7*(1-H7/100);https://www.btm.co/tr

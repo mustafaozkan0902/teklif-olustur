@@ -1,10 +1,10 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-42;5. Kanal & Priz;Mutlusan (Kanal/Boru);105x50 mm Kapaklı Duvar Tipi PVC Kablo Kanalı;m;510,60;60;=G2*(1-H2/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-43;5. Kanal & Priz;Mutlusan (Kanal/Boru);40x25 mm / 25x16 mm Sıva Üstü PVC Kablo Kanalı;m;99,90;60;=G3*(1-H3/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-44;5. Kanal & Priz;Mutlusan (Kanal/Boru);Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı Takımı;m;680,80;60;=G4*(1-H4/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-45;5. Kanal & Priz;Mutlusan (Kanal/Boru);Halojensiz Sıva Altı Kangal Boru Ø20/25mm + Buat ve Kasa;m;31,08;60;=G5*(1-H5/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-46;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı Beyaz Aydınlatma Anahtarı / Komütatör (Çerçeveli);Adet;284,90;60;=G6*(1-H6/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-47;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Çerçeveli);Adet;310,80;60;=G7*(1-H7/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-48;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı Kırmızı UPS Prizi (Kesintisiz Güç Kaynağı Prizi);Adet;366,30;60;=G8*(1-H8/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-49;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı 2xRJ45 CAT6 İkili Data / İnternet Prizi;Adet;873,20;60;=G9*(1-H9/100);https://www.mutlusan.com.tr/fiyat-listesi
-ELEKTRİK;E-50;5. Kanal & Priz;Mutlusan (Kanal/Boru);LED Acil Çıkış Yönlendirme Armatürü (3 Saat Akülü) + Topraklama Seti;Adet;2849,00;60;=G10*(1-H10/100);https://www.mutlusan.com.tr/fiyat-listesi
+ELEKTRİK;E-42;5. Kanal & Priz;Mutlusan (Kanal/Boru);105x50 mm DLP Kapaklı Duvar Tipi PVC Kablo Kanalı Gövde+Kapak (Legrand Ref. 010422+010522);m;1462,98;60;=G2*(1-H2/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-43;5. Kanal & Priz;Mutlusan (Kanal/Boru);40x25 mm / 25x16 mm Kapalı Tip PVC Kablo Kanalı (Mutlusan Canalex Ref. 001 156 040025);m;48,20;60;=G3*(1-H3/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-44;5. Kanal & Priz;Mutlusan (Kanal/Boru);Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı ve Konsol Takımı;m;680,80;60;=G4*(1-H4/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-45;5. Kanal & Priz;Mutlusan (Kanal/Boru);Halojensiz Sıva Altı Kangal Boru Ø20mm Telli (Mutlusan Ref. 001 020 151020);m;23,31;60;=G5*(1-H5/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-46;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı Beyaz Aydınlatma Anahtarı (Legrand Valena Ref. 7 744 01);Adet;601,62;60;=G6*(1-H6/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-47;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Legrand Valena Ref. 7 744 21);Adet;828,80;60;=G7*(1-H7/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-48;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı Kırmızı UPS Prizi - Fransız St. Topraklı (Legrand Valena Ref. 7 743 69);Adet;888,00;60;=G8*(1-H8/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-49;5. Kanal & Priz;Mutlusan (Kanal/Boru);Sıva Altı RJ45 CAT6 UTP Data / İnternet Prizi (Legrand Valena Ref. 7 702 46);Adet;1413,40;60;=G9*(1-H9/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi
+ELEKTRİK;E-50;5. Kanal & Priz;Mutlusan (Kanal/Boru);URA ONE LED Acil Yönlendirme Armatürü 100lm IP42 (Legrand Ref. 6 616 21);Adet;6164,20;60;=G10*(1-H10/100);https://www.mutlusan.com.tr/tr/sayfa/75/e-fiyat-listesi

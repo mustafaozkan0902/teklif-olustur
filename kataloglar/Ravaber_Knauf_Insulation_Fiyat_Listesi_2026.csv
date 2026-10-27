@@ -1,7 +1,7 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-İNŞAAT;I-07;2. Yalıtım;Ravaber / Knauf Insulation;Ara Bölme Duvar Levhası 5 cm (50 kg/m³ Taşyünü Ses ve Yangın Yalıtımı);m²;206,40;40;=G2*(1-H2/100);https://www.ravaber.com.tr/
-İNŞAAT;I-08;2. Yalıtım;Ravaber / Knauf Insulation;Taşyünü Dış Cephe Mantolama Levhası 8 cm (150 kg/m³);m²;652,80;40;=G3*(1-H3/100);https://www.ravaber.com.tr/
-İNŞAAT;I-09;2. Yalıtım;Ravaber / Knauf Insulation;XPS 5 cm Ekstrüde Polistiren Teras / Temel Isı Yalıtım Levhası;m²;326,40;40;=G4*(1-H4/100);https://www.ravaber.com.tr/
-İNŞAAT;I-10;2. Yalıtım;Ravaber / Knauf Insulation;Camyünü Şilte 10 cm (Alüminyum Folyo Kaplı Çatı Arası Isı Yalıtımı);m²;187,20;40;=G5*(1-H5/100);https://www.ravaber.com.tr/
-İNŞAAT;I-11;2. Yalıtım;Ravaber / Knauf Insulation;PE Köpük Şap Altı Darbe Ses Yalıtım Şiltesi (5 mm);m²;65,28;40;=G6*(1-H6/100);https://www.ravaber.com.tr/
-İNŞAAT;I-12;2. Yalıtım;Ravaber / Knauf Insulation;Bitümlü Membran 3 mm / 4 mm Polyester Keçeli Temel ve Teras Su Yalıtımı;m²;278,40;40;=G7*(1-H7/100);https://www.ravaber.com.tr/
+İNŞAAT;I-07;2. Yalıtım;Ravaber / Knauf Insulation;Ara Bölme Duvar Levhası 5 cm (Taşyünü Ses ve Yangın Yalıtımı - İzocam Resmi Liste);m²;206,40;40;=G2*(1-H2/100);https://ravagobuildingsolutions.com/tr/
+İNŞAAT;I-08;2. Yalıtım;Ravaber / Knauf Insulation;Manto Taşyünü Dış Cephe Levhası 8 cm (150 kg/m³ - İzocam Resmi Liste);m²;465,60;40;=G3*(1-H3/100);https://ravagobuildingsolutions.com/tr/
+İNŞAAT;I-09;2. Yalıtım;Ravaber / Knauf Insulation;Foamboard / XPS 5 cm Ekstrüde Polistiren Isı Yalıtım Levhası (İzocam Resmi Liste);m²;499,20;40;=G4*(1-H4/100);https://ravagobuildingsolutions.com/tr/
+İNŞAAT;I-10;2. Yalıtım;Ravaber / Knauf Insulation;Camyünü Çatı Şiltesi 10 cm Alüminyum Folyo Kaplı (İzocam Resmi Liste);m²;216,00;40;=G5*(1-H5/100);https://ravagobuildingsolutions.com/tr/
+İNŞAAT;I-11;2. Yalıtım;Ravaber / Knauf Insulation;PE Köpük Şap Altı Darbe Ses Yalıtım Şiltesi 5 mm (İzocam Resmi Liste);m²;52,80;40;=G6*(1-H6/100);https://ravagobuildingsolutions.com/tr/
+İNŞAAT;I-12;2. Yalıtım;Ravaber / Knauf Insulation;Bitümlü Membran 3 mm / 4 mm Polyester Keçeli Temel ve Teras Su Yalıtımı;m²;278,40;40;=G7*(1-H7/100);https://ravagobuildingsolutions.com/tr/

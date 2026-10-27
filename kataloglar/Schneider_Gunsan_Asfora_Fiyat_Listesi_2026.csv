@@ -1,10 +1,10 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-42;5. Kanal & Priz;Schneider (Günsan/Asfora);105x50 mm Kapaklı Duvar Tipi PVC Kablo Kanalı;m;593,40;64;=G2*(1-H2/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-43;5. Kanal & Priz;Schneider (Günsan/Asfora);40x25 mm / 25x16 mm Sıva Üstü PVC Kablo Kanalı;m;116,10;64;=G3*(1-H3/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-44;5. Kanal & Priz;Schneider (Günsan/Asfora);Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı Takımı;m;791,20;64;=G4*(1-H4/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-45;5. Kanal & Priz;Schneider (Günsan/Asfora);Halojensiz Sıva Altı Kangal Boru Ø20/25mm + Buat ve Kasa;m;36,12;64;=G5*(1-H5/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-46;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı Beyaz Aydınlatma Anahtarı / Komütatör (Çerçeveli);Adet;331,10;64;=G6*(1-H6/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-47;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Çerçeveli);Adet;361,20;64;=G7*(1-H7/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-48;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı Kırmızı UPS Prizi (Kesintisiz Güç Kaynağı Prizi);Adet;425,70;64;=G8*(1-H8/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-49;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı 2xRJ45 CAT6 İkili Data / İnternet Prizi;Adet;1014,80;64;=G9*(1-H9/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
-ELEKTRİK;E-50;5. Kanal & Priz;Schneider (Günsan/Asfora);LED Acil Çıkış Yönlendirme Armatürü (3 Saat Akülü) + Topraklama Seti;Adet;3311,00;64;=G10*(1-H10/100);https://www.se.com/tr/tr/work/support/downloads/price-list.jsp
+ELEKTRİK;E-42;5. Kanal & Priz;Schneider (Günsan/Asfora);105x50 mm DLP Kapaklı Duvar Tipi PVC Kablo Kanalı Gövde+Kapak (Legrand Ref. 010422+010522);m;1700,22;64;=G2*(1-H2/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-43;5. Kanal & Priz;Schneider (Günsan/Asfora);40x25 mm / 25x16 mm Kapalı Tip PVC Kablo Kanalı (Mutlusan Canalex Ref. 001 156 040025);m;56,01;64;=G3*(1-H3/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-44;5. Kanal & Priz;Schneider (Günsan/Asfora);Delikli Galvaniz Sac Kablo Tavası 200x50 mm + Askı ve Konsol Takımı;m;791,20;64;=G4*(1-H4/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-45;5. Kanal & Priz;Schneider (Günsan/Asfora);Halojensiz Sıva Altı Kangal Boru Ø20mm Telli (Mutlusan Ref. 001 020 151020);m;27,09;64;=G5*(1-H5/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-46;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı Beyaz Aydınlatma Anahtarı (Legrand Valena Ref. 7 744 01);Adet;699,18;64;=G6*(1-H6/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-47;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı Beyaz Çocuk Korumalı Topraklı Priz (Legrand Valena Ref. 7 744 21);Adet;963,20;64;=G7*(1-H7/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-48;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı Kırmızı UPS Prizi - Fransız St. Topraklı (Legrand Valena Ref. 7 743 69);Adet;1032,00;64;=G8*(1-H8/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-49;5. Kanal & Priz;Schneider (Günsan/Asfora);Sıva Altı RJ45 CAT6 UTP Data / İnternet Prizi (Legrand Valena Ref. 7 702 46);Adet;1642,60;64;=G9*(1-H9/100);https://www.se.com/tr/tr/
+ELEKTRİK;E-50;5. Kanal & Priz;Schneider (Günsan/Asfora);URA ONE LED Acil Yönlendirme Armatürü 100lm IP42 (Legrand Ref. 6 616 21);Adet;7163,80;64;=G10*(1-H10/100);https://www.se.com/tr/tr/

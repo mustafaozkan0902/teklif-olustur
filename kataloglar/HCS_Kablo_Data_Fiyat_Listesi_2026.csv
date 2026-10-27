@@ -1,11 +1,11 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-ELEKTRİK;E-32;4. ZA Kablo;HCS (Kablo/Data);CAT6 U/UTP 23AWG Halojensiz (LSOH) Data / İnternet Kablosu;m;33,12;55;=G2*(1-H2/100);https://www.hcs.com.tr/
-ELEKTRİK;E-33;4. ZA Kablo;HCS (Kablo/Data);CAT6 F/UTP (FTP Ekranlı) Halojensiz Data / Kamera Kablosu;m;42,24;55;=G3*(1-H3/100);https://www.hcs.com.tr/
-ELEKTRİK;E-34;4. ZA Kablo;HCS (Kablo/Data);JE-H(St)H FE180 1x2x0.8+0.8 Yangın Algılama ve İhbar Kablosu;m;44,64;55;=G4*(1-H4/100);https://www.hcs.com.tr/
-ELEKTRİK;E-35;4. ZA Kablo;HCS (Kablo/Data);JE-H(St)H 2x2x0.8 Halojensiz Telefon / Diyafon Sinyal Kablosu;m;39,36;55;=G5*(1-H5/100);https://www.hcs.com.tr/
-ELEKTRİK;E-36;4. ZA Kablo;HCS (Kablo/Data);LIYCY 2x0.75 mm² Ekranlı Kumanda ve Anons Hoparlör Kablosu;m;49,92;55;=G6*(1-H6/100);https://www.hcs.com.tr/
-ELEKTRİK;E-37;4. ZA Kablo;HCS (Kablo/Data);LIYCY 4x0.75 mm² Ekranlı Otomasyon / Kartlı Geçiş Kablosu;m;80,64;55;=G7*(1-H7/100);https://www.hcs.com.tr/
-ELEKTRİK;E-38;4. ZA Kablo;HCS (Kablo/Data);RG6/U-6 Tam Bakır Halojensiz TV / Uydu Koaksiyel Kablo;m;30,72;55;=G8*(1-H8/100);https://www.hcs.com.tr/
-ELEKTRİK;E-39;4. ZA Kablo;HCS (Kablo/Data);4 Core Singlemode (SM) LSZH Fiber Optik Omurga Kablosu;m;65,28;55;=G9*(1-H9/100);https://www.hcs.com.tr/
-ELEKTRİK;E-40;4. ZA Kablo;HCS (Kablo/Data);CAT6 24 Port Dolu Patch Panel + Kablo Düzenleyici;Set;8640,00;55;=G10*(1-H10/100);https://www.hcs.com.tr/
-ELEKTRİK;E-41;4. ZA Kablo;HCS (Kablo/Data);CAT6 RJ45 Patch Cord Ara Bağlantı Kablosu (1m/2m);Adet;374,40;55;=G11*(1-H11/100);https://www.hcs.com.tr/
+ELEKTRİK;E-32;4. ZA Kablo;HCS (Kablo/Data);CAT6 U/UTP 23AWG Halojensiz (LSOH) Data / İnternet Kablosu;m;35,33;55;=G2*(1-H2/100);http://hescs.com/
+ELEKTRİK;E-33;4. ZA Kablo;HCS (Kablo/Data);CAT6 F/UTP (FTP Ekranlı) Halojensiz Data / Kamera Kablosu;m;46,56;55;=G3*(1-H3/100);http://hescs.com/
+ELEKTRİK;E-34;4. ZA Kablo;HCS (Kablo/Data);JE-H(St)H FE180/PH120 1x2x0.80+0.80 Yangın İhbar Kablosu (Erse Ref. MDER009200100080O);m;69,11;55;=G4*(1-H4/100);http://hescs.com/
+ELEKTRİK;E-35;4. ZA Kablo;HCS (Kablo/Data);JE-H(St)H...Bd 2x2x0.80+0.80 Halojensiz Sinyal / Diyafon Kablosu (Erse Ref. MDER033800200080R);m;98,44;55;=G5*(1-H5/100);http://hescs.com/
+ELEKTRİK;E-36;4. ZA Kablo;HCS (Kablo/Data);LIYCY 2x0.75 mm² Ekranlı Kumanda ve Sinyal Kablosu (Erse Ref. MDER005700200075G);m;78,71;55;=G6*(1-H6/100);http://hescs.com/
+ELEKTRİK;E-37;4. ZA Kablo;HCS (Kablo/Data);LIYCY 4x0.75 mm² Ekranlı Otomasyon / Kartlı Geçiş Kablosu (Erse Ref. MDER005700400075G);m;132,31;55;=G7*(1-H7/100);http://hescs.com/
+ELEKTRİK;E-38;4. ZA Kablo;HCS (Kablo/Data);RG 6/U-6 Cu/Cu Class B HFFR Halojensiz TV / Uydu Koaksiyel Kablo (Erse Ref. FDER017800100102G);m;72,74;55;=G8*(1-H8/100);http://hescs.com/
+ELEKTRİK;E-39;4. ZA Kablo;HCS (Kablo/Data);4 Core Singlemode (SM) LSZH Fiber Optik Omurga Kablosu;m;65,28;55;=G9*(1-H9/100);http://hescs.com/
+ELEKTRİK;E-40;4. ZA Kablo;HCS (Kablo/Data);CAT6 24 Port Dolu Patch Panel + Kablo Düzenleyici;Set;8640,00;55;=G10*(1-H10/100);http://hescs.com/
+ELEKTRİK;E-41;4. ZA Kablo;HCS (Kablo/Data);CAT6 RJ45 LSZH Patch Cord Ara Bağlantı Kablosu (1m/2m);Adet;374,40;55;=G11*(1-H11/100);http://hescs.com/

@@ -1,10 +1,10 @@
 ﻿Disiplin;Poz Kodu;Grup;Marka;Ürün / Katalog Açıklaması;Birim;Brüt Katalog Liste Fiyatı (TL);Tavsiye Bayi İskontosu (%);İskontolu Net Birim Fiyat (TL);Resmi Katalog & Fiyat Doğrulama Linki
-MEKANİK;M-42;5. Vitrifiye & Armatür;VitrA / Artema;Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı;Takım;8950,00;42;=G2*(1-H2/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-43;5. Vitrifiye & Armatür;VitrA / Artema;8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli;Set;6400,00;42;=G3*(1-H3/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-44;5. Vitrifiye & Armatür;VitrA / Artema;60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo;Adet;4200,00;42;=G4*(1-H4/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-45;5. Vitrifiye & Armatür;VitrA / Artema;Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti;Takım;9800,00;42;=G5*(1-H5/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-46;5. Vitrifiye & Armatür;VitrA / Artema;Krom Lavabo Bataryası (Perlatörlü, Çelik Flex Bağlantılı);Adet;4150,00;42;=G6*(1-H6/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-47;5. Vitrifiye & Armatür;VitrA / Artema;Döner Borulu Mutfak / Ofis Eviye Bataryası;Adet;4850,00;42;=G7*(1-H7/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-48;5. Vitrifiye & Armatür;VitrA / Artema;Banyo Bataryası + Sürgülü El Duşu Takımı;Set;6900,00;42;=G8*(1-H8/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-49;5. Vitrifiye & Armatür;VitrA / Artema;"1/2"" Filtreli Krom Ara Musluk + Taharet Musluğu";Adet;690,00;42;=G9*(1-H9/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
-MEKANİK;M-50;5. Vitrifiye & Armatür;VitrA / Artema;Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti;Set;26500,00;42;=G10*(1-H10/100);https://www.vitra.com.tr/kataloglar-ve-fiyat-listeleri/
+MEKANİK;M-42;5. Vitrifiye & Armatür;VitrA / Artema;Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı;Takım;8950,00;42;=G2*(1-H2/100);https://www.vitra.com.tr/
+MEKANİK;M-43;5. Vitrifiye & Armatür;VitrA / Artema;8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli;Set;6400,00;42;=G3*(1-H3/100);https://www.vitra.com.tr/
+MEKANİK;M-44;5. Vitrifiye & Armatür;VitrA / Artema;60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo;Adet;4200,00;42;=G4*(1-H4/100);https://www.vitra.com.tr/
+MEKANİK;M-45;5. Vitrifiye & Armatür;VitrA / Artema;Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti;Takım;9800,00;42;=G5*(1-H5/100);https://www.vitra.com.tr/
+MEKANİK;M-46;5. Vitrifiye & Armatür;VitrA / Artema;Lunetta Krom Lavabo Bataryası (E.C.A. Resmi Liste S.3 Kod: 102188107);Adet;4625,00;42;=G6*(1-H6/100);https://www.vitra.com.tr/
+MEKANİK;M-47;5. Vitrifiye & Armatür;VitrA / Artema;Lunetta Döner Borulu Krom Eviye Bataryası (E.C.A. Resmi Liste S.3 Kod: 102118119);Adet;5508,00;42;=G7*(1-H7/100);https://www.vitra.com.tr/
+MEKANİK;M-48;5. Vitrifiye & Armatür;VitrA / Artema;Lunetta Krom Banyo Bataryası (E.C.A. Resmi Liste S.3 Kod: 102102484);Set;6250,00;42;=G8*(1-H8/100);https://www.vitra.com.tr/
+MEKANİK;M-49;5. Vitrifiye & Armatür;VitrA / Artema;"1/2"" Filtreli Krom Ara Musluk + Taharet Musluğu";Adet;690,00;42;=G9*(1-H9/100);https://www.vitra.com.tr/
+MEKANİK;M-50;5. Vitrifiye & Armatür;VitrA / Artema;Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti;Set;26500,00;42;=G10*(1-H10/100);https://www.vitra.com.tr/
