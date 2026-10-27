@@ -1,0 +1,51 @@
+﻿No;Disiplin;Grup;Secilen Marka;Malzeme Aciklamasi;Miktar;Birim;Liste Fiyati (TL);Iskonto (%);Net Birim Fiyat (TL);Toplam Tutar (TL)
+1;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø20 mm PN20 Temiz Su Borusu (Soğuk/Sıcak Su);1400;m;92,00;55,0;=H2*(1-I2/100);=F2*J2
+2;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø25 mm PN20 Kompozit (Folyo/Cam Elyaf) Temiz Su Borusu;950;m;158,00;55,0;=H3*(1-I3/100);=F3*J3
+3;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø32 mm PN20 Kompozit Kolon Temiz Su Borusu;420;m;265,00;55,0;=H4*(1-I4/100);=F4*J4
+4;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø40 mm PN20 Kompozit Ana Kolon Temiz Su Borusu;210;m;410,00;55,0;=H5*(1-I5/100);=F5*J5
+5;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ø50 mm PN20 Kompozit Hidrofor Çıkış / Ana Dağıtım Borusu;120;m;640,00;55,0;=H6*(1-I6/100);=F6*J6
+6;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PPRC Ek Parça Paketi (Dirsek, Te, Manşon, İstavroz, Rakor - Ø20-50mm);1;Set;85000,00;55,0;=H7*(1-I7/100);=F7*J7
+7;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Ø50 mm (3.2mm) Conta Yuvalı Pis Su Borusu;650;m;148,00;55,0;=H8*(1-I8/100);=F8*J8
+8;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Ø75 mm (3.2mm) Conta Yuvalı Pis Su Borusu;320;m;235,00;55,0;=H9*(1-I9/100);=F9*J9
+9;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;Sessiz Boru (Silence) Ø110 mm Bina İçi Atık Su / Pis Su Kolon Borusu;480;m;520,00;55,0;=H10*(1-I10/100);=F10*J10
+10;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Ø160 mm Bina Altı / Yatay Ana Pis Su Toplayıcı Boru;140;m;890,00;55,0;=H11*(1-I11/100);=F11*J11
+11;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;PVC Atık Su Ek Parçaları (45°/87° Dirsek, Çatal, Temizleme Parçası);1;Set;64000,00;55,0;=H12*(1-I12/100);=F12*J12
+12;MEKANIK;1. Sıhhi & Pis Su Boru;Fırat Boru;Paslanmaz Izgaralı Koku Fermalı Yer Süzgeci ve Balkon/Teras Süzgeçleri;65;Adet;680,00;55,0;=H13*(1-I13/100);=F13*J13
+13;MEKANIK;2. Isıtma & Radyatör;E.C.A.;28 kW Tam Yoğuşmalı Kombi (Baca Seti Dahil);12;Adet;46800,00;45,0;=H14*(1-I14/100);=F14*J14
+14;MEKANIK;2. Isıtma & Radyatör;E.C.A.;100 kW Duvar Tipi Yoğuşmalı Kaskad Kazan Ünitesi;2;Adet;168000,00;45,0;=H15*(1-I15/100);=F15*J15
+15;MEKANIK;2. Isıtma & Radyatör;E.C.A.;PKKP Tip 22 (600 mm Yükseklik) Çelik Panel Radyatör (Toplam Metraj);96;m;4850,00;45,0;=H16*(1-I16/100);=F16*J16
+16;MEKANIK;2. Isıtma & Radyatör;E.C.A.;500x1000 mm Beyaz/Krom Banyo Havlupan Radyatör;24;Adet;3450,00;45,0;=H17*(1-I17/100);=F17*J17
+17;MEKANIK;2. Isıtma & Radyatör;E.C.A.;"1/2"" Köşe Tipi Termostatik Radyatör Valfi + Dönüş Valfi Takımı";85;Takım;1380,00;45,0;=H18*(1-I18/100);=F18*J18
+18;MEKANIK;2. Isıtma & Radyatör;E.C.A.;"1"" Debi Ayarlı / Dengeleme Valfli Isıtma Kollektörü (8 Çıkışlı + Dolap)";14;Set;9200,00;45,0;=H19*(1-I19/100);=F19*J19
+19;MEKANIK;2. Isıtma & Radyatör;E.C.A.;PEX-b Ø16x2.0 mm Oksijen Bariyerli Kılıflı Mobil / Yerden Isıtma Borusu;3600;m;54,00;45,0;=H20*(1-I20/100);=F20*J20
+20;MEKANIK;2. Isıtma & Radyatör;E.C.A.;Kapalı Genleşme Tankı 200 Litre (10 Bar) + Hava Ayırıcı ve Tortu Tutucu;2;Set;28500,00;45,0;=H21*(1-I21/100);=F21*J21
+21;MEKANIK;2. Isıtma & Radyatör;E.C.A.;Boyler 500 Litre Çift Serpantinli Emaye Sıcak Su Hazırlayıcı;1;Adet;64000,00;45,0;=H22*(1-I22/100);=F22*J22
+22;MEKANIK;2. Isıtma & Radyatör;E.C.A.;Oda Termostatı (Kablosuz Dijital Programlanabilir Modülasyonlu);12;Adet;3850,00;45,0;=H23*(1-I23/100);=F23*J23
+23;MEKANIK;3. Pompa & Vana;Wilo;İki Pompalı Frekans Konvertörlü Paket Hidrofor Seti;1;Set;195000,00;38,0;=H24*(1-I24/100);=F24*J24
+24;MEKANIK;3. Pompa & Vana;Wilo;25/1-6 Islak Rotorlu Frekans Konvertörlü Sirkülasyon Pompası;4;Adet;12400,00;38,0;=H25*(1-I25/100);=F25*J25
+25;MEKANIK;3. Pompa & Vana;Wilo;40/0.5-12 Flanşlı Yüksek Verimli Ana Isıtma Sirkülasyon Pompası;2;Adet;54800,00;38,0;=H26*(1-I26/100);=F26*J26
+26;MEKANIK;3. Pompa & Vana;Wilo;Flatörlü Pis Su / Drenaj Dalgıç Pompası;2;Adet;14200,00;38,0;=H27*(1-I27/100);=F27*J27
+27;MEKANIK;3. Pompa & Vana;E.C.A. (Valf);"1/2"" ve 3/4"" Tam Geçişli Pirinç Küresel Vana (PN25 - Ortalama)";95;Adet;513,00;45,0;=H28*(1-I28/100);=F28*J28
+28;MEKANIK;3. Pompa & Vana;E.C.A. (Valf);"1"" ve 1 1/4"" Tam Geçişli Pirinç Küresel Vana (Kolon Kesme Vanaları)";36;Adet;1216,00;45,0;=H29*(1-I29/100);=F29*J29
+29;MEKANIK;3. Pompa & Vana;FAF Vana;DN65 / DN80 Wafer Tipi EPDM Contalı Kelebek Vana (Kollu);14;Adet;2565,00;50,0;=H30*(1-I30/100);=F30*J30
+30;MEKANIK;3. Pompa & Vana;FAF Vana;DN50 / DN65 Flanşlı Pislik Tutucu + Çalpara/Wafer Çekvalf Seti;10;Set;4140,00;50,0;=H31*(1-I31/100);=F31*J31
+31;MEKANIK;3. Pompa & Vana;Ayvaz;DN65 / DN80 Kauçuk Kompansatör + Basınç Düşürücü Vana Grubu;6;Set;6348,00;48,0;=H32*(1-I32/100);=F32*J32
+32;MEKANIK;3. Pompa & Vana;E.C.A. (Valf);"Otomatik Hava Purjörü 1/2"" + Manometre (0-10 Bar) + Termometre Seti";18;Set;1092,50;45,0;=H33*(1-I33/100);=F33*J33
+33;MEKANIK;4. Yangın & İzolasyon;Duyar Vana;"Sıva Altı / Üstü Tüplü Yangın Dolabı (1"" 30m Kauçuk Hortumlu + 6kg KKT)";8;Adet;14500,00;50,0;=H34*(1-I34/100);=F34*J34
+34;MEKANIK;4. Yangın & İzolasyon;Duyar Vana;"UL/FM Onaylı 1/2"" K=80 68°C Sarkık/Dik Tip Sprinkler Başlığı + Rozet";160;Adet;380,00;50,0;=H35*(1-I35/100);=F35*J35
+35;MEKANIK;4. Yangın & İzolasyon;Duyar Vana;"1""x1/2"" Paslanmaz Esnek (Flex) Sprinkler Bağlantı Hortumu (100 cm)";160;Adet;740,00;50,0;=H36*(1-I36/100);=F36*J36
+36;MEKANIK;4. Yangın & İzolasyon;Duyar Vana;Kat Kontrol Vana Grubu (İzleme Anahtarlı Kelebek Vana + Akış Anahtarı);4;Set;16800,00;50,0;=H37*(1-I37/100);=F37*J37
+37;MEKANIK;4. Yangın & İzolasyon;Duyar Vana;Islak Alarm Vana İstasyonu DN100 + İtfaiye Su Verme Ağzı (Siyam İkizi);1;Set;44000,00;50,0;=H38*(1-I38/100);=F38*J38
+38;MEKANIK;4. Yangın & İzolasyon;Ode Yalıtım;9mm / 13mm Elastomerik Kauçuk Köpüğü Boru İzolasyonu (Ø20-Ø63 Ortalama);2400;m;78,00;42,0;=H39*(1-I39/100);=F39*J39
+39;MEKANIK;4. Yangın & İzolasyon;Ode Yalıtım;Alüminyum Folyo Kaplı Camyünü Havalandırma Kanal İzolasyonu (25mm);450;m²;245,00;42,0;=H40*(1-I40/100);=F40*J40
+40;MEKANIK;4. Yangın & İzolasyon;Ode Yalıtım;Galvaniz Sac Hava Kanalı + Menfez / Anemostad + Ses İzolasyonlu Flex Kanal;320;m²;1180,00;42,0;=H41*(1-I41/100);=F41*J41
+41;MEKANIK;4. Yangın & İzolasyon;Ode Yalıtım;Split / VRF Klima Bakır Borulama Çifti (İzoleli) + Drenaj Hattı;380;m;890,00;42,0;=H42*(1-I42/100);=F42*J42
+42;MEKANIK;5. Vitrifiye & Armatür;VitrA / Artema;Kanalsız (Rim-ex) Asma Klozet + Yavaş Kapanır Klozet Kapağı;24;Takım;8950,00;42,0;=H43*(1-I43/100);=F43*J43
+43;MEKANIK;5. Vitrifiye & Armatür;VitrA / Artema;8 cm / 12 cm Tuğla/Alçıpan Duvar Tipi Gömme Rezervuar + Krom Kumanda Paneli;24;Set;6400,00;42,0;=H44*(1-I44/100);=F44*J44
+44;MEKANIK;5. Vitrifiye & Armatür;VitrA / Artema;60 cm Tezgah Üstü / Yarı Gömme Porselen Lavabo;28;Adet;4200,00;42,0;=H45*(1-I45/100);=F45*J45
+45;MEKANIK;5. Vitrifiye & Armatür;VitrA / Artema;Fotoselli / Yıkama Valfli Pisuar + Ara Bölme Seti;8;Takım;9800,00;42,0;=H46*(1-I46/100);=F46*J46
+46;MEKANIK;5. Vitrifiye & Armatür;E.C.A. / Serel;Krom Lavabo Bataryası (Perlatörlü, Çelik Flex Bağlantılı);28;Adet;3901,00;45,0;=H47*(1-I47/100);=F47*J47
+47;MEKANIK;5. Vitrifiye & Armatür;E.C.A. / Serel;Döner Borulu Mutfak / Ofis Eviye Bataryası;14;Adet;4559,00;45,0;=H48*(1-I48/100);=F48*J48
+48;MEKANIK;5. Vitrifiye & Armatür;E.C.A. / Serel;Banyo Bataryası + Sürgülü El Duşu Takımı;12;Set;6486,00;45,0;=H49*(1-I49/100);=F49*J49
+49;MEKANIK;5. Vitrifiye & Armatür;E.C.A. / Serel;"1/2"" Filtreli Krom Ara Musluk + Taharet Musluğu";96;Adet;648,60;45,0;=H50*(1-I50/100);=F50*J50
+50;MEKANIK;5. Vitrifiye & Armatür;VitrA / Artema;Bedensel Engelli WC Tutunma Barları + Engelli Klozet ve Lavabo Seti;2;Set;26500,00;42,0;=H51*(1-I51/100);=F51*J51

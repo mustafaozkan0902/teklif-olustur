@@ -1,0 +1,506 @@
+{
+  "guncelleme": "2026-10-27 19:52",
+  "marka_havuzu": {
+    "ELEKTRIK": {
+      "1. Pano & Kutu": [
+        {
+          "marka": "Legrand",
+          "carpan": 1.0,
+          "iskonto": 70
+        },
+        {
+          "marka": "Schneider Electric",
+          "carpan": 1.04,
+          "iskonto": 68
+        },
+        {
+          "marka": "Siemens",
+          "carpan": 1.02,
+          "iskonto": 68
+        },
+        {
+          "marka": "ABB",
+          "carpan": 0.98,
+          "iskonto": 67
+        },
+        {
+          "marka": "EAE Pano",
+          "carpan": 0.88,
+          "iskonto": 62
+        },
+        {
+          "marka": "Viko (Panasonic)",
+          "carpan": 0.76,
+          "iskonto": 60
+        },
+        {
+          "marka": "Mutlusan",
+          "carpan": 0.68,
+          "iskonto": 58
+        }
+      ],
+      "2. Şalt & Sigorta": [
+        {
+          "marka": "Legrand",
+          "carpan": 1.0,
+          "iskonto": 70
+        },
+        {
+          "marka": "Schneider Electric",
+          "carpan": 1.05,
+          "iskonto": 68
+        },
+        {
+          "marka": "Siemens",
+          "carpan": 1.03,
+          "iskonto": 68
+        },
+        {
+          "marka": "ABB",
+          "carpan": 0.99,
+          "iskonto": 67
+        },
+        {
+          "marka": "Eaton (Moeller)",
+          "carpan": 0.95,
+          "iskonto": 65
+        },
+        {
+          "marka": "Sigma Elektrik",
+          "carpan": 0.72,
+          "iskonto": 60
+        },
+        {
+          "marka": "Chint",
+          "carpan": 0.65,
+          "iskonto": 58
+        }
+      ],
+      "3. KA Kablo": [
+        {
+          "marka": "Prysmian",
+          "carpan": 1.0,
+          "iskonto": 58
+        },
+        {
+          "marka": "Nexans",
+          "carpan": 0.99,
+          "iskonto": 58
+        },
+        {
+          "marka": "Öznur Kablo",
+          "carpan": 0.94,
+          "iskonto": 60
+        },
+        {
+          "marka": "Hes Kablo",
+          "carpan": 0.95,
+          "iskonto": 59
+        },
+        {
+          "marka": "Borsan Kablo",
+          "carpan": 0.9,
+          "iskonto": 60
+        },
+        {
+          "marka": "Vatan Kablo",
+          "carpan": 0.91,
+          "iskonto": 60
+        },
+        {
+          "marka": "Pamukkale Kablo",
+          "carpan": 0.92,
+          "iskonto": 59
+        }
+      ],
+      "4. ZA Kablo": [
+        {
+          "marka": "Prysmian (Draka)",
+          "carpan": 1.0,
+          "iskonto": 58
+        },
+        {
+          "marka": "Erse Kablo (Ervital)",
+          "carpan": 0.92,
+          "iskonto": 62
+        },
+        {
+          "marka": "Reçber Kablo",
+          "carpan": 0.9,
+          "iskonto": 62
+        },
+        {
+          "marka": "ETK Kablo",
+          "carpan": 0.89,
+          "iskonto": 60
+        },
+        {
+          "marka": "HCS (Kablo/Data)",
+          "carpan": 0.96,
+          "iskonto": 55
+        },
+        {
+          "marka": "Legrand (LCS³)",
+          "carpan": 1.05,
+          "iskonto": 68
+        },
+        {
+          "marka": "Nexans",
+          "carpan": 0.98,
+          "iskonto": 58
+        }
+      ],
+      "5. Kanal & Priz": [
+        {
+          "marka": "Legrand",
+          "carpan": 1.0,
+          "iskonto": 70
+        },
+        {
+          "marka": "Viko (Panasonic)",
+          "carpan": 0.82,
+          "iskonto": 62
+        },
+        {
+          "marka": "Schneider (Günsan/Asfora)",
+          "carpan": 0.86,
+          "iskonto": 64
+        },
+        {
+          "marka": "EAE (Kablo Tavası)",
+          "carpan": 0.92,
+          "iskonto": 60
+        },
+        {
+          "marka": "Mutlusan (Kanal/Boru)",
+          "carpan": 0.74,
+          "iskonto": 60
+        },
+        {
+          "marka": "Ovivo / Makel",
+          "carpan": 0.7,
+          "iskonto": 60
+        }
+      ]
+    },
+    "MEKANIK": {
+      "1. Sıhhi & Pis Su Boru": [
+        {
+          "marka": "Fırat Boru",
+          "carpan": 1.0,
+          "iskonto": 55
+        },
+        {
+          "marka": "Kalde",
+          "carpan": 0.96,
+          "iskonto": 56
+        },
+        {
+          "marka": "GF Hakan Plastik",
+          "carpan": 0.98,
+          "iskonto": 55
+        },
+        {
+          "marka": "Wavin Pilsa",
+          "carpan": 0.97,
+          "iskonto": 54
+        },
+        {
+          "marka": "Dizayn Boru",
+          "carpan": 0.91,
+          "iskonto": 57
+        },
+        {
+          "marka": "Vesbo",
+          "carpan": 0.93,
+          "iskonto": 56
+        }
+      ],
+      "2. Isıtma & Radyatör": [
+        {
+          "marka": "E.C.A.",
+          "carpan": 1.0,
+          "iskonto": 45
+        },
+        {
+          "marka": "DemirDöküm",
+          "carpan": 0.98,
+          "iskonto": 44
+        },
+        {
+          "marka": "Buderus",
+          "carpan": 1.12,
+          "iskonto": 42
+        },
+        {
+          "marka": "Vaillant",
+          "carpan": 1.15,
+          "iskonto": 40
+        },
+        {
+          "marka": "Viessmann",
+          "carpan": 1.1,
+          "iskonto": 42
+        },
+        {
+          "marka": "Baymak",
+          "carpan": 0.92,
+          "iskonto": 46
+        },
+        {
+          "marka": "Alarko",
+          "carpan": 0.96,
+          "iskonto": 44
+        }
+      ],
+      "3. Pompa & Vana": [
+        {
+          "marka": "Wilo",
+          "carpan": 1.0,
+          "iskonto": 38
+        },
+        {
+          "marka": "Grundfos",
+          "carpan": 1.04,
+          "iskonto": 38
+        },
+        {
+          "marka": "Mas Daf",
+          "carpan": 0.88,
+          "iskonto": 42
+        },
+        {
+          "marka": "Standart Pompa",
+          "carpan": 0.86,
+          "iskonto": 42
+        },
+        {
+          "marka": "E.C.A. (Valf)",
+          "carpan": 0.95,
+          "iskonto": 45
+        },
+        {
+          "marka": "FAF Vana",
+          "carpan": 0.9,
+          "iskonto": 50
+        },
+        {
+          "marka": "Ayvaz",
+          "carpan": 0.92,
+          "iskonto": 48
+        }
+      ],
+      "4. Yangın & İzolasyon": [
+        {
+          "marka": "Duyar Vana",
+          "carpan": 1.0,
+          "iskonto": 50
+        },
+        {
+          "marka": "FAF Vana",
+          "carpan": 0.96,
+          "iskonto": 50
+        },
+        {
+          "marka": "Ayvaz Yangın",
+          "carpan": 0.98,
+          "iskonto": 48
+        },
+        {
+          "marka": "Ode Yalıtım",
+          "carpan": 1.0,
+          "iskonto": 42
+        },
+        {
+          "marka": "Oneflex",
+          "carpan": 0.94,
+          "iskonto": 44
+        },
+        {
+          "marka": "Armacell (ArmaFlex)",
+          "carpan": 1.12,
+          "iskonto": 38
+        }
+      ],
+      "5. Vitrifiye & Armatür": [
+        {
+          "marka": "VitrA / Artema",
+          "carpan": 1.0,
+          "iskonto": 42
+        },
+        {
+          "marka": "E.C.A. / Serel",
+          "carpan": 0.94,
+          "iskonto": 45
+        },
+        {
+          "marka": "Kale Banyo",
+          "carpan": 0.95,
+          "iskonto": 44
+        },
+        {
+          "marka": "Creavit",
+          "carpan": 0.84,
+          "iskonto": 46
+        },
+        {
+          "marka": "Geberit / Grohe",
+          "carpan": 1.28,
+          "iskonto": 36
+        },
+        {
+          "marka": "Bien Banyo",
+          "carpan": 0.86,
+          "iskonto": 45
+        }
+      ]
+    },
+    "INSAAT": {
+      "1. Alçıpan & Tavan": [
+        {
+          "marka": "Knauf",
+          "carpan": 1.0,
+          "iskonto": 35
+        },
+        {
+          "marka": "Dalsan Alçı",
+          "carpan": 0.96,
+          "iskonto": 36
+        },
+        {
+          "marka": "Saint-Gobain Rigips",
+          "carpan": 0.99,
+          "iskonto": 35
+        },
+        {
+          "marka": "ABS Alçı",
+          "carpan": 0.92,
+          "iskonto": 38
+        },
+        {
+          "marka": "Aspen (Asma Tavan)",
+          "carpan": 1.02,
+          "iskonto": 34
+        }
+      ],
+      "2. Yalıtım": [
+        {
+          "marka": "İzocam",
+          "carpan": 1.0,
+          "iskonto": 40
+        },
+        {
+          "marka": "Bonus (Eryap) Yalıtım",
+          "carpan": 0.93,
+          "iskonto": 42
+        },
+        {
+          "marka": "Filli Boya Dalmaçyalı",
+          "carpan": 0.98,
+          "iskonto": 38
+        },
+        {
+          "marka": "BTM Yalıtım",
+          "carpan": 0.95,
+          "iskonto": 40
+        },
+        {
+          "marka": "Ravaber / Knauf Insulation",
+          "carpan": 0.96,
+          "iskonto": 40
+        }
+      ],
+      "3. Yapı Kimyasalları": [
+        {
+          "marka": "Kalekim",
+          "carpan": 1.0,
+          "iskonto": 38
+        },
+        {
+          "marka": "Weber (Saint-Gobain)",
+          "carpan": 0.99,
+          "iskonto": 38
+        },
+        {
+          "marka": "Sika",
+          "carpan": 1.06,
+          "iskonto": 36
+        },
+        {
+          "marka": "Ceresit (Henkel)",
+          "carpan": 0.96,
+          "iskonto": 39
+        },
+        {
+          "marka": "Mapei",
+          "carpan": 1.04,
+          "iskonto": 36
+        },
+        {
+          "marka": "BASF MasterBuilders",
+          "carpan": 1.05,
+          "iskonto": 36
+        }
+      ],
+      "4. Seramik & Kaplama": [
+        {
+          "marka": "VitrA Karo",
+          "carpan": 1.0,
+          "iskonto": 40
+        },
+        {
+          "marka": "Kaleseramik (Çanakkale)",
+          "carpan": 0.98,
+          "iskonto": 40
+        },
+        {
+          "marka": "Bien Seramik",
+          "carpan": 0.89,
+          "iskonto": 42
+        },
+        {
+          "marka": "Ege Seramik",
+          "carpan": 0.9,
+          "iskonto": 42
+        },
+        {
+          "marka": "Kütahya Seramik",
+          "carpan": 0.92,
+          "iskonto": 41
+        },
+        {
+          "marka": "Çamsan / Kastamonu (Parke)",
+          "carpan": 0.94,
+          "iskonto": 38
+        }
+      ],
+      "5. Boya & Astar": [
+        {
+          "marka": "Filli Boya",
+          "carpan": 1.0,
+          "iskonto": 35
+        },
+        {
+          "marka": "Jotun",
+          "carpan": 1.08,
+          "iskonto": 32
+        },
+        {
+          "marka": "Marshall",
+          "carpan": 0.95,
+          "iskonto": 36
+        },
+        {
+          "marka": "Dyo",
+          "carpan": 0.94,
+          "iskonto": 36
+        },
+        {
+          "marka": "Polisan",
+          "carpan": 0.92,
+          "iskonto": 37
+        }
+      ]
+    }
+  }
+}
