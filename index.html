@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elektrik - Mekanik - İnşaat Çoklu Marka Fiyat Listesi ve Keşif Sistemi</title>
+  <title>Elektrik - Mekanik - İnşaat Keşif Fiyatlandırma Sistemi</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
@@ -19,46 +19,108 @@
 <body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4">
   <div class="max-w-7xl mx-auto space-y-4">
 
-    <!-- 1. ANA SEKMELER: ELEKTRİK / MEKANİK / İNŞAAT / TÜM MARKA LİSTELERİ -->
+    <!-- 1. ANA SEKMELER -->
     <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 shadow-sm">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 pb-4 border-b border-[var(--border)]">
         <div class="flex flex-wrap gap-2">
+          <button onclick="switchMainTab('OZEL_KESIF')" id="tab-OZEL_KESIF"
+            class="px-4 py-2.5 rounded-lg text-xs font-bold bg-emerald-600 text-white transition">
+            ✨ KENDİ KEŞFİMİ FİYATLANDIR
+          </button>
           <button onclick="switchMainTab('ELEKTRIK')" id="tab-ELEKTRIK"
-            class="px-4 py-2.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition">
-            ⚡ ELEKTRİK KEŞFİ (50 Kalem)
+            class="px-4 py-2.5 rounded-lg text-xs font-bold border border-[var(--border)] bg-[var(--background)] transition">
+            ⚡ ELEKTRİK ŞABLONU (50)
           </button>
           <button onclick="switchMainTab('MEKANIK')" id="tab-MEKANIK"
             class="px-4 py-2.5 rounded-lg text-xs font-bold border border-[var(--border)] bg-[var(--background)] transition">
-            🔧 MEKANİK KEŞFİ (50 Kalem)
+            🔧 MEKANİK ŞABLONU (50)
           </button>
           <button onclick="switchMainTab('INSAAT')" id="tab-INSAAT"
             class="px-4 py-2.5 rounded-lg text-xs font-bold border border-[var(--border)] bg-[var(--background)] transition">
-            🏗️ İNŞAAT KEŞFİ (30 Kalem)
+            🏗️ İNŞAAT ŞABLONU (30)
           </button>
           <button onclick="switchMainTab('KATALOG')" id="tab-KATALOG"
             class="px-4 py-2.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/10 text-amber-600 transition">
-            📚 TÜM MARKA FİYAT LİSTELERİ (55+ Marka)
+            📚 TÜM MARKA LİSTELERİ (55+ Marka)
           </button>
         </div>
 
-        <div class="flex flex-wrap items-center gap-3">
-          <div class="px-3 py-1.5 rounded border border-[var(--border)] bg-[var(--background)] text-xs">
-            <span class="text-[var(--muted-foreground)]">3 Disiplin Genel Net Toplam:</span>
-            <strong class="ml-1 text-emerald-600 text-sm" id="allProjectTotal">0,00 TL</strong>
-          </div>
+        <div class="flex flex-wrap items-center gap-2">
           <button onclick="exportCSV()" class="px-4 py-2 rounded bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-500">
-            📥 Excel İndir (.CSV)
+            📥 Açık Tabloyu Excel İndir (.CSV)
           </button>
         </div>
       </div>
 
-      <!-- KEŞİF MODU ÜST PANELİ: GRUP BAZLI MARKA SEÇİMİ + İSKONTO GİRİŞİ -->
-      <div id="kesifHeaderPanel" class="mt-4">
+      <!-- ==================== A. KENDİ KEŞFİMİ FİYATLANDIR PANELİ ==================== -->
+      <div id="ozelKesifPanel" class="mt-4 space-y-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+          <div class="lg:col-span-7 bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h2 class="text-sm font-bold">1. Keşif Listenizi Yapıştırın veya Dosya Yükleyin</h2>
+                <p class="text-xs text-[var(--muted-foreground)]">
+                  Excel'den doğrudan kopyalayıp yapıştırabilir veya her satıra <code>Malzeme Adı | Miktar | Birim</code> yazabilirsiniz.
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="loadSampleCustomBoq()" class="px-2.5 py-1 rounded text-xs border border-[var(--border)] bg-[var(--card)] hover:opacity-80">
+                  Örnek Keşif Doldur
+                </button>
+                <label class="cursor-pointer px-2.5 py-1 rounded text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500">
+                  📂 CSV / TXT Yükle
+                  <input type="file" accept=".csv,.txt,.tsv" onchange="handleFileUpload(event)" class="hidden" />
+                </label>
+              </div>
+            </div>
+
+            <textarea id="customBoqInput" rows="6"
+              class="w-full p-2.5 rounded border border-[var(--border)] bg-[var(--card)] text-xs font-mono"
+              placeholder="Excel'den kopyalayıp buraya yapıştırın... Örnek:&#10;3x2.5 N2XH Halojensiz Kablo	1250	m&#10;3x1.5 NYM Kablo	800	m&#10;CAT6 Data Kablosu	1500	m&#10;1P 16A Otomatik Sigorta	65	Adet&#10;4x40A 30mA Kaçak Akım Şalteri	8	Adet&#10;PPRC 25mm Temiz Su Borusu	420	m&#10;PKKP Tip 22 Panel Radyatör	35	m&#10;Asma Klozet + Gömme Rezervuar	12	Takım&#10;12.5mm Beyaz Alçıpan	650	m²"></textarea>
+
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs text-[var(--muted-foreground)]">
+                ⚡ Elektrik, 🔧 Mekanik ve 🏗️ İnşaat kataloglarındaki 130+ poz ve 55+ marka içinden otomatik eşleştirir.
+              </span>
+              <button onclick="priceCustomBoq()" class="px-5 py-2 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 shadow-sm">
+                ⚡ Keşfi Otomatik Fiyatlandır
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="flex items-center justify-between border-b border-[var(--border)] pb-2">
+                <h2 class="text-sm font-bold">2. Keşifteki Markaların İskonto Oranları</h2>
+                <span class="text-xs text-[var(--muted-foreground)]" id="customMatchedCountBadge">0 Kalem</span>
+              </div>
+              <p class="text-xs text-[var(--muted-foreground)] mt-1">
+                Keşfinizde kullanılan markalar aşağıda listelenir. İskonto oranını değiştirdiğinizde tüm keşfiniz anında güncellenir:
+              </p>
+              <div id="customBrandDiscountsBox" class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2.5 max-h-40 overflow-y-auto pr-1"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2.5 pt-2 border-t border-[var(--border)]">
+              <div class="p-2.5 rounded border border-[var(--border)] bg-[var(--card)]">
+                <div class="text-xs text-[var(--muted-foreground)]">Keşif Liste Toplamı</div>
+                <div class="text-base font-bold mt-0.5" id="customListTotal">0,00 TL</div>
+              </div>
+              <div class="p-2.5 rounded border border-emerald-500/50 bg-[var(--card)]">
+                <div class="text-xs font-semibold text-emerald-600">İskontolu Net Teklif Toplamı</div>
+                <div class="text-lg font-extrabold text-emerald-600 mt-0.5" id="customNetTotal">0,00 TL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== B. HAZIR ŞABLON MODU ÜST PANELİ ==================== -->
+      <div id="kesifHeaderPanel" class="hidden mt-4">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
           <div>
-            <h2 class="text-base font-bold" id="activeTabTitle">⚡ Elektrik Keşfi - Marka Seçimi ve İskonto Tablosu</h2>
+            <h2 class="text-base font-bold" id="activeTabTitle">⚡ Elektrik Keşfi</h2>
             <p class="text-xs text-[var(--muted-foreground)]">
-              İster üst kutulardan tüm grubun markasını tek tıkla değiştirin, ister tablodaki her satırda farklı marka seçin. Seçtiğiniz markanın liste fiyatı ve iskontosu otomatik gelir.
+              Üst kutulardan tüm grubun markasını veya tablodan tek satırın markasını değiştirebilirsiniz.
             </p>
           </div>
           <div class="flex items-center gap-3">
@@ -72,20 +134,16 @@
             </div>
           </div>
         </div>
-
-        <!-- Grup Bazlı Marka Seçici ve İskonto Kutuları -->
-        <div id="groupBrandSelectorGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5">
-          <!-- JS ile doldurulur -->
-        </div>
+        <div id="groupBrandSelectorGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5"></div>
       </div>
 
-      <!-- KATALOG MODU ÜST PANELİ -->
+      <!-- ==================== C. KATALOG MODU ÜST PANELİ ==================== -->
       <div id="katalogHeaderPanel" class="hidden mt-4">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div>
             <h2 class="text-base font-bold">📚 Tüm Markaların Çekilen Birim Fiyat Listeleri (Katalog Havuzu)</h2>
             <p class="text-xs text-[var(--muted-foreground)]">
-              Her malzeme kalemi için sektörde fiyat listesi yayınlayan tüm alternatif markaların baz liste fiyatlarını ve piyasa iskonto oranlarını yan yana görebilirsiniz.
+              Sektörde fiyat listesi yayınlayan tüm alternatif markaların baz liste fiyatlarını ve piyasa iskonto oranlarını yan yana inceleyin.
             </p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
@@ -105,14 +163,38 @@
     </div>
 
     <!-- 2. ALT GRUP FİLTRESİ VE ARAMA KUTUSU -->
-    <div id="filterBar" class="flex flex-wrap items-center justify-between gap-2">
+    <div id="filterBar" class="hidden flex-wrap items-center justify-between gap-2">
       <div class="flex flex-wrap gap-1.5" id="subCategoryButtons"></div>
       <input type="text" id="searchBox" oninput="onSearchInput()" placeholder="Malzeme veya marka ara..."
         class="px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)] w-full sm:w-64" />
     </div>
 
-    <!-- 3A. KEŞİF TABLOSU (HER SATIRDA MARKA SEÇENEKLİ) -->
-    <div id="kesifTableWrapper" class="bg-[var(--card)] border border-[var(--border)] rounded-lg shadow-sm overflow-hidden">
+    <!-- 3A. KENDİ KEŞFİMİ FİYATLANDIR TABLOSU -->
+    <div id="ozelKesifTableWrapper" class="bg-[var(--card)] border border-[var(--border)] rounded-lg shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-[var(--border)] bg-[var(--background)] font-bold">
+              <th class="py-2.5 px-3 w-10 text-center">No</th>
+              <th class="py-2.5 px-3 min-w-[200px]">Sizin Girdiğiniz Keşif Kalemi</th>
+              <th class="py-2.5 px-3 min-w-[240px]">Eşleşen Katalog Ürünü (Değiştirilebilir)</th>
+              <th class="py-2.5 px-3 w-44">Marka Seçeneği</th>
+              <th class="py-2.5 px-2 w-20 text-right">Miktar</th>
+              <th class="py-2.5 px-2 w-14 text-center">Birim</th>
+              <th class="py-2.5 px-3 w-28 text-right">Liste Fiyatı</th>
+              <th class="py-2.5 px-2 w-20 text-right">İsk. (%)</th>
+              <th class="py-2.5 px-3 w-28 text-right">Net Birim Fiyat</th>
+              <th class="py-2.5 px-3 w-32 text-right">Toplam Tutar</th>
+              <th class="py-2.5 px-2 w-10 text-center">Sil</th>
+            </tr>
+          </thead>
+          <tbody id="customTableBody" class="divide-y divide-[var(--border)]"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 3B. ŞABLON KEŞİF TABLOSU -->
+    <div id="kesifTableWrapper" class="hidden bg-[var(--card)] border border-[var(--border)] rounded-lg shadow-sm overflow-hidden">
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse text-xs">
           <thead>
@@ -134,7 +216,7 @@
       </div>
     </div>
 
-    <!-- 3B. TÜM MARKA FİYAT LİSTELERİ KARŞILAŞTIRMA TABLOSU -->
+    <!-- 3C. TÜM MARKA FİYAT LİSTELERİ KATALOG TABLOSU -->
     <div id="katalogTableWrapper" class="hidden bg-[var(--card)] border border-[var(--border)] rounded-lg shadow-sm overflow-hidden">
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse text-xs">
@@ -148,7 +230,6 @@
               <th class="py-2.5 px-3 w-32 text-right">Liste Fiyatı (TL)</th>
               <th class="py-2.5 px-3 w-28 text-right">Piyasa İskontosu (%)</th>
               <th class="py-2.5 px-3 w-32 text-right">İskontolu Net Birim (TL)</th>
-              <th class="py-2.5 px-3 w-28 text-center">Keşifte Kullan</th>
             </tr>
           </thead>
           <tbody id="katalogTableBody" class="divide-y divide-[var(--border)]"></tbody>
@@ -206,7 +287,6 @@
           { brand: "Ovivo / Makel", factor: 0.70, disc: 60 }
         ]
       },
-
       MEKANIK: {
         "1. Sıhhi & Pis Su Boru": [
           { brand: "Fırat Boru", factor: 1.00, disc: 55 },
@@ -251,7 +331,6 @@
           { brand: "Bien Banyo", factor: 0.86, disc: 45 }
         ]
       },
-
       INSAAT: {
         "1. Alçıpan & Tavan": [
           { brand: "Knauf", factor: 1.00, disc: 35 },
@@ -438,6 +517,8 @@
         const bObj = pool.find(x => x.brand === r.brand) || pool[0] || { brand: r.brand, factor: 1, disc: 50 };
         return {
           ...r,
+          discKey,
+          catalogKey: `${discKey}-${r.id}`,
           brand: bObj.brand,
           listPrice: +(r.baseList * bObj.factor).toFixed(2),
           disc: bObj.disc
@@ -451,21 +532,316 @@
       INSAAT: initItems(rawInsaat, "INSAAT")
     };
 
-    let currentMainTab = "ELEKTRIK";
+    const masterCatalog = [
+      ...state.ELEKTRIK,
+      ...state.MEKANIK,
+      ...state.INSAAT
+    ];
+
+    let customBoqRows = [];
+    let currentMainTab = "OZEL_KESIF";
     let activeSubCat = "ALL";
 
     function fmt(n) {
       return new Intl.NumberFormat('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(n) + " TL";
     }
 
+    function normalizeText(str) {
+      return (str || "")
+        .toLowerCase()
+        .replace(/ı/g, "i")
+        .replace(/ğ/g, "g")
+        .replace(/ü/g, "u")
+        .replace(/ş/g, "s")
+        .replace(/ö/g, "o")
+        .replace(/ç/g, "c")
+        .replace(/,/g, ".")
+        .replace(/[^\w\s.x/+]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function findBestCatalogMatch(userQuery) {
+      const qNorm = normalizeText(userQuery);
+      const qTokens = qNorm.split(" ").filter(t => t.length >= 2);
+
+      let bestItem = masterCatalog[0];
+      let bestScore = -1;
+
+      masterCatalog.forEach(cand => {
+        const cNorm = normalizeText(`${cand.name} ${cand.group} ${cand.brand}`);
+        let score = 0;
+
+        qTokens.forEach(tok => {
+          const isTechSpec = /\d/.test(tok) || ["nym", "n2xh", "nyy", "cat6", "liycy", "pprc", "pvc", "pex", "xps", "adp", "ups"].includes(tok);
+          if (cNorm.includes(tok)) {
+            score += isTechSpec ? 8 : 3;
+          }
+        });
+
+        if (score > bestScore) {
+          bestScore = score;
+          bestItem = cand;
+        }
+      });
+
+      return bestItem;
+    }
+
+    function parseLineToBoqRow(line, idx) {
+      const raw = line.trim();
+      let userDesc = raw;
+      let qty = 1;
+      let userUnit = "";
+
+      if (raw.includes("\t") || raw.includes(";") || raw.includes("|")) {
+        const sep = raw.includes("\t") ? "\t" : (raw.includes("|") ? "|" : ";");
+        const parts = raw.split(sep).map(s => s.trim()).filter(Boolean);
+        if (parts.length >= 2) {
+          userDesc = parts[0];
+          const parsedQty = parseFloat(parts[1].replace(",", "."));
+          if (!isNaN(parsedQty)) {
+            qty = parsedQty;
+            if (parts[2]) userUnit = parts[2];
+          }
+        }
+      } else {
+        const match = raw.match(/^(.*?)\s+(\d+(?:[.,]\d+)?)\s*(m2|m²|mt|m|adet|ad|set|takım|takim|kova|torba)?$/i);
+        if (match && match[1].trim().length > 2) {
+          userDesc = match[1].trim();
+          qty = parseFloat(match[2].replace(",", ".")) || 1;
+          userUnit = match[3] || "";
+        }
+      }
+
+      const matched = findBestCatalogMatch(userDesc);
+      const pool = brandPools[matched.discKey][matched.group] || [];
+      const bObj = pool[0] || { brand: matched.brand, factor: 1, disc: 50 };
+
+      return {
+        rowId: idx + 1,
+        userDesc,
+        catalogKey: matched.catalogKey,
+        discKey: matched.discKey,
+        group: matched.group,
+        matchedName: matched.name,
+        baseList: matched.baseList,
+        brand: bObj.brand,
+        qty,
+        unit: userUnit || matched.unit,
+        listPrice: +(matched.baseList * bObj.factor).toFixed(2),
+        disc: bObj.disc
+      };
+    }
+
+    function loadSampleCustomBoq() {
+      const sampleLines = [
+        "Ana Dağıtım Panosu ADP Dikili Tip | 1 | Adet",
+        "24 Modül Sıva Altı Sigorta Kutusu | 10 | Adet",
+        "1P C16A Otomatik Sigorta | 120 | Adet",
+        "1P B10A Aydınlatma Sigortası | 60 | Adet",
+        "4x40A 30mA Trifaze Kaçak Akım Koruma Şalteri | 10 | Adet",
+        "3x2.5 N2XH Halojensiz Priz Kablosu | 2400 | m",
+        "3x1.5 N2XH Halojensiz Aydınlatma Kablosu | 1800 | m",
+        "4x16 N2XH Kolon Kablosu | 180 | m",
+        "CAT6 U/UTP Halojensiz Data Kablosu | 2100 | m",
+        "Sıva Altı Topraklı Priz | 220 | Adet",
+        "PPRC Ø25 mm Temiz Su Borusu | 650 | m",
+        "Sessiz Boru Ø110 mm Pis Su Kolon Borusu | 280 | m",
+        "PKKP Tip 22 Panel Radyatör | 64 | m",
+        "28 kW Tam Yoğuşmalı Kombi | 8 | Adet",
+        "Asma Klozet + Kapak Takımı | 16 | Takım",
+        "12.5 mm Beyaz Alçıpan Plaka | 950 | m²",
+        "Taşyünü Dış Cephe Mantolama Levhası 8 cm | 750 | m²",
+        "60x60 Porselen Yer Seramiği | 520 | m²",
+        "15L Silinebilir İç Cephe Boyası | 45 | Kova"
+      ];
+      document.getElementById('customBoqInput').value = sampleLines.join("\n");
+      priceCustomBoq();
+    }
+
+    function handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('customBoqInput').value = e.target.result;
+        priceCustomBoq();
+      };
+      reader.readAsText(file, "UTF-8");
+    }
+
+    function priceCustomBoq() {
+      const rawText = document.getElementById('customBoqInput').value || "";
+      const lines = rawText.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      customBoqRows = lines.map((line, idx) => parseLineToBoqRow(line, idx));
+      renderCustomBoqAll();
+    }
+
+    function renderCustomBoqAll() {
+      document.getElementById('customMatchedCountBadge').textContent = `${customBoqRows.length} Kalem Fiyatlandırıldı`;
+
+      const usedBrandsMap = {};
+      customBoqRows.forEach(r => {
+        if (!usedBrandsMap[r.brand]) {
+          usedBrandsMap[r.brand] = { disc: r.disc, count: 0 };
+        }
+        usedBrandsMap[r.brand].count += 1;
+      });
+
+      const brandBox = document.getElementById('customBrandDiscountsBox');
+      brandBox.innerHTML = Object.keys(usedBrandsMap).map(bName => {
+        const info = usedBrandsMap[bName];
+        return `
+          <div class="p-2 rounded border border-[var(--border)] bg-[var(--card)] flex items-center justify-between gap-2">
+            <div class="truncate">
+              <span class="text-xs font-bold">${bName}</span>
+              <span class="text-xs text-[var(--muted-foreground)]">(${info.count})</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="text-xs font-bold">%</span>
+              <input type="number" value="${info.disc}" min="0" max="95" step="1"
+                oninput="onCustomBrandDiscountChange('${bName}', this.value)"
+                class="w-14 px-1.5 py-0.5 rounded border border-[var(--border)] bg-[var(--background)] text-xs font-bold text-right" />
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const tbody = document.getElementById('customTableBody');
+      tbody.innerHTML = customBoqRows.map(r => {
+        const pool = brandPools[r.discKey][r.group] || [];
+        const brandSelectHtml = `
+          <select onchange="onCustomRowBrandChange(${r.rowId}, this.value)"
+            class="w-full px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-xs font-bold">
+            ${pool.map(b => `<option value="${b.brand}" ${b.brand === r.brand ? 'selected' : ''}>${b.brand} (%${b.disc})</option>`).join('')}
+          </select>
+        `;
+
+        const catalogOptionsHtml = masterCatalog
+          .filter(c => c.discKey === r.discKey)
+          .map(c => `<option value="${c.catalogKey}" ${c.catalogKey === r.catalogKey ? 'selected' : ''}>[${c.group}] ${c.name}</option>`)
+          .join('');
+
+        const netUnit = r.listPrice * (1 - r.disc / 100);
+        const netTotal = r.qty * netUnit;
+
+        return `
+          <tr class="hover:bg-blue-500/5">
+            <td class="py-2 px-3 text-center text-[var(--muted-foreground)]">${r.rowId}</td>
+            <td class="py-2 px-3 font-semibold">${r.userDesc}</td>
+            <td class="py-2 px-3">
+              <select onchange="onCustomRowCatalogChange(${r.rowId}, this.value)"
+                class="w-full px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-xs">
+                ${catalogOptionsHtml}
+              </select>
+            </td>
+            <td class="py-2 px-3">${brandSelectHtml}</td>
+            <td class="py-2 px-2 text-right">
+              <input type="number" value="${r.qty}" min="0"
+                oninput="onCustomRowFieldChange(${r.rowId}, 'qty', this.value)"
+                class="w-20 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right font-semibold" />
+            </td>
+            <td class="py-2 px-2 text-center text-[var(--muted-foreground)]">${r.unit}</td>
+            <td class="py-2 px-3 text-right">
+              <input type="number" value="${r.listPrice}" min="0" step="0.5"
+                oninput="onCustomRowFieldChange(${r.rowId}, 'listPrice', this.value)"
+                class="w-24 px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-right" />
+            </td>
+            <td class="py-2 px-2 text-right">
+              <input type="number" value="${r.disc}" min="0" max="95" step="1"
+                oninput="onCustomRowFieldChange(${r.rowId}, 'disc', this.value)"
+                class="w-16 px-2 py-1 rounded border border-blue-500/40 bg-blue-500/10 text-blue-600 text-right font-bold" />
+            </td>
+            <td class="py-2 px-3 text-right font-semibold whitespace-nowrap" id="cnet-${r.rowId}">${fmt(netUnit)}</td>
+            <td class="py-2 px-3 text-right font-bold text-emerald-600 whitespace-nowrap" id="ctot-${r.rowId}">${fmt(netTotal)}</td>
+            <td class="py-2 px-2 text-center">
+              <button onclick="removeCustomRow(${r.rowId})" class="text-red-600 hover:opacity-75 font-bold">✕</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      updateCustomTotals();
+    }
+
+    function onCustomBrandDiscountChange(brandName, val) {
+      const d = parseFloat(val) || 0;
+      customBoqRows.forEach(r => {
+        if (r.brand === brandName) r.disc = d;
+      });
+      renderCustomBoqAll();
+    }
+
+    function onCustomRowBrandChange(rowId, newBrand) {
+      const row = customBoqRows.find(r => r.rowId === rowId);
+      if (!row) return;
+      const pool = brandPools[row.discKey][row.group] || [];
+      const bObj = pool.find(x => x.brand === newBrand);
+      if (!bObj) return;
+      row.brand = bObj.brand;
+      row.listPrice = +(row.baseList * bObj.factor).toFixed(2);
+      row.disc = bObj.disc;
+      renderCustomBoqAll();
+    }
+
+    function onCustomRowCatalogChange(rowId, newCatalogKey) {
+      const row = customBoqRows.find(r => r.rowId === rowId);
+      const matched = masterCatalog.find(c => c.catalogKey === newCatalogKey);
+      if (!row || !matched) return;
+      const pool = brandPools[matched.discKey][matched.group] || [];
+      const bObj = pool[0];
+      row.catalogKey = matched.catalogKey;
+      row.discKey = matched.discKey;
+      row.group = matched.group;
+      row.matchedName = matched.name;
+      row.baseList = matched.baseList;
+      row.unit = matched.unit;
+      row.brand = bObj.brand;
+      row.listPrice = +(matched.baseList * bObj.factor).toFixed(2);
+      row.disc = bObj.disc;
+      renderCustomBoqAll();
+    }
+
+    function onCustomRowFieldChange(rowId, field, val) {
+      const row = customBoqRows.find(r => r.rowId === rowId);
+      if (!row) return;
+      row[field] = parseFloat(val) || 0;
+      const netUnit = row.listPrice * (1 - row.disc / 100);
+      const netTotal = row.qty * netUnit;
+      const netEl = document.getElementById(`cnet-${rowId}`);
+      const totEl = document.getElementById(`ctot-${rowId}`);
+      if (netEl) netEl.textContent = fmt(netUnit);
+      if (totEl) totEl.textContent = fmt(netTotal);
+      updateCustomTotals();
+    }
+
+    function removeCustomRow(rowId) {
+      customBoqRows = customBoqRows.filter(r => r.rowId !== rowId);
+      renderCustomBoqAll();
+    }
+
+    function updateCustomTotals() {
+      let lSum = 0, nSum = 0;
+      customBoqRows.forEach(r => {
+        const netUnit = r.listPrice * (1 - r.disc / 100);
+        lSum += r.qty * r.listPrice;
+        nSum += r.qty * netUnit;
+      });
+      document.getElementById('customListTotal').textContent = fmt(lSum);
+      document.getElementById('customNetTotal').textContent = fmt(nSum);
+    }
+
     function switchMainTab(tabKey) {
       currentMainTab = tabKey;
       activeSubCat = "ALL";
 
-      ["ELEKTRIK", "MEKANIK", "INSAAT", "KATALOG"].forEach(k => {
+      ["OZEL_KESIF", "ELEKTRIK", "MEKANIK", "INSAAT", "KATALOG"].forEach(k => {
         const btn = document.getElementById(`tab-${k}`);
         if (k === tabKey) {
           btn.className = "px-4 py-2.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition";
+        } else if (k === "OZEL_KESIF") {
+          btn.className = "px-4 py-2.5 rounded-lg text-xs font-bold border border-emerald-500/40 bg-emerald-500/10 text-emerald-600 transition";
         } else if (k === "KATALOG") {
           btn.className = "px-4 py-2.5 rounded-lg text-xs font-bold border border-amber-500/40 bg-amber-500/10 text-amber-600 transition";
         } else {
@@ -473,27 +849,31 @@
         }
       });
 
+      document.getElementById('ozelKesifPanel').classList.toggle('hidden', tabKey !== 'OZEL_KESIF');
+      document.getElementById('ozelKesifTableWrapper').classList.toggle('hidden', tabKey !== 'OZEL_KESIF');
+      document.getElementById('kesifHeaderPanel').classList.toggle('hidden', !['ELEKTRIK', 'MEKANIK', 'INSAAT'].includes(tabKey));
+      document.getElementById('kesifTableWrapper').classList.toggle('hidden', !['ELEKTRIK', 'MEKANIK', 'INSAAT'].includes(tabKey));
+      document.getElementById('katalogHeaderPanel').classList.toggle('hidden', tabKey !== 'KATALOG');
+      document.getElementById('katalogTableWrapper').classList.toggle('hidden', tabKey !== 'KATALOG');
+      document.getElementById('filterBar').className = (tabKey === 'OZEL_KESIF')
+        ? "hidden"
+        : "flex flex-wrap items-center justify-between gap-2";
+
+      if (tabKey === "OZEL_KESIF") {
+        if (customBoqRows.length === 0) loadSampleCustomBoq();
+        return;
+      }
       if (tabKey === "KATALOG") {
-        document.getElementById('kesifHeaderPanel').classList.add('hidden');
-        document.getElementById('kesifTableWrapper').classList.add('hidden');
-        document.getElementById('katalogHeaderPanel').classList.remove('hidden');
-        document.getElementById('katalogTableWrapper').classList.remove('hidden');
         renderCatalogView();
         return;
       }
 
-      document.getElementById('kesifHeaderPanel').classList.remove('hidden');
-      document.getElementById('kesifTableWrapper').classList.remove('hidden');
-      document.getElementById('katalogHeaderPanel').classList.add('hidden');
-      document.getElementById('katalogTableWrapper').classList.add('hidden');
-
       const titles = {
-        ELEKTRIK: "⚡ Elektrik Keşfi (50 Kalem) - Çoklu Marka Seçimi ve İskonto Tablosu",
-        MEKANIK: "🔧 Mekanik Tesisat Keşfi (50 Kalem) - Çoklu Marka Seçimi ve İskonto Tablosu",
-        INSAAT: "🏗️ İnşaat & Mimari Keşfi (30 Kalem) - Çoklu Marka Seçimi ve İskonto Tablosu"
+        ELEKTRIK: "⚡ Elektrik Keşfi Şablonu (50 Kalem)",
+        MEKANIK: "🔧 Mekanik Tesisat Keşfi Şablonu (50 Kalem)",
+        INSAAT: "🏗️ İnşaat & Mimari Keşfi Şablonu (30 Kalem)"
       };
       document.getElementById('activeTabTitle').textContent = titles[tabKey];
-
       renderGroupBrandSelectors();
       renderSubCategoryButtons();
       renderTable();
@@ -510,22 +890,15 @@
         const currentBrand = sampleItem ? sampleItem.brand : pool[0].brand;
         const currentDisc = sampleItem ? sampleItem.disc : pool[0].disc;
 
-        const optionsHtml = pool.map(b =>
-          `<option value="${b.brand}" ${b.brand === currentBrand ? 'selected' : ''}>${b.brand} (%${b.disc})</option>`
-        ).join('');
-
         return `
           <div class="p-2.5 rounded border border-[var(--border)] bg-[var(--background)] space-y-2">
             <div class="text-xs font-bold text-blue-600 truncate">${g}</div>
-            <div>
-              <label class="text-xs text-[var(--muted-foreground)] block mb-0.5">Marka Seç (Gruba Uygula):</label>
-              <select onchange="onGroupBrandChange('${g}', this.value)"
-                class="w-full px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-xs font-semibold">
-                ${optionsHtml}
-              </select>
-            </div>
+            <select onchange="onGroupBrandChange('${g}', this.value)"
+              class="w-full px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-xs font-semibold">
+              ${pool.map(b => `<option value="${b.brand}" ${b.brand === currentBrand ? 'selected' : ''}>${b.brand} (%${b.disc})</option>`).join('')}
+            </select>
             <div class="flex items-center justify-between pt-1">
-              <span class="text-xs text-[var(--muted-foreground)]">Grup İskonto (%):</span>
+              <span class="text-xs text-[var(--muted-foreground)]">İskonto (%):</span>
               <input type="number" id="grpDisc-${g}" value="${currentDisc}" min="0" max="95" step="1"
                 oninput="onGroupDiscountChange('${g}', this.value)"
                 class="w-16 px-2 py-1 rounded border border-[var(--border)] bg-[var(--card)] text-xs font-bold text-right" />
@@ -539,7 +912,6 @@
       const pool = brandPools[currentMainTab][groupName] || [];
       const bObj = pool.find(x => x.brand === newBrandName);
       if (!bObj) return;
-
       state[currentMainTab].forEach(item => {
         if (item.group === groupName) {
           item.brand = bObj.brand;
@@ -547,7 +919,6 @@
           item.disc = bObj.disc;
         }
       });
-
       const discInput = document.getElementById(`grpDisc-${groupName}`);
       if (discInput) discInput.value = bObj.disc;
       renderTable();
@@ -562,13 +933,11 @@
     }
 
     function onRowBrandChange(id, newBrandName) {
-      const items = state[currentMainTab];
-      const item = items.find(i => i.id === id);
+      const item = state[currentMainTab].find(i => i.id === id);
       if (!item) return;
       const pool = brandPools[currentMainTab][item.group] || [];
       const bObj = pool.find(x => x.brand === newBrandName);
       if (!bObj) return;
-
       item.brand = bObj.brand;
       item.listPrice = +(item.baseList * bObj.factor).toFixed(2);
       item.disc = bObj.disc;
@@ -579,21 +948,10 @@
       const items = state[currentMainTab];
       const groups = Object.keys(brandPools[currentMainTab]);
       const container = document.getElementById('subCategoryButtons');
-
-      let html = `
-        <button onclick="filterSubCat('ALL')" data-sub="ALL"
-          class="sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white">
-          Tümü (${items.length})
-        </button>
-      `;
+      let html = `<button onclick="filterSubCat('ALL')" data-sub="ALL" class="sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white">Tümü (${items.length})</button>`;
       groups.forEach(g => {
         const count = items.filter(i => i.group === g).length;
-        html += `
-          <button onclick="filterSubCat('${g}')" data-sub="${g}"
-            class="sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]">
-            ${g} (${count})
-          </button>
-        `;
+        html += `<button onclick="filterSubCat('${g}')" data-sub="${g}" class="sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]">${g} (${count})</button>`;
       });
       container.innerHTML = html;
     }
@@ -601,25 +959,17 @@
     function filterSubCat(sub) {
       activeSubCat = sub;
       document.querySelectorAll('.sub-btn').forEach(b => {
-        if (b.getAttribute('data-sub') === sub) {
-          b.className = "sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white";
-        } else {
-          b.className = "sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]";
-        }
+        b.className = (b.getAttribute('data-sub') === sub)
+          ? "sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white"
+          : "sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]";
       });
-      if (currentMainTab === "KATALOG") {
-        renderCatalogTableOnly();
-      } else {
-        renderTable();
-      }
+      if (currentMainTab === "KATALOG") renderCatalogTableOnly();
+      else renderTable();
     }
 
     function onSearchInput() {
-      if (currentMainTab === "KATALOG") {
-        renderCatalogTableOnly();
-      } else {
-        renderTable();
-      }
+      if (currentMainTab === "KATALOG") renderCatalogTableOnly();
+      else renderTable();
     }
 
     function updateRow(id, field, val) {
@@ -634,25 +984,15 @@
     }
 
     function updateTotals() {
-      if (currentMainTab !== "KATALOG") {
-        const items = state[currentMainTab];
-        let tabList = 0, tabNet = 0;
-        items.forEach(item => {
-          const netUnit = item.listPrice * (1 - item.disc / 100);
-          tabList += item.qty * item.listPrice;
-          tabNet += item.qty * netUnit;
-        });
-        document.getElementById('tabListTotal').textContent = fmt(tabList);
-        document.getElementById('tabNetTotal').textContent = fmt(tabNet);
-      }
-
-      let grandNet = 0;
-      ["ELEKTRIK", "MEKANIK", "INSAAT"].forEach(k => {
-        state[k].forEach(item => {
-          grandNet += item.qty * item.listPrice * (1 - item.disc / 100);
-        });
+      if (!["ELEKTRIK", "MEKANIK", "INSAAT"].includes(currentMainTab)) return;
+      let tabList = 0, tabNet = 0;
+      state[currentMainTab].forEach(item => {
+        const netUnit = item.listPrice * (1 - item.disc / 100);
+        tabList += item.qty * item.listPrice;
+        tabNet += item.qty * netUnit;
       });
-      document.getElementById('allProjectTotal').textContent = fmt(grandNet);
+      document.getElementById('tabListTotal').textContent = fmt(tabList);
+      document.getElementById('tabNetTotal').textContent = fmt(tabNet);
     }
 
     function renderTable() {
@@ -673,7 +1013,6 @@
             ${pool.map(b => `<option value="${b.brand}" ${b.brand === item.brand ? 'selected' : ''}>${b.brand}</option>`).join('')}
           </select>
         `;
-
         const netUnit = item.listPrice * (1 - item.disc / 100);
         const netTotal = item.qty * netUnit;
         return `
@@ -703,29 +1042,17 @@
           </tr>
         `;
       }).join('');
-
       updateTotals();
     }
 
     function renderCatalogView() {
       const discKey = document.getElementById('katalogDisciplineSelect').value;
       activeSubCat = "ALL";
-
       const groups = Object.keys(brandPools[discKey]);
       const container = document.getElementById('subCategoryButtons');
-      let html = `
-        <button onclick="filterSubCat('ALL')" data-sub="ALL"
-          class="sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white">
-          Tüm Gruplar
-        </button>
-      `;
+      let html = `<button onclick="filterSubCat('ALL')" data-sub="ALL" class="sub-btn px-3 py-1.5 rounded text-xs font-semibold bg-blue-600 text-white">Tüm Gruplar</button>`;
       groups.forEach(g => {
-        html += `
-          <button onclick="filterSubCat('${g}')" data-sub="${g}"
-            class="sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]">
-            ${g}
-          </button>
-        `;
+        html += `<button onclick="filterSubCat('${g}')" data-sub="${g}" class="sub-btn px-3 py-1.5 rounded text-xs border border-[var(--border)] bg-[var(--card)]">${g}</button>`;
       });
       container.innerHTML = html;
 
@@ -734,7 +1061,6 @@
       const brandSel = document.getElementById('katalogBrandFilter');
       brandSel.innerHTML = `<option value="ALL">Tüm Markalar (${allBrandsInDisc.size} Marka)</option>` +
         [...allBrandsInDisc].map(b => `<option value="${b}">${b}</option>`).join('');
-
       renderCatalogTableOnly();
     }
 
@@ -751,20 +1077,17 @@
         pool.forEach(bObj => {
           if (selectedBrand !== 'ALL' && bObj.brand !== selectedBrand) return;
           if (q && !(`${item.name} ${bObj.brand} ${item.group}`.toLowerCase().includes(q))) return;
-
           const lPrice = +(item.baseList * bObj.factor).toFixed(2);
           const nPrice = +(lPrice * (1 - bObj.disc / 100)).toFixed(2);
           catalogRows.push({
             itemId: item.id,
-            discKey,
             group: item.group,
             brand: bObj.brand,
             name: item.name,
             unit: item.unit,
             listPrice: lPrice,
             disc: bObj.disc,
-            netPrice: nPrice,
-            isSelectedInBoq: item.brand === bObj.brand
+            netPrice: nPrice
           });
         });
       });
@@ -780,62 +1103,58 @@
           <td class="py-2 px-3 text-right font-medium">${fmt(r.listPrice)}</td>
           <td class="py-2 px-3 text-right font-bold text-blue-600">%${r.disc}</td>
           <td class="py-2 px-3 text-right font-bold text-emerald-600">${fmt(r.netPrice)}</td>
-          <td class="py-2 px-3 text-center">
-            ${r.isSelectedInBoq
-              ? `<span class="px-2 py-0.5 rounded text-xs font-bold bg-emerald-500/15 text-emerald-600">✓ Seçili</span>`
-              : `<button onclick="selectBrandFromCatalog('${r.discKey}', ${r.itemId}, '${r.brand}')"
-                   class="px-2.5 py-1 rounded text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500">
-                   Keşfe Seç
-                 </button>`
-            }
-          </td>
         </tr>
       `).join('');
     }
 
-    function selectBrandFromCatalog(discKey, itemId, brandName) {
-      const item = state[discKey].find(i => i.id === itemId);
-      if (!item) return;
-      const pool = brandPools[discKey][item.group] || [];
-      const bObj = pool.find(x => x.brand === brandName);
-      if (!bObj) return;
-      item.brand = bObj.brand;
-      item.listPrice = +(item.baseList * bObj.factor).toFixed(2);
-      item.disc = bObj.disc;
-      updateTotals();
-      renderCatalogTableOnly();
-    }
-
     function exportCSV() {
-      const targetKey = currentMainTab === "KATALOG"
-        ? document.getElementById('katalogDisciplineSelect').value
-        : currentMainTab;
-      const items = state[targetKey];
-      const rows = [["No", "Disiplin", "Grup", "Secilen Marka", "Malzeme Aciklamasi", "Miktar", "Birim", "Liste Fiyati (TL)", "Iskonto (%)", "Net Birim Fiyat (TL)", "Toplam Tutar (TL)"].join(";")];
-      items.forEach((item, idx) => {
-        const r = idx + 2;
-        rows.push([
-          item.id,
-          `"${targetKey}"`,
-          `"${item.group}"`,
-          `"${item.brand}"`,
-          `"${item.name}"`,
-          item.qty,
-          `"${item.unit}"`,
-          String(item.listPrice).replace('.', ','),
-          String(item.disc).replace('.', ','),
-          `"=H${r}*(1-I${r}/100)"`,
-          `"=F${r}*J${r}"`
-        ].join(";"));
-      });
+      const rows = [["No", "Grup", "Marka", "Girilen / Malzeme Aciklamasi", "Eslestirilen Katalog Urunu", "Miktar", "Birim", "Liste Fiyati (TL)", "Iskonto (%)", "Net Birim Fiyat (TL)", "Toplam Tutar (TL)"].join(";")];
+
+      if (currentMainTab === "OZEL_KESIF") {
+        customBoqRows.forEach((r, idx) => {
+          const excelRow = idx + 2;
+          rows.push([
+            r.rowId,
+            `"${r.group}"`,
+            `"${r.brand}"`,
+            `"${r.userDesc}"`,
+            `"${r.matchedName}"`,
+            r.qty,
+            `"${r.unit}"`,
+            String(r.listPrice).replace('.', ','),
+            String(r.disc).replace('.', ','),
+            `"=H${excelRow}*(1-I${excelRow}/100)"`,
+            `"=F${excelRow}*J${excelRow}"`
+          ].join(";"));
+        });
+      } else {
+        const targetKey = currentMainTab === "KATALOG" ? "ELEKTRIK" : currentMainTab;
+        state[targetKey].forEach((item, idx) => {
+          const excelRow = idx + 2;
+          rows.push([
+            item.id,
+            `"${item.group}"`,
+            `"${item.brand}"`,
+            `"${item.name}"`,
+            `"${item.name}"`,
+            item.qty,
+            `"${item.unit}"`,
+            String(item.listPrice).replace('.', ','),
+            String(item.disc).replace('.', ','),
+            `"=H${r}*(1-I${r}/100)"`,
+            `"=F${r}*J${r}"`
+          ].join(";"));
+        });
+      }
+
       const blob = new Blob(["\uFEFF" + rows.join("\r\n")], { type: "text/csv;charset=utf-8;" });
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = `${targetKey}_Coklu_Marka_Kesif.csv`;
+      a.download = `Fiyatlandirilmis_Kesif_${currentMainTab}.csv`;
       a.click();
     }
 
-    switchMainTab("ELEKTRIK");
+    switchMainTab("OZEL_KESIF");
   </script>
 </body>
 </html>
